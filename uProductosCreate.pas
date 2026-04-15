@@ -205,6 +205,9 @@ begin
   qAlmacen.Open;
 
 
+  //comentario.
+
+
 
 end;
 

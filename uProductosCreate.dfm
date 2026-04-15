@@ -974,7 +974,6 @@ inherited frmProductosCreate: TfrmProductosCreate
     Top = 40
   end
   object qProductosTipos: TADOQuery
-    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -989,7 +988,6 @@ inherited frmProductosCreate: TfrmProductosCreate
     Top = 256
   end
   object qCategorias: TADOQuery
-    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -999,7 +997,6 @@ inherited frmProductosCreate: TfrmProductosCreate
     Top = 24
   end
   object qProductosMarcas: TADOQuery
-    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -1009,7 +1006,6 @@ inherited frmProductosCreate: TfrmProductosCreate
     Top = 32
   end
   object qProductosUnidadesDeMedidas: TADOQuery
-    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -1019,7 +1015,6 @@ inherited frmProductosCreate: TfrmProductosCreate
     Top = 24
   end
   object qMonedas: TADOQuery
-    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -1029,7 +1024,6 @@ inherited frmProductosCreate: TfrmProductosCreate
     Top = 32
   end
   object qAlmacen: TADOQuery
-    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -1061,7 +1055,6 @@ inherited frmProductosCreate: TfrmProductosCreate
     end
   end
   object qMarcasModelos: TADOQuery
-    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <
