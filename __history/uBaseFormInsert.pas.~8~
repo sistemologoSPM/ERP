@@ -1,0 +1,70 @@
+unit uBaseFormInsert;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uBase, Vcl.AppEvnts, cxGraphics,
+  cxLookAndFeels, cxLookAndFeelPainters, Vcl.Menus, dxSkinsCore, dxSkinBlack,
+  dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom,
+  dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, cxControls, cxContainer, cxEdit, cxLabel, Vcl.StdCtrls,
+  cxButtons, Vcl.ExtCtrls, Vcl.ComCtrls, dxLayoutContainer, cxClasses,
+  dxLayoutControl, dxLayoutControlAdapters, uFormShadow;
+
+type
+  TfrmBaseFormInsert = class(TfrmBase)
+    dxLayoutControl1Group_Root: TdxLayoutGroup;
+    dxLayoutControl1: TdxLayoutControl;
+    Encabezado: TdxLayoutGroup;
+    Cuerpo: TdxLayoutGroup;
+    Pie: TdxLayoutGroup;
+    Titulo: TdxLayoutItem;
+    cxButton1: TcxButton;
+    dxLayoutItem2: TdxLayoutItem;
+    MensajeError: TdxLayoutLabeledItem;
+    ApplicationEvents1: TApplicationEvents;
+    procedure ApplicationEvents1ModalBegin(Sender: TObject);
+    procedure ApplicationEvents1ModalEnd(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmBaseFormInsert: TfrmBaseFormInsert;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmBaseFormInsert.ApplicationEvents1ModalBegin(Sender: TObject);
+begin
+  inherited;
+  frmShadow:= tfrmShadow.Create(self);
+  frmShadow.BoundsRect := Application.MainForm.BoundsRect;
+  frmShadow.Show; // Use Show for the dimmer, not ShowModal
+
+end;
+
+procedure TfrmBaseFormInsert.ApplicationEvents1ModalEnd(Sender: TObject);
+begin
+  inherited;
+  frmShadow.Release;
+  frmShadow.Hide;
+end;
+
+end.

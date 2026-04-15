@@ -1,0 +1,29 @@
+inherited frmClientesTerminosPagosCreate: TfrmClientesTerminosPagosCreate
+  BorderStyle = bsDialog
+  Caption = ''
+  ClientHeight = 378
+  ClientWidth = 414
+  ExplicitWidth = 420
+  ExplicitHeight = 407
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited StatusBar1: TStatusBar
+    Top = 359
+    Width = 414
+  end
+  inherited dxLayoutControl1: TdxLayoutControl
+    Width = 414
+    Height = 359
+    inherited cxButton1: TcxButton
+      Left = 288
+      Top = 298
+      ExplicitLeft = 288
+      ExplicitTop = 298
+    end
+  end
+  object qTerminosDePagos: TADOQuery
+    Parameters = <>
+    Left = 40
+    Top = 256
+  end
+end

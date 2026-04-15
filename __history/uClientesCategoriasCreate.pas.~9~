@@ -1,0 +1,196 @@
+unit uClientesCategoriasCreate;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uBaseFormInsert, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, Vcl.Menus, dxLayoutControlAdapters, dxLayoutContainer,
+  cxClasses, Vcl.StdCtrls, cxButtons, dxLayoutControl, Vcl.ComCtrls,
+  uBaseDeDatos, dxLayoutcxEditAdapters, cxContainer, cxEdit, cxTextEdit,
+  cxDBEdit, Data.DB, Data.Win.ADODB;
+
+type
+  TfrmClientesCategoriasCreate = class(TfrmBaseFormInsert)
+    qCategorias: TADOQuery;
+    dsCategorias: TDataSource;
+    qCategoriasCategoriaId: TIntegerField;
+    qCategoriasCategoria: TStringField;
+    qCategoriasEstadoId: TIntegerField;
+    qCategoriasCreadoPor: TStringField;
+    qCategoriasFechaCreacion: TDateTimeField;
+    qCategoriasModificadopor: TStringField;
+    qCategoriasFechaModificacion: TDateTimeField;
+    txtCategoria: TcxDBTextEdit;
+    dxLayoutItem1: TdxLayoutItem;
+    procedure FormShow(Sender: TObject);
+    procedure txtCategoriaPropertiesValidate(Sender: TObject;
+      var DisplayValue: Variant; var ErrorText: TCaption; var Error: Boolean);
+    procedure cxButton1Click(Sender: TObject);
+    procedure qCategoriasNewRecord(DataSet: TDataSet);
+    procedure qCategoriasBeforePost(DataSet: TDataSet);
+  private
+    { Private declarations }
+  public
+    CategoriaId:Integer;
+    Nuevo:Boolean;
+    { Public declarations }
+  end;
+
+var
+  frmClientesCategoriasCreate: TfrmClientesCategoriasCreate;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmClientesCategoriasCreate.cxButton1Click(Sender: TObject);
+begin
+  inherited;
+
+
+   MensajeError.CaptionOptions.Visible:= false;
+
+  if qCategorias.FieldByName('Categoria').AsString = '' then
+    Begin
+      MensajeError.CaptionOptions.Visible:= true;
+      MensajeError.CaptionOptions.Text:= 'Especifique el nombre de la categoria.';
+      txtCategoria.ValidateEdit(false);
+      txtCategoria.SetFocus;
+      exit;
+    End;
+
+  if qCategorias.State in [dsInsert, dsEdit] then
+    qCategorias.Post;
+
+  ModalResult:= qCategorias.FieldByName('CategoriaId').AsInteger;
+  CloseModal;
+
+
+end;
+
+procedure TfrmClientesCategoriasCreate.FormShow(Sender: TObject);
+begin
+  inherited;
+
+
+
+  Titulo.Caption:= 'Nueva Categoria';
+  Nuevo:=true;
+  if Categoriaid>0 then
+  Begin
+    Titulo.Caption:='Modificando cliente';
+    Nuevo:=false;
+  End;
+
+  frmClientesCategoriasCreate.Caption:= Titulo.Caption;
+
+   qCategorias.Close;
+  qCategorias.Parameters.ParamValues['ClienteId']:= CategoriaId;
+  qCategorias.Open;
+
+  if qCategorias.RecordCount > 0 then
+    qCategorias.Edit
+  else
+    qCategorias.Append;
+
+  txtCategoria.SetFocus;
+
+
+end;
+
+procedure TfrmClientesCategoriasCreate.qCategoriasBeforePost(DataSet: TDataSet);
+var i:Integer;
+valorAnterior, valorNuevo:Variant;
+
+begin
+  inherited;
+
+
+  if not  Nuevo then
+  Begin
+
+  DataSet.FieldByName('ModificadoPor').AsString:= dmBaseDeDatos.GetUsuarioActual;
+  DataSet.FieldByName('FechaModificacion').AsDateTime:= dmBaseDeDatos.GetFechaActual;
+
+  qHistorialCambios.Close;
+  qHistorialCambios.Open;
+
+  for i := 0 to DataSet.FieldCount - 1 do
+    begin
+
+      if (DataSet.Fields[i].FieldKind = fkData)
+       and (dmBaseDeDatos.CamposNoAuditables.IndexOf(DataSet.Fields[i].FieldName) = -1) then
+        Begin
+
+        valorAnterior:= DataSet.Fields[i].OldValue;
+        valorNuevo:=DataSet.Fields[i].value;
+
+        if  VarToStrDef(valorAnterior, '') <> VarToStrDef(valorNuevo, '') then
+            begin
+              qHistorialCambios.Insert;
+              qHistorialCambios.FieldByName('HistorialId').AsInteger:= dmBaseDeDatos.GetProximoId('HistorialId');
+              qHistorialCambios.FieldByName('Tabla').AsString:= 'Clientes';
+              qHistorialCambios.FieldByName('ClavePrimaria').AsInteger:= DataSet.FieldByName('ClienteId').AsInteger;
+              qHistorialCambios.FieldByName('Campo').AsString:= DataSet.Fields[i].FieldName;
+              qHistorialCambios.FieldByName('ValorAnterior').AsString:= VarToStrDef(valorAnterior, '');
+              qHistorialCambios.FieldByName('ValorNuevo').AsString:= VarToStrDef(valorNuevo, '');
+              qHistorialCambios.FieldByName('Usuario').AsString:= dmBaseDeDatos.GetUsuarioActual;
+              qHistorialCambios.FieldByName('FechaCambio').AsDateTime:= dmBaseDeDatos.GetFechaActual;
+              qHistorialCambios.Post;
+            end;
+        End;
+    end;
+
+
+    End;
+
+
+
+
+
+
+end;
+
+procedure TfrmClientesCategoriasCreate.qCategoriasNewRecord(DataSet: TDataSet);
+begin
+  inherited;
+
+  DataSet.FieldByName('EstadoId').AsInteger:= 1;
+  DataSet.FieldByName('CreadoPor').AsString:= dmBaseDeDatos.GetUsuarioActual;
+  DataSet.FieldByName('FechaCreacion').AsDateTime:= dmBaseDeDatos.GetFechaActual;
+end;
+
+procedure TfrmClientesCategoriasCreate.txtCategoriaPropertiesValidate(
+  Sender: TObject; var DisplayValue: Variant; var ErrorText: TCaption;
+  var Error: Boolean);
+begin
+  inherited;
+  Error:= false;
+  MensajeError.CaptionOptions.Visible:= false;
+
+  if VarToStr(DisplayValue) = '' then
+  Begin
+    Error:= true;
+    MensajeError.CaptionOptions.Visible:= true;
+
+  End;
+
+end;
+
+end.

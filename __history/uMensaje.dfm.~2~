@@ -1,0 +1,33 @@
+inherited frmMensaje: TfrmMensaje
+  Caption = 'frmMensaje'
+  ClientHeight = 171
+  ClientWidth = 427
+  ExplicitWidth = 443
+  ExplicitHeight = 210
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited StatusBar1: TStatusBar
+    Top = 152
+    Width = 427
+  end
+  object dxLayoutControl1: TdxLayoutControl
+    Left = 0
+    Top = 0
+    Width = 427
+    Height = 152
+    Align = alClient
+    TabOrder = 1
+    ExplicitLeft = 80
+    ExplicitTop = 64
+    ExplicitWidth = 300
+    ExplicitHeight = 250
+    object dxLayoutControl1Group_Root: TdxLayoutGroup
+      AlignHorz = ahLeft
+      AlignVert = avTop
+      ButtonOptions.Buttons = <>
+      Hidden = True
+      ShowBorder = False
+      Index = -1
+    end
+  end
+end

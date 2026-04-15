@@ -1,0 +1,224 @@
+unit uConducesClientesCreate;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uBaseFormInsert, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, Vcl.Menus, dxLayoutControlAdapters,
+  dxLayoutcxEditAdapters, dxLayoutContainer, cxContainer, cxEdit, cxStyles,
+  cxCustomData, cxFilter, cxData, cxDataStorage, cxNavigator,
+  cxDataControllerConditionalFormattingRulesManagerDialog, Data.DB, cxDBData,
+  cxGridLevel, cxClasses, cxGridCustomView, cxGridCustomTableView,
+  cxGridTableView, cxGridDBTableView, cxGrid, cxDBEdit, cxDropDownEdit,
+  cxCalendar, Vcl.DBCtrls, cxTextEdit, cxMemo, cxMaskEdit, cxLookupEdit,
+  cxDBLookupEdit, cxDBLookupComboBox, Vcl.AppEvnts, Vcl.StdCtrls, cxButtons,
+  dxLayoutControl, Vcl.ComCtrls, uBaseDeDatos, Datasnap.DBClient,
+  Datasnap.Provider, Data.Win.ADODB, uClientesBuscar;
+
+type
+  TfrmConducesClientesCreate = class(TfrmBaseFormInsert)
+    cxDBLookupComboBox1: TcxDBLookupComboBox;
+    dxLayoutItem1: TdxLayoutItem;
+    dxLayoutItem4: TdxLayoutItem;
+    dxLayoutItem5: TdxLayoutItem;
+    cxDBLookupComboBox2: TcxDBLookupComboBox;
+    dxLayoutItem6: TdxLayoutItem;
+    dxLayoutItem7: TdxLayoutItem;
+    cxDBDateEdit1: TcxDBDateEdit;
+    dxLayoutItem8: TdxLayoutItem;
+    cxDBDateEdit2: TcxDBDateEdit;
+    dxLayoutItem9: TdxLayoutItem;
+    cxDBTextEdit1: TcxDBTextEdit;
+    dxLayoutItem3: TdxLayoutItem;
+    dxLayoutItem10: TdxLayoutItem;
+    dxLayoutGroup1: TdxLayoutGroup;
+    dxLayoutGroup2: TdxLayoutGroup;
+    dxLayoutAutoCreatedGroup1: TdxLayoutAutoCreatedGroup;
+    cxGrid1DBTableView1: TcxGridDBTableView;
+    cxGrid1Level1: TcxGridLevel;
+    cxGrid1: TcxGrid;
+    dxLayoutItem11: TdxLayoutItem;
+    dxLayoutGroup3: TdxLayoutGroup;
+    cxButton2: TcxButton;
+    dxLayoutItem12: TdxLayoutItem;
+    dxLayoutAutoCreatedGroup2: TdxLayoutAutoCreatedGroup;
+    cxDBLookupComboBox3: TcxDBLookupComboBox;
+    cxDBMemo1: TcxDBMemo;
+    dxLayoutItem13: TdxLayoutItem;
+    cxDBMemo2: TcxDBMemo;
+    dxLayoutItem14: TdxLayoutItem;
+    cxDBTextEdit2: TcxDBTextEdit;
+    dxLayoutItem15: TdxLayoutItem;
+    cxDBTextEdit3: TcxDBTextEdit;
+    dxLayoutItem16: TdxLayoutItem;
+    cxDBTextEdit4: TcxDBTextEdit;
+    dxLayoutItem17: TdxLayoutItem;
+    cxDBTextEdit5: TcxDBTextEdit;
+    dxLayoutItem18: TdxLayoutItem;
+    cxDBTextEdit6: TcxDBTextEdit;
+    dxLayoutItem19: TdxLayoutItem;
+    dxLayoutGroup4: TdxLayoutGroup;
+    dxLayoutGroup5: TdxLayoutGroup;
+    cxGrid1DBTableView1Column1: TcxGridDBColumn;
+    cxGrid1DBTableView1Column2: TcxGridDBColumn;
+    cxGrid1DBTableView1Column3: TcxGridDBColumn;
+    cxGrid1DBTableView1Column4: TcxGridDBColumn;
+    cxGrid1DBTableView1Column5: TcxGridDBColumn;
+    cxGrid1DBTableView1Column6: TcxGridDBColumn;
+    cxButton3: TcxButton;
+    dxLayoutItem20: TdxLayoutItem;
+    dxLayoutItem21: TdxLayoutItem;
+    dxLayoutAutoCreatedGroup4: TdxLayoutAutoCreatedGroup;
+    cxButton4: TcxButton;
+    dxLayoutAutoCreatedGroup3: TdxLayoutAutoCreatedGroup;
+    cxGrid1DBTableView1Column7: TcxGridDBColumn;
+    cxDBTextEdit7: TcxDBTextEdit;
+    cxDBMemo3: TcxDBMemo;
+    cxDBTextEdit8: TcxDBTextEdit;
+    qConducesClientes: TADOQuery;
+    qConducesClientesDetalle: TADOQuery;
+    dsRelacion: TDataSource;
+    DataSetProvider1: TDataSetProvider;
+    cdsConducesClientes: TClientDataSet;
+    cdsConducesClientesConduceId: TIntegerField;
+    cdsConducesClientesNumero: TIntegerField;
+    cdsConducesClientesClienteId: TIntegerField;
+    cdsConducesClientesNombre: TMemoField;
+    cdsConducesClientesTipoDocumentoId: TIntegerField;
+    cdsConducesClientesDocumento: TStringField;
+    cdsConducesClientesDireccion: TMemoField;
+    cdsConducesClientesTelefonos: TMemoField;
+    cdsConducesClientesTerminoPagoId: TIntegerField;
+    cdsConducesClientesMonedaId: TIntegerField;
+    cdsConducesClientesFecha: TDateTimeField;
+    cdsConducesClientesFechaVencimiento: TDateTimeField;
+    cdsConducesClientesAlmacenId: TIntegerField;
+    cdsConducesClientesTerminos: TMemoField;
+    cdsConducesClientesNotas: TMemoField;
+    cdsConducesClientesEstadoId: TIntegerField;
+    cdsConducesClientesCreadoPor: TStringField;
+    cdsConducesClientesFechaCreacion: TDateTimeField;
+    cdsConducesClientesModificadoPor: TStringField;
+    cdsConducesClientesFechaModificacion: TDateTimeField;
+    cdsConducesClientesqConducesClientesDetalle: TDataSetField;
+    dsConducesClientes: TDataSource;
+    cdsConducesClientesDetalle: TClientDataSet;
+    dsConducesClientesDetalle: TDataSource;
+    cdsConducesClientesDetalleDetalleId: TAutoIncField;
+    cdsConducesClientesDetalleConduceId: TIntegerField;
+    cdsConducesClientesDetalleProductoId: TIntegerField;
+    cdsConducesClientesDetalleProductoNombre: TStringField;
+    cdsConducesClientesDetalleDescripcion: TMemoField;
+    cdsConducesClientesDetalleCantidad: TBCDField;
+    cdsConducesClientesDetallePrecioCosto: TBCDField;
+    cdsConducesClientesDetallePrecioVenta: TBCDField;
+    cdsConducesClientesDetalleDescuento: TBCDField;
+    cdsConducesClientesDetalleDescuentoTotal: TBCDField;
+    cdsConducesClientesDetalleSubTotal: TBCDField;
+    cdsConducesClientesDetalleImpuesto: TBCDField;
+    cdsConducesClientesDetalleTotal: TBCDField;
+    cdsConducesClientesDetalleCreadoPor: TStringField;
+    cdsConducesClientesDetalleFechaCreacion: TDateTimeField;
+    cdsConducesClientesDetalleModificadoPor: TStringField;
+    cdsConducesClientesDetalleFechaModificacion: TDateTimeField;
+    qClientes: TADOQuery;
+    cdsConducesClientesClienteNombre: TStringField;
+    procedure cxButton2Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure cdsConducesClientesClienteIdChange(Sender: TField);
+  private
+    { Private declarations }
+  public
+    ConduceId:Integer;
+    Nuevo:Boolean;
+    { Public declarations }
+  end;
+
+var
+  frmConducesClientesCreate: TfrmConducesClientesCreate;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmConducesClientesCreate.cdsConducesClientesClienteIdChange(
+  Sender: TField);
+begin
+  inherited;
+
+  cdsConducesClientes.FieldByName('Direccion').AsString:= qClientes.FieldByName('Direccion').AsString;
+  cdsConducesClientes.FieldByName('Documento').AsString:= qClientes.FieldByName('Documento').AsString;
+
+
+
+end;
+
+procedure TfrmConducesClientesCreate.cxButton2Click(Sender: TObject);
+begin
+  inherited;
+
+  frmClientesBuscar:= TfrmClientesBuscar.Create(self);
+
+  if frmClientesBuscar.ShowModal = mrOk then
+    Begin
+
+    End;
+
+  frmClientesBuscar.Release;
+
+
+end;
+
+procedure TfrmConducesClientesCreate.FormShow(Sender: TObject);
+begin
+  inherited;
+
+
+
+  Titulo.Caption:= 'Nuevo conduce';
+  Nuevo:=true;
+  if ConduceId>0 then
+  Begin
+    Titulo.Caption:='Modificando conduce';
+    Nuevo:=false;
+  End;
+
+  frmConducesClientesCreate.Caption:= Titulo.Caption;
+
+
+  qClientes.Close;
+  qClientes.Open;
+
+  qConducesClientes.Parameters.ParamValues['ConduceId']:= conduceID;
+  qConducesClientes.Close;
+  qConducesClientes.Open;
+
+  cdsConducesClientes.Close;
+  cdsConducesClientes.Open;
+
+  if cdsConducesClientes.RecordCount = 0 then
+    cdsConducesClientes.Append
+  else
+    cdsConducesClientes.Edit;
+
+
+
+end;
+
+end.

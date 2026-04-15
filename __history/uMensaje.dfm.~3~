@@ -1,0 +1,100 @@
+inherited frmMensaje: TfrmMensaje
+  Caption = 'Mensaje de confirmaci'#243'n'
+  ClientHeight = 171
+  ClientWidth = 427
+  ExplicitWidth = 443
+  ExplicitHeight = 210
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited StatusBar1: TStatusBar
+    Top = 152
+    Width = 427
+  end
+  object dxLayoutControl1: TdxLayoutControl
+    Left = 0
+    Top = 0
+    Width = 427
+    Height = 152
+    Align = alClient
+    TabOrder = 1
+    ExplicitLeft = 80
+    ExplicitTop = 64
+    ExplicitWidth = 300
+    ExplicitHeight = 250
+    object cxButton1: TcxButton
+      Left = 208
+      Top = 110
+      Width = 100
+      Height = 30
+      Caption = 'Si'
+      ModalResult = 1
+      TabOrder = 0
+    end
+    object cxButton2: TcxButton
+      Left = 315
+      Top = 110
+      Width = 100
+      Height = 30
+      Caption = 'No'
+      ModalResult = 2
+      TabOrder = 1
+    end
+    object dxLayoutControl1Group_Root: TdxLayoutGroup
+      AlignHorz = ahClient
+      AlignVert = avClient
+      ButtonOptions.Buttons = <>
+      Hidden = True
+      ItemIndex = 2
+      ShowBorder = False
+      Index = -1
+    end
+    object dxLayoutLabeledItem1: TdxLayoutLabeledItem
+      Parent = dxLayoutControl1Group_Root
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.Text = 'Label'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Index = 0
+    end
+    object dxLayoutItem4: TdxLayoutItem
+      Parent = dxLayoutGroup1
+      AlignHorz = ahRight
+      AlignVert = avTop
+      CaptionOptions.Text = 'cxButton1'
+      CaptionOptions.Visible = False
+      Control = cxButton1
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 100
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem5: TdxLayoutItem
+      Parent = dxLayoutGroup1
+      AlignHorz = ahRight
+      CaptionOptions.Text = 'cxButton2'
+      CaptionOptions.Visible = False
+      Control = cxButton2
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 100
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutGroup1: TdxLayoutGroup
+      Parent = dxLayoutControl1Group_Root
+      AlignHorz = ahRight
+      AlignVert = avBottom
+      CaptionOptions.Text = 'New Group'
+      ButtonOptions.Buttons = <>
+      LayoutDirection = ldHorizontal
+      ShowBorder = False
+      Index = 2
+    end
+    object dxLayoutSeparatorItem1: TdxLayoutSeparatorItem
+      Parent = dxLayoutControl1Group_Root
+      CaptionOptions.Text = 'Separator'
+      Index = 1
+    end
+  end
+end

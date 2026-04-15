@@ -1,0 +1,29 @@
+unit uBase;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.AppEvnts, Vcl.ComCtrls;
+
+type
+  TfrmBase = class(TForm)
+    StatusBar1: TStatusBar;
+    procedure ApplicationEvents1ModalBegin(Sender: TObject);
+    procedure ApplicationEvents1ModalEnd(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmBase: TfrmBase;
+
+implementation
+
+{$R *.dfm}
+
+uses uFormShadow;
+
+end.

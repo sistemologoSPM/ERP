@@ -1,0 +1,275 @@
+inherited frmBaseFormInsert1: TfrmBaseFormInsert1
+  Caption = 'frmBaseFormInsert1'
+  ClientHeight = 623
+  ClientWidth = 873
+  ExplicitWidth = 889
+  ExplicitHeight = 662
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited StatusBar1: TStatusBar
+    Top = 604
+    Width = 873
+    ExplicitLeft = 0
+  end
+  inherited dxLayoutControl1: TdxLayoutControl
+    Width = 873
+    Height = 604
+    inherited cxButton1: TcxButton
+      Left = 730
+      Top = 543
+      TabOrder = 10
+      ExplicitLeft = 730
+      ExplicitTop = 543
+    end
+    object cxDBLookupComboBox1: TcxDBLookupComboBox [1]
+      Left = 110
+      Top = 97
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 0
+      Width = 145
+    end
+    object cxMemo1: TcxMemo [2]
+      Left = 110
+      Top = 159
+      Lines.Strings = (
+        'cxMemo1')
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 2
+      Height = 45
+      Width = 185
+    end
+    object cxTextEdit2: TcxTextEdit [3]
+      Left = 110
+      Top = 211
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 3
+      Text = 'cxTextEdit2'
+      Width = 121
+    end
+    object cxDBLookupComboBox2: TcxDBLookupComboBox [4]
+      Left = 556
+      Top = 128
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 5
+      Width = 145
+    end
+    object DBLookupComboBox1: TDBLookupComboBox [5]
+      Left = 556
+      Top = 159
+      Width = 145
+      Height = 24
+      TabOrder = 6
+    end
+    object cxDBDateEdit1: TcxDBDateEdit [6]
+      Left = 556
+      Top = 190
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 7
+      Width = 121
+    end
+    object cxDBDateEdit2: TcxDBDateEdit [7]
+      Left = 556
+      Top = 221
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 8
+      Width = 121
+    end
+    object cxDBTextEdit1: TcxDBTextEdit [8]
+      Left = 110
+      Top = 128
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 1
+      Width = 121
+    end
+    object cxTextEdit1: TcxTextEdit [9]
+      Left = 556
+      Top = 97
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 4
+      Text = 'cxTextEdit1'
+      Width = 121
+    end
+    object cxGrid1: TcxGrid [10]
+      Left = 40
+      Top = 287
+      Width = 776
+      Height = 200
+      TabOrder = 9
+      object cxGrid1DBTableView1: TcxGridDBTableView
+        Navigator.Buttons.CustomButtons = <>
+        DataController.Summary.DefaultGroupSummaryItems = <>
+        DataController.Summary.FooterSummaryItems = <>
+        DataController.Summary.SummaryGroups = <>
+      end
+      object cxGrid1Level1: TcxGridLevel
+        GridView = cxGrid1DBTableView1
+      end
+    end
+    inherited dxLayoutControl1Group_Root: TdxLayoutGroup
+      ItemIndex = 1
+    end
+    inherited Titulo: TdxLayoutItem
+      CaptionOptions.Text = 'Conduce'
+    end
+    object dxLayoutItem1: TdxLayoutItem
+      Parent = dxLayoutGroup2
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Cliente'
+      Control = cxDBLookupComboBox1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 145
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem4: TdxLayoutItem
+      Parent = dxLayoutGroup2
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Direcci'#243'n'
+      AllowRemove = False
+      Control = cxMemo1
+      ControlOptions.OriginalHeight = 45
+      ControlOptions.OriginalWidth = 185
+      ControlOptions.ShowBorder = False
+      Index = 2
+    end
+    object dxLayoutItem5: TdxLayoutItem
+      Parent = dxLayoutGroup2
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Tel'#233'fono'
+      Control = cxTextEdit2
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 3
+    end
+    object dxLayoutItem6: TdxLayoutItem
+      Parent = dxLayoutGroup1
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Moneda'
+      Control = cxDBLookupComboBox2
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 145
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem7: TdxLayoutItem
+      Parent = dxLayoutGroup1
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Almacen'
+      Control = DBLookupComboBox1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 145
+      ControlOptions.ShowBorder = False
+      Index = 2
+    end
+    object dxLayoutItem8: TdxLayoutItem
+      Parent = dxLayoutGroup1
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Fecha'
+      Control = cxDBDateEdit1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 3
+    end
+    object dxLayoutItem9: TdxLayoutItem
+      Parent = dxLayoutGroup1
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Fecha vencimiento'
+      Control = cxDBDateEdit2
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 4
+    end
+    object dxLayoutItem3: TdxLayoutItem
+      Parent = dxLayoutGroup2
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Documento'
+      Control = cxDBTextEdit1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem10: TdxLayoutItem
+      Parent = dxLayoutGroup1
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Numero'
+      Control = cxTextEdit1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutGroup1: TdxLayoutGroup
+      Parent = dxLayoutAutoCreatedGroup1
+      AlignHorz = ahClient
+      CaptionOptions.Text = 'New Group'
+      ButtonOptions.Buttons = <>
+      Index = 1
+    end
+    object dxLayoutGroup2: TdxLayoutGroup
+      Parent = dxLayoutAutoCreatedGroup1
+      AlignHorz = ahClient
+      CaptionOptions.Text = 'New Group'
+      ButtonOptions.Buttons = <>
+      ButtonOptions.ShowExpandButton = True
+      Index = 0
+    end
+    object dxLayoutAutoCreatedGroup1: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      LayoutDirection = ldHorizontal
+      Index = 0
+      AutoCreated = True
+    end
+    object dxLayoutItem11: TdxLayoutItem
+      Parent = dxLayoutGroup3
+      AlignHorz = ahClient
+      CaptionOptions.Text = 'cxGrid1'
+      CaptionOptions.Visible = False
+      Control = cxGrid1
+      ControlOptions.OriginalHeight = 200
+      ControlOptions.OriginalWidth = 250
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutGroup3: TdxLayoutGroup
+      Parent = Cuerpo
+      CaptionOptions.Text = 'New Group'
+      CaptionOptions.Visible = False
+      ButtonOptions.Buttons = <>
+      Index = 1
+    end
+  end
+  inherited ApplicationEvents1: TApplicationEvents
+    Left = 72
+    Top = 24
+  end
+end

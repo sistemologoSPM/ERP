@@ -1,0 +1,111 @@
+unit uBaseDeDatos;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB, System.ImageList,
+  Vcl.ImgList, Vcl.Controls, cxImageList, cxGraphics;
+
+type
+  TdmBaseDeDatos = class(TDataModule)
+    db: TADOConnection;
+    qSecuencias: TADOQuery;
+    qNuevoGUID: TADOQuery;
+    qFechaActual: TADOQuery;
+    qFechaActualFechaActual: TDateTimeField;
+    qNuevoGUIDGuid: TGuidField;
+    ImgenesEstados: TcxImageList;
+    qValoresPorDefecto: TADOQuery;
+    qValoresPorDefectoClientesTipoClienteId: TIntegerField;
+    qValoresPorDefectoClientesCategoriaId: TIntegerField;
+    qValoresPorDefectoClientesTerminoDePagoId: TIntegerField;
+    qValoresPorDefectoClientesSexoId: TIntegerField;
+    qValoresPorDefectoClientesProvinciaId: TIntegerField;
+    qValoresPorDefectoClientesTipoDocumentoId: TIntegerField;
+    qValoresPorDefectoClientesEstadoCivilId: TIntegerField;
+    qValoresPorDefectoClientesListaPrecioId: TIntegerField;
+    qValoresPorDefectoClientesNacionalidadId: TIntegerField;
+    qValoresPorDefectoClientesTipoNCFId: TIntegerField;
+    function GetFechaActual:TDatetime;
+    function GetNuevoGUID:String;
+    function GetProximoId(Campo:String): Integer;
+    procedure DataModuleCreate(Sender: TObject);
+    procedure DataModuleDestroy(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    GetUsuarioActual:String;
+    CamposNoAuditables: TStringList;
+    { Public declarations }
+  end;
+
+var
+  dmBaseDeDatos: TdmBaseDeDatos;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+
+procedure TdmBaseDeDatos.DataModuleCreate(Sender: TObject);
+begin
+GetUsuarioActual:= 'Administrador';
+
+
+CamposNoAuditables:= TStringList.Create;
+
+CamposNoAuditables.Add('ClienteId');
+CamposNoAuditables.Add('ClienteGuid');
+CamposNoAuditables.Add('Codigo');
+CamposNoAuditables.Add('CreadoPor');
+CamposNoAuditables.Add('FechaCreacion');
+CamposNoAuditables.Add('ModificadoPor');
+CamposNoAuditables.Add('FechaModificacion');
+CamposNoAuditables.Add('CategoriaId');
+
+
+
+
+
+end;
+
+procedure TdmBaseDeDatos.DataModuleDestroy(Sender: TObject);
+begin
+    CamposNoAuditables.free;
+end;
+
+function  TdmBaseDeDatos.GetFechaActual:TDatetime;
+Begin
+  qFechaActual.Close;
+  qFechaActual.Open;
+
+  Result:= qFechaActual.FieldByName('FechaActual').AsDateTime;
+
+End;
+
+
+
+function TdmBaseDeDatos.GetNuevoGUID: String;
+begin
+  qNuevoGUID.Close;
+  qNuevoGUID.Open;
+
+  Result:= qNuevoGUID.FieldByName('Guid').AsString;
+
+end;
+
+function TdmBaseDeDatos.GetProximoId(Campo:String): Integer;
+begin
+  qSecuencias.Close;
+  qSecuencias.Open;
+
+  qSecuencias.Edit;
+  qSecuencias.FieldByName(Campo).AsInteger:=qSecuencias.FieldByName(campo).AsInteger+1;
+  qSecuencias.Post;
+
+  Result:= qSecuencias.FieldByName(Campo).AsInteger;
+end;
+
+end.

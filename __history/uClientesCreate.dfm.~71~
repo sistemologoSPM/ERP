@@ -1,0 +1,1484 @@
+inherited frmClientesCreate: TfrmClientesCreate
+  Left = 658
+  Caption = 'frmClientesCreate'
+  ClientHeight = 692
+  ClientWidth = 907
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnShow = FormShow
+  ExplicitWidth = 923
+  ExplicitHeight = 751
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited StatusBar1: TStatusBar
+    Top = 673
+    Width = 907
+    ExplicitTop = 673
+    ExplicitWidth = 907
+  end
+  inherited dxLayoutControl1: TdxLayoutControl
+    Width = 907
+    Height = 673
+    ExplicitWidth = 907
+    ExplicitHeight = 673
+    inherited cxButton1: TcxButton
+      Left = 786
+      Top = 621
+      TabOrder = 28
+      OnClick = cxButton1Click
+      ExplicitLeft = 786
+      ExplicitTop = 621
+    end
+    object btnCargarFoto: TcxButton [1]
+      Left = 735
+      Top = 249
+      Width = 150
+      Height = 30
+      Caption = 'Cargar foto'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA793000000BF4944415438116360A0
+        1030C2F54FEF580D6713C3C8AC080529630211B4C3931AF81840188F0DB85DB0
+        AA818D81956333030BC75A868606165C66E036E00DC73486FF0C76408D2E0C62
+        1C13803456C48C55745A473650BC068861C88CC1CBF535C3B63DA76102301A11
+        0B3091196D5E0CFF983601B9E886FF6160F8EFC99055B9072807479806C0A4A6
+        B503A389711584FB3F0CA87135848D4AE20E03547538793843978181E93103E3
+        FF35609DFF816C300393A0D805C3C000CC5021510400FF5023284F89C0160000
+        000049454E44AE426082}
+      TabOrder = 26
+      OnClick = btnCargarFotoClick
+    end
+    object btnTomarFoto: TcxButton [2]
+      Left = 735
+      Top = 286
+      Width = 150
+      Height = 30
+      Caption = 'Tomar foto'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA7930000015C494441543811D5513D
+        4B0341107D7B17BDE89D680249103FE2A148500BDB087682BD4D6CECAD6CC5DF
+        61636D1A031656567682D8048C8242D414778526908F229722646F9DDB8BB97C
+        FD811C336FDECEBC99656F8089FFD8B817A8B96689F22679604294F8F1DC7A90
+        F019F303A0DE38976022D53D1F74E37078F013EC8367F4338F0703724DE125FE
+        7D37A2201D55E5F1A9CA5168B848CE329C6E4CE1E2B50D9E31646F482A86E068
+        398499AF77DCDE1565E530BD09D3DCC24B8343916D322D4191D8070BD30CAB35
+        0BD9FB3CCA7507958E8AEB671B9AFD8D7A1B382F10F4E94706983AC3DBE70FC0
+        185862118844C10C038FC532D6A8D6D72BE9C8806A5B201ED5014DF35DCA8098
+        11466DF07259191960390289ED1496E2F352E041181CFB7B3BB05BAE771CF0DE
+        2FA1DDF7B6A0AB0C2749056EE597C4F494780259CB45ABD3938CDD824DEA1572
+        385CE0AAC489C6C8C99A1EA7189815D089677FCFBE5DDEC509E9660000000049
+        454E44AE426082}
+      TabOrder = 27
+      OnClick = btnTomarFotoClick
+    end
+    object txtNombres: TcxDBTextEdit [3]
+      Left = 171
+      Top = 155
+      DataBinding.DataField = 'Nombres'
+      DataBinding.DataSource = dsClientes
+      Properties.ValidationErrorIconAlignment = taRightJustify
+      Properties.ValidationOptions = [evoRaiseException, evoShowErrorIcon]
+      Properties.OnValidate = txtNombresPropertiesValidate
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 3
+      Width = 200
+    end
+    object txtApellidos: TcxDBTextEdit [4]
+      Left = 489
+      Top = 155
+      DataBinding.DataField = 'Apellidos'
+      DataBinding.DataSource = dsClientes
+      Properties.ValidationErrorIconAlignment = taRightJustify
+      Properties.ValidationOptions = [evoRaiseException, evoShowErrorIcon]
+      Properties.OnValidate = txtNombresPropertiesValidate
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 4
+      Width = 200
+    end
+    object cxDBTextEdit3: TcxDBTextEdit [5]
+      Left = 171
+      Top = 217
+      DataBinding.DataField = 'Alias'
+      DataBinding.DataSource = dsClientes
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 7
+      Width = 200
+    end
+    object cxDBTextEdit4: TcxDBTextEdit [6]
+      Left = 489
+      Top = 217
+      DataBinding.DataField = 'Representante'
+      DataBinding.DataSource = dsClientes
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 8
+      Width = 200
+    end
+    object txtDocumento: TcxDBTextEdit [7]
+      Left = 489
+      Top = 186
+      DataBinding.DataField = 'Documento'
+      DataBinding.DataSource = dsClientes
+      Properties.ValidationErrorIconAlignment = taRightJustify
+      Properties.ValidationOptions = [evoRaiseException, evoShowErrorIcon]
+      Properties.OnValidate = txtNombresPropertiesValidate
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 6
+      Width = 200
+    end
+    object cxDBDateEdit1: TcxDBDateEdit [8]
+      Left = 171
+      Top = 279
+      DataBinding.DataField = 'FechaNacimiento'
+      DataBinding.DataSource = dsClientes
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 11
+      Width = 200
+    end
+    object cxDBCurrencyEdit1: TcxDBCurrencyEdit [9]
+      Left = 489
+      Top = 373
+      DataBinding.DataField = 'LimiteDeCredito'
+      DataBinding.DataSource = dsClientes
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 17
+      Width = 200
+    end
+    object cxDBMemo1: TcxDBMemo [10]
+      Left = 171
+      Top = 467
+      DataBinding.DataField = 'Direccion'
+      DataBinding.DataSource = dsClientes
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 20
+      Height = 50
+      Width = 518
+    end
+    object cxDBTextEdit7: TcxDBTextEdit [11]
+      Left = 171
+      Top = 524
+      DataBinding.DataField = 'TelefonoCelular'
+      DataBinding.DataSource = dsClientes
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 21
+      Width = 180
+    end
+    object cxDBTextEdit8: TcxDBTextEdit [12]
+      Left = 171
+      Top = 555
+      DataBinding.DataField = 'TelefonoHogar'
+      DataBinding.DataSource = dsClientes
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 23
+      Width = 180
+    end
+    object cxDBTextEdit9: TcxDBTextEdit [13]
+      Left = 469
+      Top = 524
+      DataBinding.DataField = 'TelefonoTrabajo'
+      DataBinding.DataSource = dsClientes
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 22
+      Width = 220
+    end
+    object cxDBTextEdit6: TcxDBTextEdit [14]
+      Left = 469
+      Top = 555
+      DataBinding.DataField = 'CorreoElectronico'
+      DataBinding.DataSource = dsClientes
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 24
+      Width = 220
+    end
+    object Panel1: TPanel [15]
+      Left = 26
+      Top = 123
+      Width = 673
+      Height = 25
+      BevelOuter = bvNone
+      Caption = 'Datos personales'
+      Color = clSilver
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 2
+    end
+    object Panel2: TPanel [16]
+      Left = 26
+      Top = 310
+      Width = 673
+      Height = 25
+      BevelOuter = bvNone
+      Caption = 'Datos de facturaci'#243'n'
+      Color = clSilver
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 13
+    end
+    object Panel3: TPanel [17]
+      Left = 26
+      Top = 404
+      Width = 673
+      Height = 25
+      BevelOuter = bvNone
+      Caption = 'Datos de localizaci'#243'n'
+      Color = clSilver
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 18
+    end
+    object imgFotoCliente: TcxDBImage [18]
+      Left = 734
+      Top = 92
+      DataBinding.DataField = 'Foto'
+      DataBinding.DataSource = dsFotos
+      Properties.FitMode = ifmFill
+      Properties.GraphicClassName = 'TdxSmartImage'
+      Properties.ShowFocusRect = False
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 25
+      Height = 150
+      Width = 152
+    end
+    object cxDBLookupComboBox1: TcxDBLookupComboBox [19]
+      Left = 171
+      Top = 92
+      AutoSize = False
+      DataBinding.DataField = 'ListadoTiposClientes'
+      DataBinding.DataSource = dsClientes
+      Properties.DropDownListStyle = lsFixedList
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.Color = clWhite
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 0
+      Height = 24
+      Width = 200
+    end
+    object cxDBLookupComboBox2: TcxDBLookupComboBox [20]
+      Left = 489
+      Top = 92
+      AutoSize = False
+      DataBinding.DataField = 'ListadoCategorias'
+      DataBinding.DataSource = dsClientes
+      Properties.DropDownListStyle = lsFixedList
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 1
+      Height = 24
+      Width = 200
+    end
+    object cxDBLookupComboBox3: TcxDBLookupComboBox [21]
+      Left = 171
+      Top = 186
+      AutoSize = False
+      DataBinding.DataField = 'ListadoTiposDocumentos'
+      DataBinding.DataSource = dsClientes
+      Properties.DropDownListStyle = lsFixedList
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 5
+      Height = 24
+      Width = 200
+    end
+    object cxDBLookupComboBox4: TcxDBLookupComboBox [22]
+      Left = 171
+      Top = 248
+      AutoSize = False
+      DataBinding.DataField = 'ListadoSexos'
+      DataBinding.DataSource = dsClientes
+      Properties.DropDownListStyle = lsFixedList
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 9
+      Height = 24
+      Width = 200
+    end
+    object cxDBLookupComboBox5: TcxDBLookupComboBox [23]
+      Left = 489
+      Top = 248
+      AutoSize = False
+      DataBinding.DataField = 'ListadoEstadosCiviles'
+      DataBinding.DataSource = dsClientes
+      Properties.DropDownListStyle = lsFixedList
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 10
+      Height = 24
+      Width = 200
+    end
+    object cxDBLookupComboBox6: TcxDBLookupComboBox [24]
+      Left = 489
+      Top = 279
+      AutoSize = False
+      DataBinding.DataField = 'ListadoNacionalidades'
+      DataBinding.DataSource = dsClientes
+      Properties.DropDownListStyle = lsFixedList
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 12
+      Height = 24
+      Width = 200
+    end
+    object cxDBLookupComboBox7: TcxDBLookupComboBox [25]
+      Left = 171
+      Top = 342
+      AutoSize = False
+      DataBinding.DataField = 'ListadoNCF'
+      DataBinding.DataSource = dsClientes
+      Properties.DropDownListStyle = lsFixedList
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 14
+      Height = 24
+      Width = 200
+    end
+    object cxDBLookupComboBox8: TcxDBLookupComboBox [26]
+      Left = 489
+      Top = 342
+      AutoSize = False
+      DataBinding.DataField = 'ListadoTerminosDePagos'
+      DataBinding.DataSource = dsClientes
+      Properties.DropDownListStyle = lsFixedList
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 15
+      Height = 24
+      Width = 200
+    end
+    object cxDBLookupComboBox9: TcxDBLookupComboBox [27]
+      Left = 171
+      Top = 373
+      AutoSize = False
+      DataBinding.DataField = 'ListadoListasDePrecios'
+      DataBinding.DataSource = dsClientes
+      Properties.DropDownListStyle = lsFixedList
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 16
+      Height = 24
+      Width = 200
+    end
+    object cxDBLookupComboBox10: TcxDBLookupComboBox [28]
+      Left = 171
+      Top = 436
+      AutoSize = False
+      DataBinding.DataField = 'ListadosProvincias'
+      DataBinding.DataSource = dsClientes
+      Properties.DropDownListStyle = lsFixedList
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 19
+      Height = 24
+      Width = 200
+    end
+    inherited Encabezado: TdxLayoutGroup
+      AlignHorz = ahClient
+      LayoutDirection = ldHorizontal
+    end
+    inherited Cuerpo: TdxLayoutGroup
+      Parent = dxLayoutAutoCreatedGroup1
+      AlignHorz = ahClient
+      ItemIndex = 4
+      Index = 0
+    end
+    inherited Pie: TdxLayoutGroup
+      AlignHorz = ahClient
+      AlignVert = avClient
+    end
+    object Foto: TdxLayoutGroup
+      Parent = dxLayoutAutoCreatedGroup1
+      AlignHorz = ahRight
+      AlignVert = avClient
+      CaptionOptions.Text = 'New Group'
+      CaptionOptions.Visible = False
+      SizeOptions.Width = 180
+      SizeOptions.MaxWidth = 180
+      ButtonOptions.Buttons = <>
+      Index = 1
+    end
+    object dxLayoutItem3: TdxLayoutItem
+      Parent = Foto
+      AlignHorz = ahCenter
+      CaptionOptions.Text = 'cxButton2'
+      CaptionOptions.Visible = False
+      SizeOptions.Height = 30
+      SizeOptions.Width = 150
+      Control = btnCargarFoto
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 150
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem4: TdxLayoutItem
+      Parent = Foto
+      AlignHorz = ahCenter
+      CaptionOptions.Text = 'cxButton3'
+      CaptionOptions.Visible = False
+      SizeOptions.Height = 30
+      SizeOptions.Width = 150
+      Control = btnTomarFoto
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 150
+      ControlOptions.ShowBorder = False
+      Index = 2
+    end
+    object dxLayoutItem5: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup2
+      AlignHorz = ahLeft
+      AlignVert = avClient
+      CaptionOptions.Text = 'Nombres'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = txtNombres
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem6: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup2
+      AlignHorz = ahLeft
+      AlignVert = avTop
+      CaptionOptions.Text = 'Apellidos'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = txtApellidos
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem8: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup3
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.Text = 'Categorias'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBLookupComboBox2
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem9: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup4
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Alias'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBTextEdit3
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem10: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup4
+      AlignHorz = ahLeft
+      AlignVert = avClient
+      CaptionOptions.Text = 'Representante'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBTextEdit4
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem11: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup5
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Tipos de documentos'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBLookupComboBox3
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem12: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup5
+      AlignHorz = ahLeft
+      AlignVert = avClient
+      CaptionOptions.Text = 'Documento'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = txtDocumento
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem13: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup6
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Sexos'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBLookupComboBox4
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem14: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup6
+      AlignHorz = ahLeft
+      AlignVert = avClient
+      CaptionOptions.Text = 'Estados Civiles'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBLookupComboBox5
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem15: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup7
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Fecha nacimiento'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBDateEdit1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem16: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup7
+      AlignHorz = ahLeft
+      AlignVert = avClient
+      CaptionOptions.Text = 'Nacionalidades'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBLookupComboBox6
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem17: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup8
+      AlignHorz = ahLeft
+      AlignVert = avTop
+      CaptionOptions.Text = 'Comprobantes fiscales'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBLookupComboBox7
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem18: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup8
+      CaptionOptions.Text = 'Plazos de pagos'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBLookupComboBox8
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem20: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup9
+      AlignVert = avClient
+      CaptionOptions.Text = 'Limite de cr'#233'dito'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBCurrencyEdit1
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem19: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup9
+      AlignHorz = ahLeft
+      AlignVert = avTop
+      CaptionOptions.Text = 'Listas de precios'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBLookupComboBox9
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem21: TdxLayoutItem
+      Parent = Cuerpo
+      AlignHorz = ahLeft
+      AlignVert = avTop
+      CaptionOptions.Text = 'Provincias'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBLookupComboBox10
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 11
+    end
+    object dxLayoutItem22: TdxLayoutItem
+      Parent = Cuerpo
+      AlignHorz = ahClient
+      AlignVert = avTop
+      CaptionOptions.Text = 'Direcci'#243'n'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBMemo1
+      ControlOptions.OriginalHeight = 50
+      ControlOptions.OriginalWidth = 500
+      ControlOptions.ShowBorder = False
+      Index = 12
+    end
+    object dxLayoutItem23: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup10
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Tel'#233'fono celular'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBTextEdit7
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 180
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem24: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup11
+      AlignHorz = ahLeft
+      AlignVert = avTop
+      CaptionOptions.Text = 'Tel'#233'fono Hogar'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBTextEdit8
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 180
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem25: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup10
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.Text = 'Tel'#233'fono trabajo'
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavRight]
+      Control = cxDBTextEdit9
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem26: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup11
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.Text = 'Correo electr'#243'nico'
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavRight]
+      Control = cxDBTextEdit6
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem27: TdxLayoutItem
+      Parent = Cuerpo
+      AlignHorz = ahClient
+      AlignVert = avTop
+      CaptionOptions.Text = 'Panel1'
+      CaptionOptions.Visible = False
+      Padding.AssignedValues = [lpavRight]
+      Control = Panel1
+      ControlOptions.OriginalHeight = 25
+      ControlOptions.OriginalWidth = 185
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem28: TdxLayoutItem
+      Parent = Cuerpo
+      AlignHorz = ahClient
+      AlignVert = avTop
+      CaptionOptions.Text = 'Panel2'
+      CaptionOptions.Visible = False
+      Control = Panel2
+      ControlOptions.OriginalHeight = 25
+      ControlOptions.OriginalWidth = 185
+      ControlOptions.ShowBorder = False
+      Index = 7
+    end
+    object dxLayoutItem29: TdxLayoutItem
+      Parent = Cuerpo
+      AlignHorz = ahClient
+      AlignVert = avTop
+      CaptionOptions.Text = 'Panel3'
+      CaptionOptions.Visible = False
+      Control = Panel3
+      ControlOptions.OriginalHeight = 25
+      ControlOptions.OriginalWidth = 185
+      ControlOptions.ShowBorder = False
+      Index = 10
+    end
+    object dxLayoutAutoCreatedGroup4: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      LayoutDirection = ldHorizontal
+      Index = 4
+      AutoCreated = True
+    end
+    object dxLayoutAutoCreatedGroup2: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      AlignHorz = ahClient
+      AlignVert = avTop
+      LayoutDirection = ldHorizontal
+      Index = 2
+      AutoCreated = True
+    end
+    object dxLayoutAutoCreatedGroup5: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      AlignHorz = ahClient
+      AlignVert = avTop
+      LayoutDirection = ldHorizontal
+      Index = 3
+      AutoCreated = True
+    end
+    object dxLayoutAutoCreatedGroup6: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      AlignHorz = ahClient
+      AlignVert = avTop
+      LayoutDirection = ldHorizontal
+      Index = 5
+      AutoCreated = True
+    end
+    object dxLayoutAutoCreatedGroup7: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      AlignHorz = ahClient
+      AlignVert = avTop
+      LayoutDirection = ldHorizontal
+      Index = 6
+      AutoCreated = True
+    end
+    object dxLayoutAutoCreatedGroup11: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      AlignHorz = ahClient
+      AlignVert = avTop
+      LayoutDirection = ldHorizontal
+      Index = 14
+      AutoCreated = True
+    end
+    object dxLayoutAutoCreatedGroup10: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      AlignHorz = ahClient
+      AlignVert = avTop
+      LayoutDirection = ldHorizontal
+      Index = 13
+      AutoCreated = True
+    end
+    object dxLayoutAutoCreatedGroup8: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      AlignVert = avTop
+      LayoutDirection = ldHorizontal
+      Index = 8
+      AutoCreated = True
+    end
+    object dxLayoutAutoCreatedGroup9: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      AlignVert = avTop
+      LayoutDirection = ldHorizontal
+      Index = 9
+      AutoCreated = True
+    end
+    object dxLayoutAutoCreatedGroup1: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutControl1Group_Root
+      AlignHorz = ahClient
+      AlignVert = avClient
+      LayoutDirection = ldHorizontal
+      Index = 1
+      AutoCreated = True
+    end
+    object dxLayoutItem30: TdxLayoutItem
+      Parent = Foto
+      CaptionOptions.Text = 'cxDBImage1'
+      CaptionOptions.Visible = False
+      Control = imgFotoCliente
+      ControlOptions.OriginalHeight = 150
+      ControlOptions.OriginalWidth = 140
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem1: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup3
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Tipos de clientes'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBLookupComboBox1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutAutoCreatedGroup3: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      LayoutDirection = ldHorizontal
+      Index = 0
+      AutoCreated = True
+    end
+  end
+  object qClientes: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    BeforePost = qClientesBeforePost
+    OnNewRecord = qClientesNewRecord
+    Parameters = <
+      item
+        Name = 'ClienteId'
+        Attributes = [paSigned]
+        DataType = ftInteger
+        Precision = 10
+        Size = 4
+        Value = Null
+      end>
+    SQL.Strings = (
+      'Select * From Clientes'
+      'Where ClienteId=:ClienteId')
+    Left = 64
+    Top = 408
+    object qClientesClienteId: TIntegerField
+      FieldName = 'ClienteId'
+    end
+    object qClientesClienteGuid: TGuidField
+      FieldName = 'ClienteGuid'
+      FixedChar = True
+      Size = 38
+    end
+    object qClientesCodigo: TIntegerField
+      FieldName = 'Codigo'
+    end
+    object qClientesTipoClienteId: TIntegerField
+      FieldName = 'TipoClienteId'
+    end
+    object qClientesCategoriaId: TIntegerField
+      FieldName = 'CategoriaId'
+    end
+    object qClientesNombres: TStringField
+      FieldName = 'Nombres'
+      Size = 200
+    end
+    object qClientesApellidos: TStringField
+      FieldName = 'Apellidos'
+      Size = 200
+    end
+    object qClientesAlias: TStringField
+      FieldName = 'Alias'
+      Size = 200
+    end
+    object qClientesRepresentante: TStringField
+      FieldName = 'Representante'
+      Size = 200
+    end
+    object qClientesTipoDocumentoId: TIntegerField
+      FieldName = 'TipoDocumentoId'
+    end
+    object qClientesDocumento: TStringField
+      FieldName = 'Documento'
+      Size = 50
+    end
+    object qClientesSexoId: TIntegerField
+      FieldName = 'SexoId'
+    end
+    object qClientesEstadoCivilId: TIntegerField
+      FieldName = 'EstadoCivilId'
+    end
+    object qClientesFechaNacimiento: TDateTimeField
+      FieldName = 'FechaNacimiento'
+    end
+    object qClientesTipoNCFId: TIntegerField
+      FieldName = 'TipoNCFId'
+    end
+    object qClientesTerminoPagoId: TIntegerField
+      FieldName = 'TerminoPagoId'
+    end
+    object qClientesListaPrecioId: TIntegerField
+      FieldName = 'ListaPrecioId'
+    end
+    object qClientesLimiteDeCredito: TBCDField
+      FieldName = 'LimiteDeCredito'
+      Precision = 19
+    end
+    object qClientesProvinciaId: TIntegerField
+      FieldName = 'ProvinciaId'
+    end
+    object qClientesDireccion: TMemoField
+      FieldName = 'Direccion'
+      BlobType = ftMemo
+    end
+    object qClientesTelefonoCelular: TStringField
+      FieldName = 'TelefonoCelular'
+    end
+    object qClientesTelefonoHogar: TStringField
+      FieldName = 'TelefonoHogar'
+    end
+    object qClientesTelefonoTrabajo: TStringField
+      FieldName = 'TelefonoTrabajo'
+    end
+    object qClientesCorreoElectronico: TStringField
+      FieldName = 'CorreoElectronico'
+      Size = 50
+    end
+    object qClientesEstadoId: TIntegerField
+      FieldName = 'EstadoId'
+    end
+    object qClientesCreadoPor: TStringField
+      FieldName = 'CreadoPor'
+      Size = 50
+    end
+    object qClientesFechaCreacion: TDateTimeField
+      FieldName = 'FechaCreacion'
+    end
+    object qClientesModificadoPor: TStringField
+      FieldName = 'ModificadoPor'
+      Size = 50
+    end
+    object qClientesFechaModficacion: TDateTimeField
+      FieldName = 'FechaModficacion'
+    end
+    object qClientesListadoTiposClientes: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoTiposClientes'
+      LookupDataSet = qTiposClientes
+      LookupKeyFields = 'TipoClienteId'
+      LookupResultField = 'TipoCliente'
+      KeyFields = 'TipoClienteId'
+      Lookup = True
+    end
+    object qClientesListadoCategorias: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoCategorias'
+      LookupDataSet = qCategorias
+      LookupKeyFields = 'CategoriaId'
+      LookupResultField = 'Categoria'
+      KeyFields = 'CategoriaId'
+      Lookup = True
+    end
+    object qClientesListadoTiposDocumentos: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoTiposDocumentos'
+      LookupDataSet = TiposDocumentos
+      LookupKeyFields = 'TipoDocumentoId'
+      LookupResultField = 'TipoDocumento'
+      KeyFields = 'TipoDocumentoId'
+      Lookup = True
+    end
+    object qClientesListadoSexos: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoSexos'
+      LookupDataSet = qSexos
+      LookupKeyFields = 'SexoId'
+      LookupResultField = 'Nombre'
+      KeyFields = 'SexoId'
+      Lookup = True
+    end
+    object qClientesListadoEstadosCiviles: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoEstadosCiviles'
+      LookupDataSet = qEstadosCiviles
+      LookupKeyFields = 'EstadoCivilId'
+      LookupResultField = 'Nombre'
+      KeyFields = 'EstadoCivilId'
+      Lookup = True
+    end
+    object qClientesNacionalidadId: TIntegerField
+      FieldName = 'NacionalidadId'
+    end
+    object qClientesListadoNacionalidades: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoNacionalidades'
+      LookupDataSet = qNacionalidades
+      LookupKeyFields = 'NacionalidadId'
+      LookupResultField = 'Nacionalidad'
+      KeyFields = 'NacionalidadId'
+      Lookup = True
+    end
+    object qClientesListadoNCF: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoNCF'
+      LookupDataSet = qTipoNCF
+      LookupKeyFields = 'TipoNCFId'
+      LookupResultField = 'TipoNCF'
+      KeyFields = 'TipoNCFId'
+      Lookup = True
+    end
+    object qClientesListadoTerminosDePagos: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoTerminosDePagos'
+      LookupDataSet = qTerminosDePagos
+      LookupKeyFields = 'TerminoPagoId'
+      LookupResultField = 'TerminoPago'
+      KeyFields = 'TerminoPagoId'
+      Lookup = True
+    end
+    object qClientesListadoListasDePrecios: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoListasDePrecios'
+      LookupDataSet = qListadoDePrecios
+      LookupKeyFields = 'ListaPrecioId'
+      LookupResultField = 'Nombre'
+      KeyFields = 'ListaPrecioId'
+      Lookup = True
+    end
+    object qClientesListadosProvincias: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadosProvincias'
+      LookupDataSet = qProvincias
+      LookupKeyFields = 'ProvinciaId'
+      LookupResultField = 'Nombre'
+      KeyFields = 'ProvinciaId'
+      Lookup = True
+    end
+  end
+  object dsClientes: TDataSource
+    DataSet = qClientes
+    Left = 128
+    Top = 408
+  end
+  object qTiposClientes: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from ClientesTipos')
+    Left = 56
+    object qTiposClientesTipoClienteId: TIntegerField
+      FieldName = 'TipoClienteId'
+    end
+    object qTiposClientesTipoCliente: TStringField
+      DisplayLabel = 'Tipos de clientes'
+      FieldName = 'TipoCliente'
+      Size = 50
+    end
+  end
+  object qCategorias: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From ClientesCategorias'
+      'Where EstadoId = 1')
+    Left = 136
+    object qCategoriasCategoriaId: TIntegerField
+      FieldName = 'CategoriaId'
+    end
+    object qCategoriasCategoria: TStringField
+      DisplayLabel = 'Categorias'
+      FieldName = 'Categoria'
+      Size = 200
+    end
+  end
+  object TiposDocumentos: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From TiposDocumentos')
+    Left = 216
+    object TiposDocumentosTipoDocumentoId: TIntegerField
+      FieldName = 'TipoDocumentoId'
+    end
+    object TiposDocumentosTipoDocumento: TStringField
+      DisplayLabel = 'Tipos de documentos'
+      FieldName = 'TipoDocumento'
+      Size = 50
+    end
+  end
+  object qSexos: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From Sexos')
+    Left = 280
+    object qSexosSexoId: TIntegerField
+      FieldName = 'SexoId'
+    end
+    object qSexosNombre: TStringField
+      DisplayLabel = 'Sexos'
+      FieldName = 'Nombre'
+      Size = 50
+    end
+  end
+  object qEstadosCiviles: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From EstadosCiviles')
+    Left = 336
+    object qEstadosCivilesEstadoCivilId: TIntegerField
+      FieldName = 'EstadoCivilId'
+    end
+    object qEstadosCivilesNombre: TStringField
+      DisplayLabel = 'Estados civiles'
+      FieldName = 'Nombre'
+      Size = 50
+    end
+  end
+  object qNacionalidades: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From Nacionalidades')
+    Left = 408
+    object qNacionalidadesNacionalidadId: TIntegerField
+      FieldName = 'NacionalidadId'
+    end
+    object qNacionalidadesNacionalidad: TStringField
+      DisplayLabel = 'Nacionalidades'
+      FieldName = 'Nacionalidad'
+      Size = 50
+    end
+  end
+  object qTipoNCF: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From ComprobantesFicalesTipos')
+    Left = 480
+    Top = 8
+    object qTipoNCFTipoNCFId: TIntegerField
+      FieldName = 'TipoNCFId'
+    end
+    object qTipoNCFTipoNCF: TStringField
+      DisplayLabel = 'Comprobantes fiscales'
+      FieldName = 'TipoNCF'
+      Size = 100
+    end
+    object qTipoNCFLetra: TStringField
+      FieldName = 'Letra'
+      Size = 1
+    end
+    object qTipoNCFCodigo: TStringField
+      FieldName = 'Codigo'
+      Size = 2
+    end
+    object qTipoNCFesElectronico: TBooleanField
+      FieldName = 'esElectronico'
+    end
+  end
+  object qTerminosDePagos: TADOQuery
+    Active = True
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from ClientesTerminosDePagos'
+      'Where EstadoId = 1')
+    Left = 544
+    Top = 8
+    object qTerminosDePagosTerminoPagoId: TIntegerField
+      FieldName = 'TerminoPagoId'
+    end
+    object qTerminosDePagosTerminoPago: TStringField
+      FieldName = 'TerminoPago'
+      Size = 150
+    end
+    object qTerminosDePagosDias: TIntegerField
+      FieldName = 'Dias'
+    end
+    object qTerminosDePagosEstadoId: TIntegerField
+      FieldName = 'EstadoId'
+    end
+    object qTerminosDePagosCreadoPor: TStringField
+      FieldName = 'CreadoPor'
+      Size = 50
+    end
+    object qTerminosDePagosFechaCreacion: TDateTimeField
+      FieldName = 'FechaCreacion'
+    end
+    object qTerminosDePagosModificadoPor: TStringField
+      FieldName = 'ModificadoPor'
+      Size = 50
+    end
+    object qTerminosDePagosFechaModificacion: TDateTimeField
+      FieldName = 'FechaModificacion'
+    end
+  end
+  object qListadoDePrecios: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from ListasDePrecios')
+    Left = 616
+    Top = 8
+    object qListadoDePreciosListaPrecioId: TIntegerField
+      FieldName = 'ListaPrecioId'
+    end
+    object qListadoDePreciosNombre: TStringField
+      DisplayLabel = 'Listasd de precios'
+      FieldName = 'Nombre'
+      Size = 200
+    end
+    object qListadoDePreciosDescripcion: TMemoField
+      FieldName = 'Descripcion'
+      BlobType = ftMemo
+    end
+    object qListadoDePreciosEstadoId: TIntegerField
+      FieldName = 'EstadoId'
+    end
+  end
+  object qProvincias: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from Provincias')
+    Left = 672
+    object qProvinciasProvinciaId: TIntegerField
+      FieldName = 'ProvinciaId'
+    end
+    object qProvinciasNombre: TStringField
+      DisplayLabel = 'Provincias'
+      FieldName = 'Nombre'
+      Size = 100
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 760
+    Top = 40
+    object Configuraciones1: TMenuItem
+      Caption = 'Configuraciones'
+      object Clientescategorias1: TMenuItem
+        Caption = 'Categorias'
+        OnClick = Clientescategorias1Click
+      end
+      object Clientesplazosdepagos1: TMenuItem
+        Caption = 'Plazos de pagos'
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object Salir1: TMenuItem
+        Caption = 'Salir'
+        OnClick = Salir1Click
+      end
+    end
+  end
+  object qValoresPorDefecto: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From ValoresPorDefecto')
+    Left = 712
+    Top = 432
+    object qValoresPorDefectoClientesTipoClienteId: TIntegerField
+      FieldName = 'ClientesTipoClienteId'
+    end
+    object qValoresPorDefectoClientesCategoriaId: TIntegerField
+      FieldName = 'ClientesCategoriaId'
+    end
+    object qValoresPorDefectoClientesTerminoDePagoId: TIntegerField
+      FieldName = 'ClientesTerminoDePagoId'
+    end
+    object qValoresPorDefectoClientesSexoId: TIntegerField
+      FieldName = 'ClientesSexoId'
+    end
+    object qValoresPorDefectoClientesProvinciaId: TIntegerField
+      FieldName = 'ClientesProvinciaId'
+    end
+    object qValoresPorDefectoClientesTipoDocumentoId: TIntegerField
+      FieldName = 'ClientesTipoDocumentoId'
+    end
+    object qValoresPorDefectoClientesEstadoCivilId: TIntegerField
+      FieldName = 'ClientesEstadoCivilId'
+    end
+    object qValoresPorDefectoClientesListaPrecioId: TIntegerField
+      FieldName = 'ClientesListaPrecioId'
+    end
+    object qValoresPorDefectoClientesNacionalidadId: TIntegerField
+      FieldName = 'ClientesNacionalidadId'
+    end
+    object qValoresPorDefectoClientesTipoNCFId: TIntegerField
+      FieldName = 'ClientesTipoNCFId'
+    end
+  end
+  object qProximoCodigo: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select IsNull(Max(Codigo),0)+1 Codigo From Clientes')
+    Left = 40
+    Top = 600
+  end
+  object qHistorialCambios: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <
+      item
+        Name = 'HistorialId'
+        Attributes = [paSigned]
+        DataType = ftInteger
+        Precision = 10
+        Size = 4
+        Value = Null
+      end>
+    SQL.Strings = (
+      'Select * From HistorialDeCambios '
+      'Where HistorialId=:HistorialId')
+    Left = 736
+    Top = 368
+    object qHistorialCambiosHistorialId: TIntegerField
+      FieldName = 'HistorialId'
+    end
+    object qHistorialCambiosTabla: TStringField
+      FieldName = 'Tabla'
+      Size = 50
+    end
+    object qHistorialCambiosClavePrimaria: TIntegerField
+      FieldName = 'ClavePrimaria'
+    end
+    object qHistorialCambiosCampo: TStringField
+      FieldName = 'Campo'
+      Size = 50
+    end
+    object qHistorialCambiosValorAnterior: TMemoField
+      FieldName = 'ValorAnterior'
+      BlobType = ftMemo
+    end
+    object qHistorialCambiosValorNuevo: TMemoField
+      FieldName = 'ValorNuevo'
+      BlobType = ftMemo
+    end
+    object qHistorialCambiosUsuario: TStringField
+      FieldName = 'Usuario'
+      Size = 50
+    end
+    object qHistorialCambiosFechaCambio: TDateTimeField
+      FieldName = 'FechaCambio'
+    end
+  end
+  object qFotos: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    OnNewRecord = qFotosNewRecord
+    Parameters = <
+      item
+        Name = 'ClienteId'
+        Attributes = [paSigned]
+        DataType = ftInteger
+        Precision = 10
+        Size = 4
+        Value = Null
+      end>
+    SQL.Strings = (
+      'Select * From ClientesFotos Where ClienteId= :ClienteId')
+    Left = 776
+    Top = 128
+  end
+  object dsFotos: TDataSource
+    DataSet = qFotos
+    Left = 784
+    Top = 192
+  end
+end

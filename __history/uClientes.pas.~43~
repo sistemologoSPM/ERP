@@ -1,0 +1,264 @@
+unit uClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uBaseFormList, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, Vcl.Menus, cxStyles, cxCustomData, cxFilter, cxData,
+  cxDataStorage, cxEdit, cxNavigator,
+  cxDataControllerConditionalFormattingRulesManagerDialog, Data.DB, cxDBData,
+  dxLayoutControlAdapters, dxLayoutContainer, Vcl.AppEvnts, cxGridLevel,
+  cxClasses, cxGridCustomView, cxGridCustomTableView, cxGridTableView,
+  cxGridDBTableView, cxGrid, Vcl.StdCtrls, cxButtons, dxLayoutControl,
+  Vcl.ExtCtrls, Vcl.ComCtrls, uClientesCreate, uBaseDeDatos, Data.Win.ADODB,
+  uClientesHistorial, System.ImageList, Vcl.ImgList, cxImageList,
+  cxImageComboBox, uFormShadow, uClientesValoresPorDefecto, uMensaje;
+
+type
+  TfrmClientes = class(TfrmFormList)
+    dxLayoutSeparatorItem2: TdxLayoutSeparatorItem;
+    dxLayoutItem3: TdxLayoutItem;
+    dxLayoutItem4: TdxLayoutItem;
+    btnImportar: TcxButton;
+    btnPlantillaImportarClientes: TcxButton;
+    btnClienteVer: TcxButton;
+    btnClienteModificar: TcxButton;
+    btnClienteHistorialCambios: TcxButton;
+    dxLayoutItem6: TdxLayoutItem;
+    dxLayoutItem8: TdxLayoutItem;
+    dxLayoutItem9: TdxLayoutItem;
+    dxLayoutItem10: TdxLayoutItem;
+    btnFacturar: TcxButton;
+    btnAplicarPagos: TcxButton;
+    qClientes: TADOQuery;
+    dsClientes: TDataSource;
+    qClientescodigo: TIntegerField;
+    qClientesNombreCliente: TStringField;
+    qClientesCategoria: TStringField;
+    qClientesTipoCliente: TStringField;
+    qClientesDocumento: TStringField;
+    qClientesTelefonos: TStringField;
+    qClientesCorreoElectronico: TStringField;
+    qClientesEstado: TStringField;
+    GridListadoDBTableView1codigo: TcxGridDBColumn;
+    GridListadoDBTableView1NombreCliente: TcxGridDBColumn;
+    GridListadoDBTableView1Categoria: TcxGridDBColumn;
+    GridListadoDBTableView1TipoCliente: TcxGridDBColumn;
+    GridListadoDBTableView1Documento: TcxGridDBColumn;
+    GridListadoDBTableView1Telefonos: TcxGridDBColumn;
+    GridListadoDBTableView1CorreoElectronico: TcxGridDBColumn;
+    GridListadoDBTableView1Estado: TcxGridDBColumn;
+    qClientesClienteId: TIntegerField;
+    btnEnviarNotificacion: TcxButton;
+    dxLayoutItem11: TdxLayoutItem;
+    dxLayoutItem12: TdxLayoutItem;
+    btnInactivarCliente: TcxButton;
+    cxImageList1: TcxImageList;
+    qClientesEstadoId: TIntegerField;
+    MainMenu1: TMainMenu;
+    Configuraciones1: TMenuItem;
+    Valorespordefecto1: TMenuItem;
+    N1: TMenuItem;
+    Salir1: TMenuItem;
+    ClientesActualizarEstado: TADOStoredProc;
+    qClientesCambios: TIntegerField;
+    procedure btnNuevoClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure btnClienteModificarClick(Sender: TObject);
+    procedure btnClienteHistorialCambiosClick(Sender: TObject);
+    procedure qClientesAfterScroll(DataSet: TDataSet);
+    procedure Valorespordefecto1Click(Sender: TObject);
+    procedure Salir1Click(Sender: TObject);
+    procedure btnInactivarClienteClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    ClienteId:Integer;
+    { Public declarations }
+  end;
+
+var
+  frmClientes: TfrmClientes;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmClientes.btnClienteHistorialCambiosClick(Sender: TObject);
+begin
+  inherited;
+
+  frmShadow:= TfrmShadow.Create(self);
+  frmShadow.Show;
+
+
+ frmClientesHistorial:= TfrmClientesHistorial.Create(self);
+ frmClientesHistorial.ClienteId:=qClientes.FieldByName('ClienteId').AsInteger;
+ frmClientesHistorial.ClienteNombre:= qClientes.FieldByName('NombreCliente').AsString;
+ frmClientesHistorial.ShowModal;
+ frmClientesHistorial.Release;
+
+ frmShadow.Free;
+
+end;
+
+procedure TfrmClientes.btnClienteModificarClick(Sender: TObject);
+
+begin
+  inherited;
+    inherited;
+
+
+
+  frmShadow:= TfrmShadow.Create(self);
+  frmShadow.Show;
+
+  frmClientesCreate:= TfrmClientesCreate.Create(self);
+  frmClientesCreate.ClienteId:=qClientes.FieldByName('ClienteId').AsInteger;;
+  ClienteId:= frmClientesCreate.ShowModal;
+  frmClientesCreate.Release;
+
+  frmShadow.Free;
+
+  qClientes.Close;
+  qClientes.Open;
+
+  qClientes.Locate('ClienteId',ClienteId, [] );
+  GridListadoDBTableView1.Control.SetFocus;
+
+end;
+
+procedure TfrmClientes.btnInactivarClienteClick(Sender: TObject);
+var
+  Mensaje:String;
+  EstadoId, ClienteId:Integer;
+
+begin
+  inherited;
+
+  ClienteId:= qClientes.FieldByName('ClienteId').AsInteger;
+  Mensaje:= '¿Esta seguro que desea deactivar el cliente?';
+  EstadoId:= 2;
+
+  if qClientes.FieldByName('EstadoId').AsInteger = 2 then
+    Begin
+       Mensaje:= '¿Esta seguro que desea activar el cliente?';
+       EstadoId:= 1;
+    End;
+
+  frmMensaje:= TfrmMensaje.Create(self);
+  frmMensaje.Mensaje:= Mensaje;
+
+  if frmMensaje.ShowModal = mrOk then
+    Begin
+      ClientesActualizarEstado.Parameters.ParamValues['@ClienteId']:= ClienteId;
+      ClientesActualizarEstado.Parameters.ParamValues['@EstadoId']:= EstadoId;
+      ClientesActualizarEstado.Parameters.ParamValues['@Usuario']:= dmBaseDeDatos.GetUsuarioActual;
+
+      ClientesActualizarEstado.ExecProc;
+
+      qClientes.Close;
+      qClientes.Open;
+
+      qClientes.Locate('ClienteId', ClienteId,[] );
+      GridListadoDBTableView1.Control.SetFocus;
+
+    End;
+
+  frmMensaje.Free;
+
+
+
+
+end;
+
+procedure TfrmClientes.btnNuevoClick(Sender: TObject);
+begin
+  inherited;
+
+  frmShadow:= TfrmShadow.Create(self);
+  frmShadow.Show;
+
+  frmClientesCreate:= TfrmClientesCreate.Create(self);
+  frmClientesCreate.ClienteId:=0;
+  ClienteId:= frmClientesCreate.ShowModal;
+  frmClientesCreate.Release;
+
+  frmShadow.Free;
+
+  qClientes.Close;
+  qClientes.Open;
+
+
+  qClientes.Locate('ClienteId', ClienteId,[] );
+  GridListadoDBTableView1.Control.SetFocus;
+
+
+end;
+
+procedure TfrmClientes.FormShow(Sender: TObject);
+begin
+  inherited;
+
+  qClientes.Close;
+  qClientes.Open;
+  
+end;
+
+procedure TfrmClientes.qClientesAfterScroll(DataSet: TDataSet);
+begin
+  inherited;
+
+        btnInactivarCliente.Caption:= 'Desactivar';
+      btnInactivarCliente.OptionsImage.ImageIndex:=1;
+
+  if DataSet.FieldByName('EstadoId').AsInteger = 2 then
+    Begin
+      btnInactivarCliente.Caption:= 'Activar';
+      btnInactivarCliente.OptionsImage.ImageIndex:=0;
+    End;
+
+     btnClienteHistorialCambios.Enabled:= DataSet.FieldByName('Cambios').AsInteger > 0;
+
+end;
+
+procedure TfrmClientes.Salir1Click(Sender: TObject);
+begin
+  inherited;
+Close;
+end;
+
+procedure TfrmClientes.Valorespordefecto1Click(Sender: TObject);
+begin
+  inherited;
+
+
+  frmShadow:= TfrmShadow.Create(self);
+  frmShadow.Show;
+
+
+frmClientesValoresPorDefecto:= TfrmClientesValoresPorDefecto.Create(self);
+frmClientesValoresPorDefecto.ShowModal;
+frmClientesValoresPorDefecto.Release;
+
+frmShadow.Free;
+
+end;
+
+end.

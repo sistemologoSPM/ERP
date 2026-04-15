@@ -1,0 +1,218 @@
+unit uMenu;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxLookAndFeels,
+  cxLookAndFeelPainters, Vcl.Menus, dxSkinsCore, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, cxControls, cxContainer, cxEdit, cxImage, Vcl.StdCtrls,
+  cxButtons, Vcl.ExtCtrls, cxPC, System.ImageList, Vcl.ImgList, cxImageList,
+  Vcl.ComCtrls, cxLabel, dxBevel, cxStyles, cxCustomData, Data.DB, cxDBData,
+  cxGridLevel, cxGridChartView, cxGridDBChartView, cxClasses, cxGridCustomView,
+  cxGrid, dxGDIPlusClasses, cxFilter, cxData, cxDataStorage, cxNavigator,
+  cxDataControllerConditionalFormattingRulesManagerDialog,
+  cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxTextEdit,
+  cxMaskEdit, cxDropDownEdit,
+  dxLayoutControlAdapters, dxLayoutContainer, dxLayoutControl,
+  dxLayoutcxEditAdapters, uClientes, uConducesClientes, uClientesCreate;
+
+type
+  TfrmMenu = class(TForm)
+    Panel1: TPanel;
+    FlowPanel1: TFlowPanel;
+    btnUsuarioActual: TcxButton;
+    cxButton17: TcxButton;
+    cxButton18: TcxButton;
+    cxImage2: TcxImage;
+    pcMEnu: TcxPageControl;
+    tabIngresos: TcxTabSheet;
+    tabCompras: TcxTabSheet;
+    tabInventario: TcxTabSheet;
+    tabContabilidad: TcxTabSheet;
+    tabRecursosHumanos: TcxTabSheet;
+    Imagenes24x24: TcxImageList;
+    tabConfiguraciones: TcxTabSheet;
+    StatusBar1: TStatusBar;
+    btnClientes: TcxButton;
+    btnCotizaciones: TcxButton;
+    btnConducesClientes: TcxButton;
+    btnFacturas: TcxButton;
+    btnPagosRecibidos: TcxButton;
+    btnNotasDeCreditos: TcxButton;
+    btnFacturasRecurrentes: TcxButton;
+    Imagenes16x16: TcxImageList;
+    Panel3: TPanel;
+    btnCuadresDeCajas: TcxButton;
+    btnConducesVendedores: TcxButton;
+    cxButton8: TcxButton;
+    cxButton9: TcxButton;
+    cxButton10: TcxButton;
+    cxButton11: TcxButton;
+    cxButton22: TcxButton;
+    cxButton23: TcxButton;
+    btnReporteAntiguedadSaldoCxC: TcxButton;
+    btnReporteEstadoCuentaCxC: TcxButton;
+    btnReporteFacturasPendientesCxC: TcxButton;
+    btnReporteListadoFacturasCxC: TcxButton;
+    btnReporteListadoPagosCxC: TcxButton;
+    btnReporteListadoNotasCreditosCxC: TcxButton;
+    Panel6: TPanel;
+    Panel7: TPanel;
+    Bevel1: TBevel;
+    cardTotalCxC: TPanel;
+    dxBevel1: TdxBevel;
+    cxLabel3: TcxLabel;
+    cxLabel4: TcxLabel;
+    cxImage3: TcxImage;
+    cardTotalVencido: TPanel;
+    dxBevel2: TdxBevel;
+    cxLabel5: TcxLabel;
+    cxLabel6: TcxLabel;
+    cxImage4: TcxImage;
+    cardTotalNoVencido: TPanel;
+    dxBevel3: TdxBevel;
+    cxLabel7: TcxLabel;
+    cxLabel8: TcxLabel;
+    cxImage5: TcxImage;
+    cbFiltroMonedasCxC: TcxComboBox;
+    cbFiltrosCxC: TcxComboBox;
+    ScrollBox1: TScrollBox;
+    Bevel5: TBevel;
+    Panel4: TPanel;
+    cxButton12: TcxButton;
+    Panel5: TPanel;
+    cxButton13: TcxButton;
+    cxButton14: TcxButton;
+    cxButton16: TcxButton;
+    cxButton20: TcxButton;
+    cxButton24: TcxButton;
+    cxButton25: TcxButton;
+    cxButton26: TcxButton;
+    cxButton33: TcxButton;
+    cxButton34: TcxButton;
+    tabBancos: TcxTabSheet;
+    Panel8: TPanel;
+    cxButton35: TcxButton;
+    cxButton36: TcxButton;
+    cxButton37: TcxButton;
+    cxButton38: TcxButton;
+    cxButton15: TcxButton;
+    cxTabSheet1: TcxTabSheet;
+    Panel10: TPanel;
+    cxButton39: TcxButton;
+    cxButton40: TcxButton;
+    Panel11: TPanel;
+    cxButton41: TcxButton;
+    cxButton42: TcxButton;
+    cxButton45: TcxButton;
+    cxButton43: TcxButton;
+    cxButton44: TcxButton;
+    dxLayoutControl1Group_Root: TdxLayoutGroup;
+    dxLayoutControl1: TdxLayoutControl;
+    OpcionesCxC: TdxLayoutGroup;
+    ReportesCXC: TdxLayoutGroup;
+    DashboardCxC: TdxLayoutGroup;
+    dxLayoutItem1: TdxLayoutItem;
+    dxLayoutItem2: TdxLayoutItem;
+    dxLayoutItem3: TdxLayoutItem;
+    dxLayoutGroup1: TdxLayoutGroup;
+    dxLayoutItem4: TdxLayoutItem;
+    dxLayoutGroup2: TdxLayoutGroup;
+    dxLayoutAutoCreatedGroup1: TdxLayoutAutoCreatedGroup;
+    dxLayoutItem5: TdxLayoutItem;
+    dxLayoutItem6: TdxLayoutItem;
+    dxLayoutItem7: TdxLayoutItem;
+    dxLayoutItem8: TdxLayoutItem;
+    dxLayoutItem9: TdxLayoutItem;
+    dxLayoutItem10: TdxLayoutItem;
+    dxLayoutItem11: TdxLayoutItem;
+    dxLayoutItem12: TdxLayoutItem;
+    dxLayoutItem13: TdxLayoutItem;
+    dxLayoutItem14: TdxLayoutItem;
+    dxLayoutItem15: TdxLayoutItem;
+    dxLayoutAutoCreatedGroup2: TdxLayoutAutoCreatedGroup;
+    dxLayoutItem16: TdxLayoutItem;
+    dxLayoutItem17: TdxLayoutItem;
+    dxLayoutGroup3: TdxLayoutGroup;
+    dxLayoutItem18: TdxLayoutItem;
+    dxLayoutItem19: TdxLayoutItem;
+    dxLayoutItem20: TdxLayoutItem;
+    dxLayoutAutoCreatedGroup3: TdxLayoutAutoCreatedGroup;
+    dxLayoutSeparatorItem1: TdxLayoutSeparatorItem;
+    procedure cxLabel4MouseEnter(Sender: TObject);
+    procedure cxLabel4MouseLeave(Sender: TObject);
+    procedure btnClientesClick(Sender: TObject);
+    procedure btnConducesClientesClick(Sender: TObject);
+    procedure btnConducesVendedoresClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMenu: TfrmMenu;
+
+implementation
+
+{$R *.dfm}
+
+
+
+procedure TfrmMenu.btnClientesClick(Sender: TObject);
+begin
+frmClientes:= tfrmClientes.Create(Self);
+frmClientes.Modo := 1;
+frmClientes.WindowState:= wsMaximized;
+frmClientes.ShowModal;
+frmClientes.Release;
+
+
+end;
+
+procedure TfrmMenu.btnConducesClientesClick(Sender: TObject);
+begin
+frmConducesClientes:= tfrmConducesClientes.Create(self);
+frmConducesClientes.modo:= 1;
+frmConducesClientes.ShowModal;
+frmConducesClientes.Release;
+end;
+
+procedure TfrmMenu.btnConducesVendedoresClick(Sender: TObject);
+begin
+
+  frmClientesCreate:= TfrmClientesCreate.Create(self);
+  frmClientesCreate.ClienteId:=0;
+  frmClientesCreate.ShowModal;
+  frmClientesCreate.Release;
+
+end;
+
+procedure TfrmMenu.cxLabel4MouseEnter(Sender: TObject);
+begin
+
+cxLabel4.Style.TextStyle:= [fsBold,fsUnderline];
+end;
+
+procedure TfrmMenu.cxLabel4MouseLeave(Sender: TObject);
+begin
+cxLabel4.Style.TextStyle:= [fsBold];
+
+end;
+
+end.

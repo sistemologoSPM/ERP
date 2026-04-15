@@ -1,0 +1,14 @@
+object dmBaseDeDatos: TdmBaseDeDatos
+  OldCreateOrder = False
+  Height = 153
+  Width = 194
+  object db: TADOConnection
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
+      'fo=False;Initial Catalog=ERP;Data Source=LAPTOP-OLDNPPCQ;'
+    LoginPrompt = False
+    Provider = 'SQLOLEDB.1'
+    Left = 80
+    Top = 56
+  end
+end

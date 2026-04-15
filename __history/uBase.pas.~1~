@@ -1,0 +1,43 @@
+unit uBase;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.AppEvnts, Vcl.ComCtrls;
+
+type
+  TfrmBase = class(TForm)
+    ApplicationEvents1: TApplicationEvents;
+    StatusBar1: TStatusBar;
+    procedure ApplicationEvents1ModalBegin(Sender: TObject);
+    procedure ApplicationEvents1ModalEnd(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmBase: TfrmBase;
+
+implementation
+
+{$R *.dfm}
+
+uses uFormShadow;
+
+procedure TfrmBase.ApplicationEvents1ModalBegin(Sender: TObject);
+begin
+  frmShadow:= tfrmShadow.Create(self);
+  frmShadow.BoundsRect := Application.MainForm.BoundsRect;
+  frmShadow.Show; // Use Show for the dimmer, not ShowModal
+end;
+
+procedure TfrmBase.ApplicationEvents1ModalEnd(Sender: TObject);
+begin
+  frmShadow.Release;
+  frmShadow.Hide;
+end;
+
+end.

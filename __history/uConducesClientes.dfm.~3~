@@ -1,0 +1,5 @@
+inherited frmFormList1: TfrmFormList1
+  Caption = 'frmFormList1'
+  PixelsPerInch = 96
+  TextHeight = 16
+end

@@ -1,0 +1,5 @@
+inherited frmClientesCategoriasHistorial: TfrmClientesCategoriasHistorial
+  Caption = 'frmClientesCategoriasHistorial'
+  PixelsPerInch = 96
+  TextHeight = 16
+end

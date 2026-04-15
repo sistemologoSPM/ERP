@@ -1,0 +1,532 @@
+unit uClientesCreate;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uBaseFormInsert, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, Vcl.Menus, dxLayoutControlAdapters, Vcl.AppEvnts,
+  dxLayoutContainer, cxClasses, Vcl.StdCtrls, cxButtons, dxLayoutControl,
+  Vcl.ComCtrls, dxLayoutcxEditAdapters, cxContainer, cxEdit, cxImage, Data.DB,
+  Data.Win.ADODB, uBaseDeDatos, cxTextEdit, cxDBEdit, Vcl.DBCtrls, cxMaskEdit,
+  cxDropDownEdit, cxCalendar, cxCurrencyEdit, cxMemo, dxLayoutLookAndFeels,
+  Vcl.ExtCtrls, cxLookupEdit, cxDBLookupEdit,
+  cxDBLookupComboBox, uFormShadow;
+
+type
+  TfrmClientesCreate = class(TfrmBaseFormInsert)
+
+    Foto: TdxLayoutGroup;
+    btnCargarFoto: TcxButton;
+    dxLayoutItem3: TdxLayoutItem;
+    btnTomarFoto: TcxButton;
+    dxLayoutItem4: TdxLayoutItem;
+    qClientes: TADOQuery;
+    dsClientes: TDataSource;
+    qClientesClienteId: TIntegerField;
+    qClientesClienteGuid: TGuidField;
+    qClientesCodigo: TIntegerField;
+    qClientesTipoClienteId: TIntegerField;
+    qClientesCategoriaId: TIntegerField;
+    qClientesNombres: TStringField;
+    qClientesApellidos: TStringField;
+    qClientesAlias: TStringField;
+    qClientesRepresentante: TStringField;
+    qClientesTipoDocumentoId: TIntegerField;
+    qClientesDocumento: TStringField;
+    qClientesSexoId: TIntegerField;
+    qClientesEstadoCivilId: TIntegerField;
+    qClientesFechaNacimiento: TDateTimeField;
+    qClientesTipoNCFId: TIntegerField;
+    qClientesTerminoPagoId: TIntegerField;
+    qClientesListaPrecioId: TIntegerField;
+    qClientesLimiteDeCredito: TBCDField;
+    qClientesProvinciaId: TIntegerField;
+    qClientesDireccion: TMemoField;
+    qClientesTelefonoCelular: TStringField;
+    qClientesTelefonoHogar: TStringField;
+    qClientesTelefonoTrabajo: TStringField;
+    qClientesCorreoElectronico: TStringField;
+    qClientesEstadoId: TIntegerField;
+    qClientesCreadoPor: TStringField;
+    qClientesFechaCreacion: TDateTimeField;
+    qClientesModificadoPor: TStringField;
+    qClientesFechaModficacion: TDateTimeField;
+    qTiposClientes: TADOQuery;
+    qClientesListadoTiposClientes: TStringField;
+    qCategorias: TADOQuery;
+    qClientesListadoCategorias: TStringField;
+    txtNombres: TcxDBTextEdit;
+    dxLayoutItem5: TdxLayoutItem;
+    txtApellidos: TcxDBTextEdit;
+    dxLayoutItem6: TdxLayoutItem;
+    dxLayoutItem8: TdxLayoutItem;
+    cxDBTextEdit3: TcxDBTextEdit;
+    dxLayoutItem9: TdxLayoutItem;
+    cxDBTextEdit4: TcxDBTextEdit;
+    dxLayoutItem10: TdxLayoutItem;
+    TiposDocumentos: TADOQuery;
+    qClientesListadoTiposDocumentos: TStringField;
+    dxLayoutItem11: TdxLayoutItem;
+    txtDocumento: TcxDBTextEdit;
+    dxLayoutItem12: TdxLayoutItem;
+    qSexos: TADOQuery;
+    qEstadosCiviles: TADOQuery;
+    qNacionalidades: TADOQuery;
+    qClientesListadoSexos: TStringField;
+    qClientesListadoEstadosCiviles: TStringField;
+    qClientesNacionalidadId: TIntegerField;
+    qClientesListadoNacionalidades: TStringField;
+    dxLayoutItem13: TdxLayoutItem;
+    dxLayoutItem14: TdxLayoutItem;
+    cxDBDateEdit1: TcxDBDateEdit;
+    dxLayoutItem15: TdxLayoutItem;
+    dxLayoutItem16: TdxLayoutItem;
+    qTipoNCF: TADOQuery;
+    qClientesListadoNCF: TStringField;
+    dxLayoutItem17: TdxLayoutItem;
+    qTerminosDePagos: TADOQuery;
+    qClientesListadoTerminosDePagos: TStringField;
+    dxLayoutItem18: TdxLayoutItem;
+    qListadoDePrecios: TADOQuery;
+    qClientesListadoListasDePrecios: TStringField;
+    cxDBCurrencyEdit1: TcxDBCurrencyEdit;
+    dxLayoutItem20: TdxLayoutItem;
+    dxLayoutItem19: TdxLayoutItem;
+    qProvincias: TADOQuery;
+    qClientesListadosProvincias: TStringField;
+    dxLayoutItem21: TdxLayoutItem;
+    cxDBMemo1: TcxDBMemo;
+    dxLayoutItem22: TdxLayoutItem;
+    cxDBTextEdit7: TcxDBTextEdit;
+    dxLayoutItem23: TdxLayoutItem;
+    cxDBTextEdit8: TcxDBTextEdit;
+    dxLayoutItem24: TdxLayoutItem;
+    cxDBTextEdit9: TcxDBTextEdit;
+    dxLayoutItem25: TdxLayoutItem;
+    cxDBTextEdit6: TcxDBTextEdit;
+    dxLayoutItem26: TdxLayoutItem;
+    Panel1: TPanel;
+    dxLayoutItem27: TdxLayoutItem;
+    Panel2: TPanel;
+    dxLayoutItem28: TdxLayoutItem;
+    Panel3: TPanel;
+    dxLayoutItem29: TdxLayoutItem;
+    dxLayoutAutoCreatedGroup4: TdxLayoutAutoCreatedGroup;
+    dxLayoutAutoCreatedGroup2: TdxLayoutAutoCreatedGroup;
+    dxLayoutAutoCreatedGroup5: TdxLayoutAutoCreatedGroup;
+    dxLayoutAutoCreatedGroup6: TdxLayoutAutoCreatedGroup;
+    dxLayoutAutoCreatedGroup7: TdxLayoutAutoCreatedGroup;
+    dxLayoutAutoCreatedGroup11: TdxLayoutAutoCreatedGroup;
+    dxLayoutAutoCreatedGroup10: TdxLayoutAutoCreatedGroup;
+    dxLayoutAutoCreatedGroup8: TdxLayoutAutoCreatedGroup;
+    dxLayoutAutoCreatedGroup9: TdxLayoutAutoCreatedGroup;
+    dxLayoutAutoCreatedGroup1: TdxLayoutAutoCreatedGroup;
+    imgFotoCliente: TcxDBImage;
+    dxLayoutItem30: TdxLayoutItem;
+    MainMenu1: TMainMenu;
+    Configuraciones1: TMenuItem;
+    Clientescategorias1: TMenuItem;
+    Clientesplazosdepagos1: TMenuItem;
+    qValoresPorDefecto: TADOQuery;
+    qValoresPorDefectoClientesTipoClienteId: TIntegerField;
+    qValoresPorDefectoClientesCategoriaId: TIntegerField;
+    qValoresPorDefectoClientesTerminoDePagoId: TIntegerField;
+    qValoresPorDefectoClientesSexoId: TIntegerField;
+    qValoresPorDefectoClientesProvinciaId: TIntegerField;
+    qValoresPorDefectoClientesTipoDocumentoId: TIntegerField;
+    qValoresPorDefectoClientesEstadoCivilId: TIntegerField;
+    qValoresPorDefectoClientesListaPrecioId: TIntegerField;
+    qValoresPorDefectoClientesNacionalidadId: TIntegerField;
+    qValoresPorDefectoClientesTipoNCFId: TIntegerField;
+    cxDBLookupComboBox1: TcxDBLookupComboBox;
+    dxLayoutItem1: TdxLayoutItem;
+    dxLayoutAutoCreatedGroup3: TdxLayoutAutoCreatedGroup;
+    cxDBLookupComboBox2: TcxDBLookupComboBox;
+    qCategoriasCategoriaId: TIntegerField;
+    qCategoriasCategoria: TStringField;
+    qTiposClientesTipoClienteId: TIntegerField;
+    qTiposClientesTipoCliente: TStringField;
+    cxDBLookupComboBox3: TcxDBLookupComboBox;
+    cxDBLookupComboBox4: TcxDBLookupComboBox;
+    cxDBLookupComboBox5: TcxDBLookupComboBox;
+    cxDBLookupComboBox6: TcxDBLookupComboBox;
+    cxDBLookupComboBox7: TcxDBLookupComboBox;
+    cxDBLookupComboBox8: TcxDBLookupComboBox;
+    cxDBLookupComboBox9: TcxDBLookupComboBox;
+    cxDBLookupComboBox10: TcxDBLookupComboBox;
+    TiposDocumentosTipoDocumentoId: TIntegerField;
+    TiposDocumentosTipoDocumento: TStringField;
+    qSexosSexoId: TIntegerField;
+    qSexosNombre: TStringField;
+    qEstadosCivilesEstadoCivilId: TIntegerField;
+    qEstadosCivilesNombre: TStringField;
+    qNacionalidadesNacionalidadId: TIntegerField;
+    qNacionalidadesNacionalidad: TStringField;
+    qTipoNCFTipoNCFId: TIntegerField;
+    qTipoNCFTipoNCF: TStringField;
+    qTipoNCFLetra: TStringField;
+    qTipoNCFCodigo: TStringField;
+    qTipoNCFesElectronico: TBooleanField;
+    qTerminosDePagosTerminoPagoId: TIntegerField;
+    qTerminosDePagosTeminoPago: TStringField;
+    qProvinciasProvinciaId: TIntegerField;
+    qProvinciasNombre: TStringField;
+    qListadoDePreciosListaPrecioId: TIntegerField;
+    qListadoDePreciosNombre: TStringField;
+    qListadoDePreciosDescripcion: TMemoField;
+    qListadoDePreciosEstadoId: TIntegerField;
+    qProximoCodigo: TADOQuery;
+    qHistorialCambios: TADOQuery;
+    qHistorialCambiosHistorialId: TIntegerField;
+    qHistorialCambiosTabla: TStringField;
+    qHistorialCambiosClavePrimaria: TIntegerField;
+    qHistorialCambiosCampo: TStringField;
+    qHistorialCambiosValorAnterior: TMemoField;
+    qHistorialCambiosValorNuevo: TMemoField;
+    qHistorialCambiosUsuario: TStringField;
+    qHistorialCambiosFechaCambio: TDateTimeField;
+    qFotos: TADOQuery;
+    dsFotos: TDataSource;
+    N2: TMenuItem;
+    Salir1: TMenuItem;
+    procedure FormShow(Sender: TObject);
+    procedure btnCargarFotoClick(Sender: TObject);
+    procedure btnTomarFotoClick(Sender: TObject);
+    procedure qClientesNewRecord(DataSet: TDataSet);
+    procedure cxButton1Click(Sender: TObject);
+    procedure txtNombresPropertiesValidate(Sender: TObject;
+      var DisplayValue: Variant; var ErrorText: TCaption; var Error: Boolean);
+    procedure qClientesBeforePost(DataSet: TDataSet);
+    procedure qHistorialCambiosEditError(DataSet: TDataSet; E: EDatabaseError;
+      var Action: TDataAction);
+    procedure qHistorialCambiosPostError(DataSet: TDataSet; E: EDatabaseError;
+      var Action: TDataAction);
+    procedure qFotosNewRecord(DataSet: TDataSet);
+    procedure Salir1Click(Sender: TObject);
+    procedure SombraModalBegin(Sender: TObject);
+    procedure SombraModalEnd(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    ClienteId:Integer;
+    Nuevo:Boolean;
+    { Public declarations }
+  end;
+
+var
+  frmClientesCreate: TfrmClientesCreate;
+
+implementation
+
+{$R *.dfm}
+
+
+
+procedure TfrmClientesCreate.btnCargarFotoClick(Sender: TObject);
+begin
+  inherited;
+imgFotoCliente.LoadFromFile;
+end;
+
+
+type
+  TcxImageAccess = class (TcxImage);
+
+procedure TfrmClientesCreate.btnTomarFotoClick(Sender: TObject);
+begin
+  inherited;
+
+  TcxImageAccess(imgFotoCliente).AssignFromWebCam;
+
+end;
+
+procedure TfrmClientesCreate.cxButton1Click(Sender: TObject);
+begin
+  inherited;
+
+  MensajeError.CaptionOptions.Visible:= false;
+
+  if qClientes.FieldByName('Nombres').AsString = '' then
+    Begin
+      MensajeError.CaptionOptions.Visible:= true;
+      MensajeError.CaptionOptions.Text:= 'Especifique el nombre del cliente.';
+      txtNombres.ValidateEdit(false);
+      txtNombres.SetFocus;
+      exit;
+    End;
+
+  if qClientes.FieldByName('TipoClienteId').AsInteger = 2 then
+    if qClientes.FieldByName('Apellidos').AsString = '' then
+      Begin
+        MensajeError.CaptionOptions.Visible:= true;
+        MensajeError.CaptionOptions.Text:= 'Especifique los apellidos del cliente.';
+        txtApellidos.ValidateEdit(false);
+        txtApellidos.SetFocus;
+        exit;
+      End;
+
+  if qClientes.FieldByName('Documento').AsString = '' then
+    Begin
+      MensajeError.CaptionOptions.Visible:= true;
+      MensajeError.CaptionOptions.Text:= 'Especifique el documento de identidad del cliente.';
+      txtDocumento.ValidateEdit(false);
+      txtDocumento.SetFocus;
+      exit;
+    End;
+
+  if qClientes.FieldByName('Codigo').AsInteger = 0 then
+    Begin
+
+      qProximoCodigo.Close;
+      qProximoCodigo.Open;
+
+      qClientes.FieldByName('codigo').AsInteger:= qProximoCodigo.FieldByName('codigo').AsInteger;
+
+    End;
+
+  if qClientes.State in [dsEdit, dsInsert] then
+    qClientes.Post;
+
+  if imgFotoCliente.EditValue = Null then
+    qFotos.Cancel;
+
+  if qFotos.State in [dsEdit, dsInsert] then
+    qFotos.Post;
+
+
+  //ModalResult:= qClientes.FieldByName('ClienteId').AsInteger;
+  CloseModal;
+
+
+end;
+
+procedure TfrmClientesCreate.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  inherited;
+ModalResult:= qClientes.FieldByName('ClienteId').AsInteger;
+
+end;
+
+procedure TfrmClientesCreate.FormShow(Sender: TObject);
+begin
+  inherited;
+
+  Titulo.Caption:= 'Nuevo cliente';
+  Nuevo:=true;
+  if ClienteId>0 then
+  Begin
+    Titulo.Caption:='Modificando cliente';
+    Nuevo:=false;
+  End;
+
+  frmClientesCreate.Caption:= Titulo.Caption;
+
+  qTiposClientes.close;
+  qTiposClientes.Open;
+
+  qCategorias.Close;
+  qCategorias.Open;
+
+  qSexos.Close;
+  qSexos.Open;
+
+  qEstadosCiviles.Close;
+  qEstadosCiviles.Open;
+
+  qNacionalidades.Close;
+  qNacionalidades.Open;
+
+  qTipoNCF.Close;
+  qTipoNCF.Open;
+
+  qTerminosDePagos.Close;
+  qTerminosDePagos.Open;
+
+  qListadoDePrecios.Close;
+  qListadoDePrecios.Open;
+
+  qProvincias.Close;
+  qProvincias.Open;
+
+  qClientes.Close;
+  qClientes.Parameters.ParamValues['ClienteId']:= ClienteId;
+  qClientes.Open;
+
+  if qClientes.RecordCount > 0 then
+    qClientes.Edit
+  else
+    qClientes.Append;
+
+  qFotos.Close;
+  qFotos.Parameters.ParamValues['ClienteId']:= ClienteId;
+  qFotos.Open;
+
+  if qFotos.RecordCount > 0 then
+    qFotos.Edit
+  else
+    qFotos.Append;
+
+
+  cxDBLookupComboBox1.SetFocus;
+
+
+end;
+
+procedure TfrmClientesCreate.qClientesBeforePost(DataSet: TDataSet);
+var i:Integer;
+valorAnterior, valorNuevo:Variant;
+
+begin
+  inherited;
+
+
+  if not  Nuevo then
+  Begin
+  qHistorialCambios.Close;
+  qHistorialCambios.Open;
+
+  for i := 0 to DataSet.FieldCount - 1 do
+    begin
+
+      if (DataSet.Fields[i].FieldKind = fkData)
+       and (dmBaseDeDatos.CamposNoAuditables.IndexOf(DataSet.Fields[i].FieldName) = -1) then
+        Begin
+
+        valorAnterior:= DataSet.Fields[i].OldValue;
+        valorNuevo:=DataSet.Fields[i].value;
+
+        if  VarToStrDef(valorAnterior, '') <> VarToStrDef(valorNuevo, '') then
+            begin
+              qHistorialCambios.Insert;
+              qHistorialCambios.FieldByName('HistorialId').AsInteger:= dmBaseDeDatos.GetProximoId('HistorialId');
+              qHistorialCambios.FieldByName('Tabla').AsString:= 'Clientes';
+              qHistorialCambios.FieldByName('ClavePrimaria').AsInteger:= DataSet.FieldByName('ClienteId').AsInteger;
+              qHistorialCambios.FieldByName('Campo').AsString:= DataSet.Fields[i].FieldName;
+              qHistorialCambios.FieldByName('ValorAnterior').AsString:= VarToStrDef(valorAnterior, '');
+              qHistorialCambios.FieldByName('ValorNuevo').AsString:= VarToStrDef(valorNuevo, '');
+              qHistorialCambios.FieldByName('Usuario').AsString:= dmBaseDeDatos.GetUsuarioActual;
+              qHistorialCambios.FieldByName('FechaCambio').AsDateTime:= dmBaseDeDatos.GetFechaActual;
+              qHistorialCambios.Post;
+            end;
+        End;
+    end;
+
+
+    End;
+
+
+
+
+
+
+end;
+
+procedure TfrmClientesCreate.qClientesNewRecord(DataSet: TDataSet);
+begin
+  inherited;
+
+  qValoresPorDefecto.Close;
+  qValoresPorDefecto.Open;
+
+  DataSet.FieldByName('ClienteId').AsInteger:= dmBaseDeDatos.GetProximoId('ClienteId');
+  DataSet.FieldByName('ClienteGuid').AsString:= dmBaseDeDatos.GetNuevoGUID;
+  DataSet.FieldByName('Codigo').AsInteger:= 0;
+  DataSet.FieldByName('TipoClienteId').AsInteger:= qValoresPorDefecto.FieldByName('ClientesTipoClienteId').AsInteger;
+  DataSet.FieldByName('CategoriaId').AsInteger:= qValoresPorDefecto.FieldByName('ClientesCategoriaId').AsInteger;
+  DataSet.FieldByName('TipoDocumentoId').AsInteger:= qValoresPorDefecto.FieldByName('ClientesTipoDocumentoId').AsInteger;
+  DataSet.FieldByName('SexoId').AsInteger:= qValoresPorDefecto.FieldByName('ClientesSexoId').AsInteger;
+  DataSet.FieldByName('EstadoCivilId').AsInteger:= qValoresPorDefecto.FieldByName('ClientesEstadoCivilId').AsInteger;
+  DataSet.FieldByName('TipoNCFId').AsInteger:= qValoresPorDefecto.FieldByName('ClientesTipoNCFId').AsInteger;
+  DataSet.FieldByName('TerminoPagoId').AsInteger:= qValoresPorDefecto.FieldByName('ClientesTerminoDePagoId').AsInteger;
+  DataSet.FieldByName('ListaPrecioId').AsInteger:= qValoresPorDefecto.FieldByName('ClientesListaPrecioId').AsInteger;
+  DataSet.FieldByName('ProvinciaId').AsInteger:= qValoresPorDefecto.FieldByName('ClientesProvinciaId').AsInteger;
+  DataSet.FieldByName('NacionalidadId').AsInteger:= qValoresPorDefecto.FieldByName('ClientesNAcionalidadId').AsInteger;
+
+  DataSet.FieldByName('CreadoPor').AsString:= dmBaseDeDatos.GetUsuarioActual;
+  DataSet.FieldByName('FechaCreacion').AsDateTime:= dmBaseDeDatos.GetFechaActual;
+  DataSet.FieldByName('EstadoId').AsInteger:=1;
+
+
+
+
+
+
+end;
+
+procedure TfrmClientesCreate.qFotosNewRecord(DataSet: TDataSet);
+begin
+  inherited;
+  DataSet.FieldByName('ClienteId').AsInteger:=   qClientes.FieldByName('clienteId').AsInteger;
+end;
+
+procedure TfrmClientesCreate.qHistorialCambiosEditError(DataSet: TDataSet;
+  E: EDatabaseError; var Action: TDataAction);
+begin
+  inherited;
+showMessage(e.Message);
+end;
+
+procedure TfrmClientesCreate.qHistorialCambiosPostError(DataSet: TDataSet;
+  E: EDatabaseError; var Action: TDataAction);
+begin
+  inherited;
+       ShowMessage(e.Message);
+end;
+
+procedure TfrmClientesCreate.Salir1Click(Sender: TObject);
+begin
+  inherited;
+  Close;
+end;
+
+procedure TfrmClientesCreate.SombraModalBegin(Sender: TObject);
+begin
+  inherited;
+ frmShadow:= tfrmShadow.Create(self);
+ frmShadow.BoundsRect := Application.MainForm.BoundsRect;
+  frmShadow.Show;
+end;
+
+procedure TfrmClientesCreate.SombraModalEnd(Sender: TObject);
+begin
+  inherited;
+  frmShadow.Release;
+  frmShadow.Hide;
+end;
+
+procedure TfrmClientesCreate.txtNombresPropertiesValidate(Sender: TObject;
+  var DisplayValue: Variant; var ErrorText: TCaption; var Error: Boolean);
+begin
+  inherited;
+ Error:= false;
+  MensajeError.CaptionOptions.Visible:= false;
+
+  if VarToStr(DisplayValue) = '' then
+  Begin
+    Error:= true;
+    MensajeError.CaptionOptions.Visible:= true;
+
+  End;
+
+end;
+
+
+end.

@@ -1,0 +1,55 @@
+inherited frmClientesHistorial: TfrmClientesHistorial
+  Caption = 'frmClientesHistorial'
+  OnShow = FormShow
+  ExplicitTop = 8
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited dxLayoutControl1: TdxLayoutControl
+    inherited GridListado: TcxGrid
+      inherited GridListadoDBTableView1: TcxGridDBTableView
+        DataController.DataSource = dsHistorial
+        object GridListadoDBTableView1Campo: TcxGridDBColumn
+          DataBinding.FieldName = 'Campo'
+          Width = 150
+        end
+        object GridListadoDBTableView1valorAnterior: TcxGridDBColumn
+          DataBinding.FieldName = 'valorAnterior'
+          Width = 150
+        end
+        object GridListadoDBTableView1ValorNuevo: TcxGridDBColumn
+          DataBinding.FieldName = 'ValorNuevo'
+          Width = 150
+        end
+        object GridListadoDBTableView1Usuario: TcxGridDBColumn
+          DataBinding.FieldName = 'Usuario'
+          Width = 150
+        end
+        object GridListadoDBTableView1FechaCambio: TcxGridDBColumn
+          DataBinding.FieldName = 'FechaCambio'
+          Width = 150
+        end
+      end
+    end
+  end
+  object qHistorial: TADOQuery
+    Active = True
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <
+      item
+        Name = 'ClienteId'
+        DataType = ftInteger
+        Size = -1
+        Value = Null
+      end>
+    SQL.Strings = (
+      'select * from ClientesHistorialCambios( :ClienteId)')
+    Left = 144
+    Top = 280
+  end
+  object dsHistorial: TDataSource
+    DataSet = qHistorial
+    Left = 192
+    Top = 224
+  end
+end

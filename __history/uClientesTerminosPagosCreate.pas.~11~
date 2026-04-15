@@ -1,0 +1,206 @@
+unit uClientesTerminosPagosCreate;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uBaseFormInsert, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, Vcl.Menus, dxLayoutControlAdapters, dxLayoutContainer,
+  cxClasses, Vcl.StdCtrls, cxButtons, dxLayoutControl, Vcl.ComCtrls,
+  uBaseDeDatos, Data.DB, Data.Win.ADODB, dxLayoutcxEditAdapters, cxContainer,
+  cxEdit, cxMaskEdit, cxSpinEdit, cxDBEdit, cxTextEdit;
+
+type
+  TfrmClientesTerminosPagosCreate = class(TfrmBaseFormInsert)
+    qTerminosDePagos: TADOQuery;
+    dsTerminosDePagos: TDataSource;
+    qTerminosDePagosDias: TIntegerField;
+    qTerminosDePagosEstadoId: TIntegerField;
+    qTerminosDePagosCreadoPor: TStringField;
+    qTerminosDePagosFechaCreacion: TDateTimeField;
+    qTerminosDePagosModificadoPor: TStringField;
+    qTerminosDePagosFechaModificacion: TDateTimeField;
+    txtTerminoPago: TcxDBTextEdit;
+    dxLayoutItem1: TdxLayoutItem;
+    cxDBSpinEdit1: TcxDBSpinEdit;
+    dxLayoutItem3: TdxLayoutItem;
+    dxLayoutGroup1: TdxLayoutGroup;
+    qHistorialCambios: TADOQuery;
+    qHistorialCambiosHistorialId: TIntegerField;
+    qHistorialCambiosTabla: TStringField;
+    qHistorialCambiosClavePrimaria: TIntegerField;
+    qHistorialCambiosCampo: TStringField;
+    qHistorialCambiosValorAnterior: TMemoField;
+    qHistorialCambiosValorNuevo: TMemoField;
+    qHistorialCambiosUsuario: TStringField;
+    qHistorialCambiosFechaCambio: TDateTimeField;
+    qTerminosDePagosTerminoPago: TStringField;
+    qTerminosDePagosTerminoPagoId: TAutoIncField;
+    procedure FormShow(Sender: TObject);
+    procedure cxButton1Click(Sender: TObject);
+    procedure qTerminosDePagosBeforePost(DataSet: TDataSet);
+    procedure qTerminosDePagosNewRecord(DataSet: TDataSet);
+    procedure txtTerminoPagoPropertiesValidate(Sender: TObject;
+      var DisplayValue: Variant; var ErrorText: TCaption; var Error: Boolean);
+  private
+    { Private declarations }
+  public
+    TerminoPagoId:Integer;
+    Nuevo:Boolean;
+
+    { Public declarations }
+  end;
+
+var
+  frmClientesTerminosPagosCreate: TfrmClientesTerminosPagosCreate;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmClientesTerminosPagosCreate.cxButton1Click(Sender: TObject);
+begin
+  inherited;
+
+   MensajeError.CaptionOptions.Visible:= false;
+
+  if qTerminosDePagos.FieldByName('TerminoPago').AsString = '' then
+    Begin
+      MensajeError.CaptionOptions.Visible:= true;
+      MensajeError.CaptionOptions.Text:= 'Especifique el nombre del termino pago.';
+      txtTerminoPago.ValidateEdit(false);
+      txtTerminoPago.SetFocus;
+      exit;
+    End;
+
+  if qTerminosDePagos.State in [dsInsert, dsEdit] then
+    qTerminosDePagos.Post;
+
+  ModalResult:= qTerminosDePagos.FieldByName('TerminoPagoId').AsInteger;
+  CloseModal;
+end;
+
+procedure TfrmClientesTerminosPagosCreate.FormShow(Sender: TObject);
+begin
+  inherited;
+  Titulo.Caption:= 'Nuevo Termino de pago';
+  Nuevo:=true;
+  if TerminoPagoId>0 then
+  Begin
+    Titulo.Caption:='Modificando Termino de pago';
+    Nuevo:=false;
+  End;
+
+  frmClientesTerminosPagosCreate.Caption:= Titulo.Caption;
+
+   qTerminosDePagos.Close;
+  qTerminosDePagos.Parameters.ParamValues['TerminoPagoId']:= TerminoPagoId;
+  qTerminosDePagos.Open;
+
+  if qTerminosDePagos.RecordCount > 0 then
+    qTerminosDePagos.Edit
+  else
+    qTerminosDePagos.Append;
+
+  txtTerminoPago.SetFocus;
+
+end;
+
+procedure TfrmClientesTerminosPagosCreate.qTerminosDePagosBeforePost(
+  DataSet: TDataSet);
+var i:Integer;
+valorAnterior, valorNuevo:Variant;
+
+begin
+  inherited;
+
+
+  if not  Nuevo then
+  Begin
+
+  DataSet.FieldByName('ModificadoPor').AsString:= dmBaseDeDatos.GetUsuarioActual;
+  DataSet.FieldByName('FechaModificacion').AsDateTime:= dmBaseDeDatos.GetFechaActual;
+
+  qHistorialCambios.Close;
+  qHistorialCambios.Open;
+
+  for i := 0 to DataSet.FieldCount - 1 do
+    begin
+
+      if (DataSet.Fields[i].FieldKind = fkData)
+       and (dmBaseDeDatos.CamposNoAuditables.IndexOf(DataSet.Fields[i].FieldName) = -1) then
+        Begin
+
+        valorAnterior:= DataSet.Fields[i].OldValue;
+        valorNuevo:=DataSet.Fields[i].value;
+
+        if  VarToStrDef(valorAnterior, '') <> VarToStrDef(valorNuevo, '') then
+            begin
+              qHistorialCambios.Insert;
+              qHistorialCambios.FieldByName('HistorialId').AsInteger:= dmBaseDeDatos.GetProximoId('HistorialId');
+              qHistorialCambios.FieldByName('Tabla').AsString:= 'ClientesTerminosDePagos';
+              qHistorialCambios.FieldByName('ClavePrimaria').AsInteger:= DataSet.FieldByName('TeminoPagoId').AsInteger;
+              qHistorialCambios.FieldByName('Campo').AsString:= DataSet.Fields[i].FieldName;
+              qHistorialCambios.FieldByName('ValorAnterior').AsString:= VarToStrDef(valorAnterior, '');
+              qHistorialCambios.FieldByName('ValorNuevo').AsString:= VarToStrDef(valorNuevo, '');
+              qHistorialCambios.FieldByName('Usuario').AsString:= dmBaseDeDatos.GetUsuarioActual;
+              qHistorialCambios.FieldByName('FechaCambio').AsDateTime:= dmBaseDeDatos.GetFechaActual;
+              qHistorialCambios.Post;
+            end;
+        End;
+    end;
+
+
+    End;
+
+
+
+
+
+
+end;
+
+procedure TfrmClientesTerminosPagosCreate.qTerminosDePagosNewRecord(
+  DataSet: TDataSet);
+begin
+  inherited;
+DataSet.FieldByName('EstadoId').AsInteger:= 1;
+  DataSet.FieldByName('CreadoPor').AsString:= dmBaseDeDatos.GetUsuarioActual;
+  DataSet.FieldByName('FechaCreacion').AsDateTime:= dmBaseDeDatos.GetFechaActual;
+end;
+
+procedure TfrmClientesTerminosPagosCreate.txtTerminoPagoPropertiesValidate(
+  Sender: TObject; var DisplayValue: Variant; var ErrorText: TCaption;
+  var Error: Boolean);
+begin
+  inherited;
+
+  Error:= false;
+  MensajeError.CaptionOptions.Visible:= false;
+
+  if VarToStr(DisplayValue) = '' then
+  Begin
+    Error:= true;
+    MensajeError.CaptionOptions.Visible:= true;
+
+  End;
+
+
+end;
+
+end.

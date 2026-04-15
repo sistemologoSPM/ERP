@@ -1,0 +1,12 @@
+inherited frmConducesVendedores: TfrmConducesVendedores
+  Caption = 'frmConducesVendedores'
+  ExplicitTop = 8
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited Panel3: TPanel
+    ExplicitHeight = 474
+    inherited Grid: TcxGrid
+      ExplicitHeight = 468
+    end
+  end
+end

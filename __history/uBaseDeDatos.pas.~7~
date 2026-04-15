@@ -1,0 +1,68 @@
+unit uBaseDeDatos;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB;
+
+type
+  TdmBaseDeDatos = class(TDataModule)
+    db: TADOConnection;
+    qSecuencias: TADOQuery;
+    qNuevoGUID: TADOQuery;
+    qFechaActual: TADOQuery;
+    qFechaActualFechaActual: TDateTimeField;
+    qNuevoGUIDGuid: TGuidField;
+    function GetFechaActual:TDatetime;
+    function GetNuevoGUID:String;
+    function GetProximoId(Campo:String): Integer;
+  private
+    { Private declarations }
+  public
+    GetUsuarioActual:String;
+    { Public declarations }
+  end;
+
+var
+  dmBaseDeDatos: TdmBaseDeDatos;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+
+function  TdmBaseDeDatos.GetFechaActual:TDatetime;
+Begin
+  qFechaActual.Close;
+  qFechaActual.Open;
+
+  Result:= qFechaActual.FieldByName('FechaActual').AsDateTime;
+
+End;
+
+
+
+function TdmBaseDeDatos.GetNuevoGUID: String;
+begin
+  qNuevoGUID.Close;
+  qNuevoGUID.Open;
+
+  Result:= qNuevoGUID.FieldByName('Guid').AsString;
+
+end;
+
+function TdmBaseDeDatos.GetProximoId(Campo:String): Integer;
+begin
+  qSecuencias.Close;
+  qSecuencias.Open;
+
+  qSecuencias.Edit;
+  qSecuencias.FieldByName(Campo).AsInteger:=qSecuencias.FieldByName(campo).AsInteger+1;
+  qSecuencias.Post;
+
+  Result:= qSecuencias.FieldByName(Campo).AsInteger;
+end;
+
+end.

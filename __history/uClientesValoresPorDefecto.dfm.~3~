@@ -1,0 +1,288 @@
+inherited frmValoresPorDefecto: TfrmValoresPorDefecto
+  Caption = 'Clientes valores por defecto'
+  ClientHeight = 435
+  ClientWidth = 437
+  ExplicitWidth = 453
+  ExplicitHeight = 474
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited StatusBar1: TStatusBar
+    Top = 416
+    Width = 437
+  end
+  inherited dxLayoutControl1: TdxLayoutControl
+    Width = 437
+    Height = 416
+    inherited cxButton1: TcxButton
+      Left = 311
+      Top = 355
+      TabOrder = 5
+      ExplicitLeft = 311
+      ExplicitTop = 355
+    end
+    object DBLookupComboBox1: TDBLookupComboBox [1]
+      Left = 137
+      Top = 92
+      Width = 274
+      Height = 24
+      DataField = 'ListadoTiposClientes'
+      DataSource = DataSource1
+      TabOrder = 0
+    end
+    object DBLookupComboBox2: TDBLookupComboBox [2]
+      Left = 137
+      Top = 123
+      Width = 274
+      Height = 24
+      DataField = 'ListadoCategorias'
+      DataSource = DataSource1
+      TabOrder = 1
+    end
+    object DBLookupComboBox3: TDBLookupComboBox [3]
+      Left = 137
+      Top = 154
+      Width = 274
+      Height = 24
+      DataField = 'ListadoTiposDocumentos'
+      DataSource = DataSource1
+      TabOrder = 2
+    end
+    object DBLookupComboBox4: TDBLookupComboBox [4]
+      Left = 137
+      Top = 185
+      Width = 274
+      Height = 24
+      DataField = 'ListadoSexos'
+      DataSource = DataSource1
+      TabOrder = 3
+    end
+    object DBLookupComboBox5: TDBLookupComboBox [5]
+      Left = 137
+      Top = 216
+      Width = 274
+      Height = 24
+      DataField = 'ListadosEstadosCiviles'
+      DataSource = DataSource1
+      TabOrder = 4
+    end
+    inherited Titulo: TdxLayoutItem
+      CaptionOptions.Text = 'Valores por defecto'
+    end
+    object dxLayoutItem1: TdxLayoutItem
+      Parent = Cuerpo
+      CaptionOptions.Text = 'Tipos Clientes'
+      Control = DBLookupComboBox1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 145
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem3: TdxLayoutItem
+      Parent = Cuerpo
+      CaptionOptions.Text = 'Categorias'
+      Control = DBLookupComboBox2
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 145
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem4: TdxLayoutItem
+      Parent = Cuerpo
+      CaptionOptions.Text = 'Tipos Documentos'
+      Control = DBLookupComboBox3
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 145
+      ControlOptions.ShowBorder = False
+      Index = 2
+    end
+    object dxLayoutItem5: TdxLayoutItem
+      Parent = Cuerpo
+      CaptionOptions.Text = 'Sexos'
+      Control = DBLookupComboBox4
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 145
+      ControlOptions.ShowBorder = False
+      Index = 3
+    end
+    object dxLayoutItem6: TdxLayoutItem
+      Parent = Cuerpo
+      CaptionOptions.Text = 'Estados Civiles'
+      Control = DBLookupComboBox5
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 145
+      ControlOptions.ShowBorder = False
+      Index = 4
+    end
+  end
+  object qValoresPorDefecto: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From ValoresPorDefecto')
+    Left = 56
+    Top = 216
+    object qValoresPorDefectoClientesTipoClienteId: TIntegerField
+      FieldName = 'ClientesTipoClienteId'
+    end
+    object qValoresPorDefectoClientesCategoriaId: TIntegerField
+      FieldName = 'ClientesCategoriaId'
+    end
+    object qValoresPorDefectoClientesTerminoDePagoId: TIntegerField
+      FieldName = 'ClientesTerminoDePagoId'
+    end
+    object qValoresPorDefectoClientesSexoId: TIntegerField
+      FieldName = 'ClientesSexoId'
+    end
+    object qValoresPorDefectoClientesProvinciaId: TIntegerField
+      FieldName = 'ClientesProvinciaId'
+    end
+    object qValoresPorDefectoClientesTipoDocumentoId: TIntegerField
+      FieldName = 'ClientesTipoDocumentoId'
+    end
+    object qValoresPorDefectoClientesEstadoCivilId: TIntegerField
+      FieldName = 'ClientesEstadoCivilId'
+    end
+    object qValoresPorDefectoClientesListaPrecioId: TIntegerField
+      FieldName = 'ClientesListaPrecioId'
+    end
+    object qValoresPorDefectoListadoTiposClientes: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoTiposClientes'
+      LookupDataSet = qTiposClientes
+      LookupKeyFields = 'TipoClienteId'
+      LookupResultField = 'TipoCliente'
+      KeyFields = 'ClientesTipoClienteId'
+      Lookup = True
+    end
+    object qValoresPorDefectoListadoCategorias: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoCategorias'
+      LookupDataSet = qCategorias
+      LookupKeyFields = 'CategoriaId'
+      LookupResultField = 'Categoria'
+      KeyFields = 'ClientesCategoriaId'
+      Lookup = True
+    end
+    object qValoresPorDefectoListadoTiposDocumentos: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoTiposDocumentos'
+      LookupDataSet = TiposDocumentos
+      LookupKeyFields = 'TipoDocumentoId'
+      LookupResultField = 'TipoDocumento'
+      KeyFields = 'ClientesTipoDocumentoId'
+      Lookup = True
+    end
+    object qValoresPorDefectoListadoSexos: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoSexos'
+      LookupDataSet = qSexos
+      LookupKeyFields = 'SexoId'
+      LookupResultField = 'Nombre'
+      KeyFields = 'ClientesSexoId'
+      Lookup = True
+    end
+    object qValoresPorDefectoListadosEstadosCiviles: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadosEstadosCiviles'
+      LookupDataSet = qEstadosCiviles
+      LookupKeyFields = 'EstadoCivilId'
+      LookupResultField = 'Nombre'
+      KeyFields = 'ClientesEstadoCivilId'
+      Lookup = True
+    end
+  end
+  object qTiposClientes: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from ClientesTipos')
+    Left = 56
+  end
+  object qCategorias: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From ClientesCategorias')
+    Left = 56
+    Top = 56
+  end
+  object TiposDocumentos: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From TiposDocumentos')
+    Left = 120
+    Top = 65528
+  end
+  object qSexos: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From Sexos')
+    Left = 112
+    Top = 64
+  end
+  object qEstadosCiviles: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From EstadosCiviles')
+    Left = 336
+  end
+  object qNacionalidades: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From Nacionalidades')
+    Left = 392
+    Top = 48
+  end
+  object qTipoNCF: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From ComprobantesFicalesTipos')
+    Left = 393
+    Top = 216
+  end
+  object qTerminosDePagos: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from ClientesTerminosDePagos')
+    Left = 393
+    Top = 168
+  end
+  object qListadoDePrecios: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from ListasDePrecios')
+    Left = 393
+    Top = 96
+  end
+  object qProvincias: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from Provincias')
+    Left = 305
+    Top = 72
+  end
+  object DataSource1: TDataSource
+    DataSet = qValoresPorDefecto
+    Left = 216
+    Top = 224
+  end
+end

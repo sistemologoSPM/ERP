@@ -1,0 +1,6 @@
+inherited frmClientesHistorial: TfrmClientesHistorial
+  Caption = 'frmClientesHistorial'
+  ExplicitTop = 8
+  PixelsPerInch = 96
+  TextHeight = 16
+end

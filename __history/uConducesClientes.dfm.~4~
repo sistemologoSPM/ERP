@@ -1,0 +1,15 @@
+inherited frmConducesClientes: TfrmConducesClientes
+  Caption = 'frmConducesClientes'
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited dxLayoutControl1: TdxLayoutControl
+    inherited btnImprimir: TcxButton
+      Width = 244
+      Caption = 'Imprimir listado de conduces'
+      ExplicitWidth = 244
+    end
+    inherited dxLayoutItem7: TdxLayoutItem
+      ControlOptions.OriginalWidth = 244
+    end
+  end
+end

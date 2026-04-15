@@ -1,0 +1,2706 @@
+object frmMenu: TfrmMenu
+  Left = 0
+  Top = 0
+  Caption = 'ERP'
+  ClientHeight = 687
+  ClientWidth = 1269
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Trebuchet MS'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 18
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1269
+    Height = 73
+    Align = alTop
+    BevelOuter = bvNone
+    Caption = 'Panel1'
+    ParentBackground = False
+    ShowCaption = False
+    TabOrder = 0
+    object FlowPanel1: TFlowPanel
+      Left = 888
+      Top = 0
+      Width = 381
+      Height = 73
+      Align = alRight
+      BevelEdges = [beBottom]
+      BevelOuter = bvNone
+      Caption = 'FlowPanel1'
+      FlowStyle = fsRightLeftBottomTop
+      Padding.Top = 10
+      Padding.Right = 30
+      Padding.Bottom = 10
+      ParentBackground = False
+      ShowCaption = False
+      TabOrder = 0
+      object btnUsuarioActual: TcxButton
+        AlignWithMargins = True
+        Left = 198
+        Top = 20
+        Width = 150
+        Height = 40
+        Caption = 'Usuario'
+        OptionsImage.Glyph.SourceDPI = 96
+        OptionsImage.Glyph.Data = {
+          89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+          F800000006624B474400FF00FF00FFA0BDA7930000019849444154480D636018
+          EA8091580FFCDFEA67C7C0CC60C1F0FFDF7F867F4C2719BD371D22462F410BFE
+          EF0EE567F8F3632DD03067204642FFF730B0708630BAAEFE882488C164C21041
+          17F8F363295008CD70A00803A30BC3EF1F4B402C7C18AF0FFE6FF7B16460603C
+          86CF0086FF0C968C5E9B4FE05283DF078C4C56B834C2C51919808E80F33018F8
+          2DC0508E4DE03FDE50C06FC1FF7FF8830764DF7FFC4188D70246CF2DC781666C
+          0562ECE83FC3167CE10FD284D702900206168E6820BD1788D1103099B272C4A0
+          096270F1861FB26A72331AB2193461E3F5414AD504F13FCC7F821918FE7B006D
+          570662512006A1D78C0CFFEFFC6760DAC9F29765ED9CB6829720416C18AB0509
+          0D0D1C0C7F79EA8106E701357101313EF40D985027F2BD676F9C3C39EF27BA42
+          0C0B121ABA2418FE306E6560643042574C807F9681F9BFCF8286B217C8EA502C
+          88AA681764676539FA9F814113591109EC6B0CCC2CD60B1A0A3FC0F4A0245336
+          56D69914180E32538BE1EFDF5920060CA358000CF3509804F9F47F1433D02C20
+          DF585C3A696E012E8B47C5E12100009EA96547AD9CF7610000000049454E44AE
+          426082}
+        TabOrder = 0
+      end
+      object cxButton17: TcxButton
+        AlignWithMargins = True
+        Left = 142
+        Top = 20
+        Width = 50
+        Height = 40
+        OptionsImage.Glyph.SourceDPI = 96
+        OptionsImage.Glyph.Data = {
+          89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+          F800000006624B474400FF00FF00FFA0BDA7930000021F49444154480DED544D
+          68134114FEDE34C96E3616B12A0424A078A83FC788A262F1E045C19F8B528AE7
+          9C84DE3D0882F4AE55B0A0DE44A19EBD4AAE558FC59FA220D643C59F16494D36
+          4D9EDF4E4320BBD9490ADE7479DF9B99F77D6FDECC303BC03FF52DCD0417966E
+          05E7B7B2E9CC56C4C6B4E761A0CCF189A14C865169357705909BD41E20227B03
+          D11B32113E8B062E888B8C38ADFA1540EFB31FD72A442A32517F402ED5E2493D
+          427D5128C26C7C64304FF4B31A9A99FD72A6B6D28F8C622672A930AD73E4F244
+          9A15906B9D4D23A3B8BB80B4F7442237DA2517EF2EA066C4956CB9011A7701E8
+          093B89D3B935A905F4393C5ECDB2736E4B4A79536B0709975A0005EF1EAFE758
+          222311D03104DEDD44B813E87B4DF9634D71F58F3B9AE11AD529391D3E898B13
+          3BD057C72FC1F80FE3C28163E33FD297C72EC6753D3BD00514115CFE84603C87
+          C667A0F105687E03C2AF40EB274FACBD992F59C078407617B11BC8EF053C62FD
+          5D88B5F9929C041360BFDE02556F96D16BDC01E0EF23F81B648B408E93C8084F
+          8D935260AD55033658345CE1429681FA072EE2370BE38E9C6A4C5B0D9D105DD3
+          45E4F0DDABF0BD9C84E0285B2EB54BA777044D6A1798F31441634E8E70DC51F7
+          14E8C46C638BFDC81E444B0E41CCE8F27BDC26E1135045BD348E6968FB179FEF
+          45EC0CDFCA61841117476A81B8F0F5F560952BDC6EE38AD5F2CCFA0EDB1FE032
+          03F82E3DBA0D5745758E01357CA6D9FEB7BF73027F00034387543E2BDDF10000
+          000049454E44AE426082}
+        TabOrder = 1
+      end
+      object cxButton18: TcxButton
+        AlignWithMargins = True
+        Left = 86
+        Top = 20
+        Width = 50
+        Height = 40
+        OptionsImage.Glyph.SourceDPI = 96
+        OptionsImage.Glyph.Data = {
+          89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+          F800000006624B474400FF00FF00FFA0BDA793000002A049444154480DD5554D
+          48545114FEEE7DAF19C33FA4425450478AA21629F64BA450D03ECA68DFA22628
+          685741D6A616B5082AD05A44102E925A0451D45231DC5412440535235ACECAB4
+          71A47CF3DEBB9DFB9CFB7AEFBE372A440B2FE7DC73CE77CE3DE7DE33C379C06A
+          5F6C250F68ED9B6905CC3DDC650DA0E5729103ECD1F174DD389659E50B08C152
+          FD851E085CA41CDB89E3688CC06BD974D5633026488F506C81B6BB3F6A85B366
+          90A20F112F4B0CE205B78BC7BF9C5D97D783230536DE9AAE71CCC4100596BB35
+          B962692C91FCDDF5F9C486B9A097070D505B1C3339405824F9B6F5068E6C36D1
+          B3C5447BBD4121116AB7AC8A873A1A7A41AA6FEE18F5FC911E746E6702872979
+          101F9A70D03BBC0057EB3C63389A49573F51B1DA0B705E3994ECA8E75E7299E7
+          FEFB22EEBCB1E0B84057B381BD4D860AF3A510B8E01BA4F805DAFA7F6E22BB83
+          38445BA93512F834EDE0011518FC68E3EB2C5520B0A5D63F4E964F9D2DB76753
+          CA329502C7D881987FDAC0872224ABB8C62A8ED652E2CC8CA3E09064DCD84540
+          9618FE150447A30496E2BA0A86EB07124850675E661D8C4E2DBE443FC3196B52
+          985F002E9802CBC94BFB9268AEE118F9E6E0C6E842B9B010EE17A0ECDF431ECD
+          A849307436702CD8C0D5D716ACF8EE78A75C21FC5C7F7F03D31881630B8AA05A
+          B46B249B71EF5D11794BA040ACB983A6705C3EAC00FF0599936B270894B38544
+          94E62969AEE062322FEF10F50790B793672AA794CD95E249212E7B3266DBDDC8
+          71657F12370F265145ED8A09F120C679AFA794B65081ECE9EA6700232E790322
+          370FCC1705BDC0C52FAF9301A752199E664E553E57A694917E2F35EC4CBA8E1C
+          0D92E5618D5730ECE8841CB9CC287693FA8A3844B68BC8EC9101725C1BB6D5AD
+          4FD2459FDCE39826EB7FFBE0E8F5FEE593A9E75A7DF61F08F7E14CC098BD7A00
+          00000049454E44AE426082}
+        TabOrder = 2
+      end
+    end
+    object cxImage2: TcxImage
+      Left = 0
+      Top = 0
+      Align = alLeft
+      Properties.FitMode = ifmNormal
+      Properties.PopupMenuLayout.MenuItems = []
+      Properties.ReadOnly = True
+      Properties.ShowFocusRect = False
+      Style.BorderStyle = ebsNone
+      TabOrder = 1
+      Transparent = True
+      Height = 73
+      Width = 201
+    end
+  end
+  object pcMEnu: TcxPageControl
+    AlignWithMargins = True
+    Left = 0
+    Top = 78
+    Width = 1269
+    Height = 590
+    Margins.Left = 0
+    Margins.Top = 5
+    Margins.Right = 0
+    Margins.Bottom = 0
+    Align = alClient
+    Color = clBtnFace
+    Focusable = False
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 1
+    Properties.ActivePage = tabInventario
+    Properties.ActivateFocusedTab = False
+    Properties.CustomButtons.Buttons = <>
+    Properties.HotTrack = True
+    Properties.Images = Imagenes24x24
+    Properties.Style = 6
+    Properties.TabHeight = 50
+    Properties.TabWidth = 165
+    ClientRectBottom = 590
+    ClientRectRight = 1269
+    ClientRectTop = 52
+    object tabIngresos: TcxTabSheet
+      Caption = 'Ingresos'
+      ImageIndex = 0
+      object Panel6: TPanel
+        AlignWithMargins = True
+        Left = 5
+        Top = 0
+        Width = 1244
+        Height = 528
+        Margins.Left = 5
+        Margins.Top = 0
+        Margins.Right = 20
+        Margins.Bottom = 10
+        Align = alClient
+        BevelOuter = bvNone
+        Caption = 'Panel6'
+        Color = clSilver
+        ParentBackground = False
+        ShowCaption = False
+        TabOrder = 0
+        object Panel7: TPanel
+          Left = 0
+          Top = 0
+          Width = 1244
+          Height = 177
+          Align = alTop
+          BevelOuter = bvNone
+          Caption = 'Panel7'
+          ShowCaption = False
+          TabOrder = 0
+          object Bevel1: TBevel
+            Left = 0
+            Top = 172
+            Width = 1244
+            Height = 5
+            Align = alBottom
+            Shape = bsBottomLine
+            ExplicitTop = 124
+            ExplicitWidth = 855
+          end
+          object Bevel5: TBevel
+            Left = 0
+            Top = 0
+            Width = 1244
+            Height = 49
+            Align = alTop
+            Shape = bsBottomLine
+            ExplicitWidth = 855
+          end
+        end
+        object ScrollBox1: TScrollBox
+          AlignWithMargins = True
+          Left = 3
+          Top = 180
+          Width = 1238
+          Height = 345
+          Align = alClient
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          BorderStyle = bsNone
+          TabOrder = 1
+        end
+      end
+      object dxLayoutControl1: TdxLayoutControl
+        Left = 0
+        Top = 0
+        Width = 1269
+        Height = 538
+        Align = alClient
+        TabOrder = 1
+        object btnClientes: TcxButton
+          Left = 28
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Clientes'
+          OptionsImage.ImageIndex = 0
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 0
+          OnClick = btnClientesClick
+        end
+        object btnCotizaciones: TcxButton
+          Left = 574
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Cotizaciones'
+          OptionsImage.ImageIndex = 6
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 3
+        end
+        object btnConducesClientes: TcxButton
+          Left = 210
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Conduces clientes'
+          OptionsImage.ImageIndex = 5
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 1
+          OnClick = btnConducesClientesClick
+        end
+        object btnFacturas: TcxButton
+          Left = 28
+          Top = 88
+          Width = 175
+          Height = 40
+          Caption = 'Facturas'
+          OptionsImage.ImageIndex = 19
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 5
+        end
+        object btnPagosRecibidos: TcxButton
+          Left = 392
+          Top = 88
+          Width = 175
+          Height = 40
+          Caption = 'Pagos recibidos'
+          OptionsImage.ImageIndex = 8
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 7
+        end
+        object btnFacturasRecurrentes: TcxButton
+          Left = 210
+          Top = 88
+          Width = 175
+          Height = 40
+          Caption = 'Facturas recurrentes'
+          OptionsImage.ImageIndex = 2
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 6
+        end
+        object btnCuadresDeCajas: TcxButton
+          Left = 756
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Cuadres de cajas'
+          OptionsImage.ImageIndex = 9
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 4
+        end
+        object btnConducesVendedores: TcxButton
+          Left = 392
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Conduces vendedores'
+          OptionsImage.ImageIndex = 5
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 2
+          OnClick = btnConducesVendedoresClick
+        end
+        object btnReporteAntiguedadSaldoCxC: TcxButton
+          Left = 28
+          Top = 188
+          Width = 300
+          Height = 35
+          Caption = '1. Reporte de saldo por antiguedad'
+          OptionsImage.Margin = 15
+          TabOrder = 8
+        end
+        object btnReporteEstadoCuentaCxC: TcxButton
+          Left = 28
+          Top = 230
+          Width = 300
+          Height = 35
+          Caption = '2. Reporte de estado de cuenta'
+          OptionsImage.Margin = 15
+          TabOrder = 9
+        end
+        object btnReporteFacturasPendientesCxC: TcxButton
+          Left = 28
+          Top = 272
+          Width = 300
+          Height = 35
+          Caption = '3. Reporte de facturas pendientes'
+          OptionsImage.Margin = 15
+          TabOrder = 10
+        end
+        object btnReporteListadoFacturasCxC: TcxButton
+          Left = 28
+          Top = 314
+          Width = 300
+          Height = 35
+          Caption = '4. Listado de facturas'
+          OptionsImage.Margin = 15
+          TabOrder = 11
+        end
+        object btnReporteListadoPagosCxC: TcxButton
+          Left = 28
+          Top = 356
+          Width = 300
+          Height = 35
+          Caption = '5. Listado de pagos'
+          OptionsImage.Margin = 15
+          TabOrder = 12
+        end
+        object btnReporteListadoNotasCreditosCxC: TcxButton
+          Left = 28
+          Top = 398
+          Width = 300
+          Height = 35
+          Caption = '6. Listado de notas cr'#233'ditos'
+          OptionsImage.Margin = 15
+          TabOrder = 13
+        end
+        object cardTotalCxC: TPanel
+          AlignWithMargins = True
+          Left = 365
+          Top = 223
+          Width = 175
+          Height = 100
+          Margins.Left = 10
+          Margins.Top = 10
+          Margins.Right = 10
+          Margins.Bottom = 10
+          BevelOuter = bvNone
+          BorderWidth = 1
+          Caption = 'cardTotalCxC'
+          Color = clWhite
+          ParentBackground = False
+          ShowCaption = False
+          TabOrder = 16
+          object dxBevel1: TdxBevel
+            AlignWithMargins = True
+            Left = 4
+            Top = 4
+            Width = 167
+            Height = 92
+            Align = alClient
+            ExplicitLeft = 24
+            ExplicitWidth = 158
+            ExplicitHeight = 112
+          end
+          object cxLabel3: TcxLabel
+            Left = 4
+            Top = 44
+            AutoSize = False
+            Caption = 'Cuentas por cobrar'
+            Properties.Alignment.Horz = taCenter
+            Properties.Alignment.Vert = taVCenter
+            Height = 22
+            Width = 167
+            AnchorX = 88
+            AnchorY = 55
+          end
+          object cxLabel4: TcxLabel
+            Left = 4
+            Top = 65
+            Cursor = crHandPoint
+            AutoSize = False
+            Caption = '12,500.00'
+            ParentFont = False
+            Style.Font.Charset = DEFAULT_CHARSET
+            Style.Font.Color = clWindowText
+            Style.Font.Height = -19
+            Style.Font.Name = 'Tahoma'
+            Style.Font.Style = []
+            Style.TextColor = clNavy
+            Style.TextStyle = [fsBold]
+            Style.IsFontAssigned = True
+            Properties.Alignment.Horz = taCenter
+            Properties.Alignment.Vert = taVCenter
+            OnMouseEnter = cxLabel4MouseEnter
+            OnMouseLeave = cxLabel4MouseLeave
+            Height = 23
+            Width = 167
+            AnchorX = 88
+            AnchorY = 77
+          end
+          object cxImage3: TcxImage
+            Left = 4
+            Top = 7
+            Picture.Data = {
+              0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000020
+              000000200806000000737A7AF400000006624B474400FF00FF00FFA0BDA79300
+              00047A494441545809ED577F4C55551CFF9CFB1EF2D414704A3D5820F1B3668E
+              840928AE08D72CE03DA8398B7FB247D966FDD16CD65AABB1FE74D9DADC5A6EBA
+              D60C2597F9602F756EA5B5319A60A02ED1661B3E4A401014315EF8DE3D7DCF79
+              3C76EEBBF73E68ABF98F77E7FBFB7BCEF7FBBEDF73CEBD0FB8FFDCE30AB07F1B
+              DFD3E6C9D3756D13E72C9B69BA5BCCE7BA36480BF547183F71BCC1FFBBD0CD17
+              68DEDCAE9B0F6F768492EE6ED5811D34E1B1843338FB159ABEBBB4F7892F9B9B
+              9B694A426FD07A891D9E6BF3946A11C77E30BE3AB1A7C9DAAB69BAAFDDDBDE63
+              B2280A4DE14D6CCDB70D3E4DD73AEC82172D2B8400D3C4A8A2985AD529D6888A
+              D6D836813ABFB79131BE8FA62D20B01CDE5C0F04581AA3CA64B146ADDFBB252A
+              9AB16502B547EBD772603FB9DBB628F3810CA4BA52B062E1723CBE7C151CCC41
+              EE968381B32F6A8ED69758594D014AF66E4B72A75FBF40CE8504A6E1D41CD851
+              F2163664561A6C837786B0AB6B37AEDCBC62D02B42DF64EACDD5A7AB4E87151D
+              4C15C87870D8470E96C1498F67733699820BBD7BF143F8B0FC7DB81C2E215AC1
+              A34B6EA56C45DCA3C5C9A033BD3D5EA7CACF646F9462580FA3B9F323BC7CC287
+              EF83A7A42ECD958AF5991592B7427477BC11AF372450FBCD0BF9763B3E36D1BD
+              D82DD9F3A3177076B80763A1717CD5D722750215A4E50B6207C575ED7539AAD1
+              A90ACC197E9AB25455263E140E21D9918CB4E434BA44687F81E3C6D4183EE868
+              8678C6FF1E17C41E74AD9A8CFB08E4305400BA9625B50950C7B54E69CD495989
+              F7CADE81A09C92E81D390701572782D26E87E80766AB3643053810ADAFEA11C7
+              1FB8D80251E6BCD45C54B8CB51EE2EC399C12E1CA036CC157C66A98C192A8926
+              F10CE28CB319D6964CDE9DC4CE9FDEC5C14BAD10ED60D48832F75A7CF2E4C7A8
+              CEAAB29D376BE08CCDF2C41812A00DF827E9E61C613D824397BE46D3C9D7D17A
+              F930A623D358E048C29BC5DB91B5247117E966FC430D6048808401D518CF17A6
+              15A032739D04F1CB27A627D0D277089FFEB247BA3A35A7B449C10E311E544D4E
+              55E08E480061276D05AAAB6A98E12B33D7A33ECF23A5A6F16DB8FED788E4FBC6
+              FA2415287DD10A41EC801AC08FA9464D15027501D1821E55A7F2FD13FD883D2F
+              156D91F7BFA844D5C34F21F60CDD198EB156B49B5ECFD75483A102D2C0F82E7A
+              79B44A3E0E8923D858F422D217A5636356359D820A881B312579A9F40C4542F8
+              61E094E42D91583BCE60D891D2C6C16AFDF5DDC4AF21300DF116DC59FA367253
+              1F31D8443B3E3FBF175D43670DFA5981F19F03DEB675D45C3EAB23C69C0029C5
+              EB984EC48F54091789A621CA5EB02C1FAFAD6AA22B88634FCF6718B83D207993
+              7354314551377CD7E03765A745ED461C68F09FA1CC9A484BF308C70D71F35D1E
+              FB0D2353A3189DBA81E0ED60A2E05453FE8A5570B12CC511C41A6A8E3C5F435F
+              BE07C91A6D3231EA58B9345B8AFD1357258D470CB845975B63A0BECDB0F3553F
+              F25145337F4F3F4A453AC7BCEDDD0BC3CE3594E9AB1CB8287409417C9633EE2B
+              3D575C4247CEF648C7D6A07563ECFCE87FFDC7647E51EF7BFD8F15F80762C46D
+              FBB5F6EF2E0000000049454E44AE426082}
+            Properties.PopupMenuLayout.MenuItems = []
+            Properties.ReadOnly = True
+            Properties.ShowFocusRect = False
+            Style.BorderStyle = ebsNone
+            TabOrder = 2
+            Height = 39
+            Width = 167
+          end
+        end
+        object cardTotalVencido: TPanel
+          AlignWithMargins = True
+          Left = 547
+          Top = 223
+          Width = 175
+          Height = 100
+          Margins.Left = 10
+          Margins.Top = 10
+          Margins.Right = 10
+          Margins.Bottom = 10
+          BevelOuter = bvNone
+          BorderWidth = 1
+          Caption = 'Panel14'
+          Color = clWhite
+          ParentBackground = False
+          ShowCaption = False
+          TabOrder = 17
+          object dxBevel2: TdxBevel
+            AlignWithMargins = True
+            Left = 4
+            Top = 4
+            Width = 167
+            Height = 92
+            Align = alClient
+            ExplicitLeft = 24
+            ExplicitWidth = 158
+            ExplicitHeight = 112
+          end
+          object cxLabel5: TcxLabel
+            Left = 4
+            Top = 44
+            AutoSize = False
+            Caption = 'Saldos vencidos'
+            Properties.Alignment.Horz = taCenter
+            Properties.Alignment.Vert = taVCenter
+            Height = 22
+            Width = 167
+            AnchorX = 88
+            AnchorY = 55
+          end
+          object cxLabel6: TcxLabel
+            Left = 4
+            Top = 65
+            AutoSize = False
+            Caption = '2,500.00'
+            ParentFont = False
+            Style.Font.Charset = DEFAULT_CHARSET
+            Style.Font.Color = clWindowText
+            Style.Font.Height = -19
+            Style.Font.Name = 'Tahoma'
+            Style.Font.Style = []
+            Style.TextColor = clRed
+            Style.TextStyle = [fsBold]
+            Style.IsFontAssigned = True
+            Properties.Alignment.Horz = taCenter
+            Properties.Alignment.Vert = taVCenter
+            Height = 23
+            Width = 167
+            AnchorX = 88
+            AnchorY = 77
+          end
+          object cxImage4: TcxImage
+            Left = 4
+            Top = 7
+            Picture.Data = {
+              0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000020
+              000000200806000000737A7AF400000006624B474400FF00FF00FFA0BDA79300
+              000295494441545809ED55CD6B1351109FD94D9B9AB5100415410F8205039A43
+              D30F0FA22169ABBDE92127FF063F90528FF15805EBC93FC1533D292A341AA320
+              DA467A680545BC55057B10A559B436BBE34C42974DF7ED336D92531BE6F7F6F7
+              E6E3F726F3421660F7B3D32780CD0C6075E4541A5C777F33B95E8E492BBD85F2
+              4B6F1F4230C4EFB92BD9E124002DB0C3646CC51C00ECDFFB7C6E515764E882C4
+              0A08748F73B67A389700D7D05D213A681BA88C0CE6B889D33A81FFC432AB99A1
+              9C2E27F40A682C69D94ECF472E3ECC68C5962DF34F0267176D954844E5145FC5
+              D97383C71F7AB89138015DB94B920AEB33F7C1FDF0BEC615CB918A139D647F9E
+              1130E515FC1A1DEEE3C3A52850B0E1300E1C84C8994C0DC237FCAA27024EFE1E
+              1B3AAA8A291B305CBACDC95146BBACA7EAC01D9558A0013B33308E001754C9AD
+              F858F362253B787EB3464303944A751198D39B93DAB7C76939C3AFD7D0801D37
+              AE00D2717F429B79C28E9B97FD9A5E03F6B9D421FEDF51FE52FD056DE037EB67
+              D595BC0670BDDBE07B62AB073ABABA3DDE395E03B1E29BAF0490EFE8C1228E90
+              B70AAFBF0915789DC886D2E9886DDA0B7C152765DF7ED092E558FD582A5537B4
+              BD0988430244784D782720DA72865FBBA10109F416E78B3C9607C275889CCD82
+              F56CAE06E1BA5C8921C28C680BF723D08004D1A4EBFC54BE3CD8BF1DB3B18AA2
+              19A85536109B2D2FF3BBE05620DBE77057BE43F555B106E1BE508022D254AC34
+              F7251060074F9B5785D1F8B1A8FD77DF1287FA18ADD827ABFB47129F7E5E5389
+              282720895280AE3121BC1520D18468856984362005D68BB70F01E189F06DE2B1
+              552C3FD2D56A1B9042A76A5EE5A7727CECD7D95A951CA9D5E5F0F7D386EB417B
+              74688088E2F55D732B22FEB40AF3EF9ACBDECDDAC913F80703CDB0E2F29D437C
+              0000000049454E44AE426082}
+            Properties.PopupMenuLayout.MenuItems = []
+            Properties.ReadOnly = True
+            Properties.ShowFocusRect = False
+            Style.BorderStyle = ebsNone
+            TabOrder = 2
+            Height = 39
+            Width = 167
+          end
+        end
+        object cardTotalNoVencido: TPanel
+          AlignWithMargins = True
+          Left = 729
+          Top = 223
+          Width = 175
+          Height = 100
+          Margins.Left = 10
+          Margins.Top = 10
+          Margins.Right = 10
+          Margins.Bottom = 10
+          BevelOuter = bvNone
+          BorderWidth = 1
+          Caption = 'Panel14'
+          Color = clWhite
+          ParentBackground = False
+          ShowCaption = False
+          TabOrder = 18
+          object dxBevel3: TdxBevel
+            AlignWithMargins = True
+            Left = 4
+            Top = 4
+            Width = 167
+            Height = 92
+            Align = alClient
+            ExplicitLeft = 24
+            ExplicitWidth = 158
+            ExplicitHeight = 112
+          end
+          object cxLabel7: TcxLabel
+            Left = 4
+            Top = 44
+            AutoSize = False
+            Caption = 'Saldos no vencidos'
+            Properties.Alignment.Horz = taCenter
+            Properties.Alignment.Vert = taVCenter
+            Height = 22
+            Width = 167
+            AnchorX = 88
+            AnchorY = 55
+          end
+          object cxLabel8: TcxLabel
+            Left = 4
+            Top = 65
+            AutoSize = False
+            Caption = '2,500.00'
+            ParentFont = False
+            Style.Font.Charset = DEFAULT_CHARSET
+            Style.Font.Color = clWindowText
+            Style.Font.Height = -19
+            Style.Font.Name = 'Tahoma'
+            Style.Font.Style = []
+            Style.TextColor = clNavy
+            Style.TextStyle = [fsBold]
+            Style.IsFontAssigned = True
+            Properties.Alignment.Horz = taCenter
+            Properties.Alignment.Vert = taVCenter
+            OnMouseEnter = cxLabel4MouseEnter
+            OnMouseLeave = cxLabel4MouseLeave
+            Height = 23
+            Width = 167
+            AnchorX = 88
+            AnchorY = 77
+          end
+          object cxImage5: TcxImage
+            Left = 4
+            Top = 7
+            Picture.Data = {
+              0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000020
+              000000200806000000737A7AF400000006624B474400FF00FF00FFA0BDA79300
+              00047A494441545809ED577F4C55551CFF9CFB1EF2D414704A3D5820F1B3668E
+              840928AE08D72CE03DA8398B7FB247D966FDD16CD65AABB1FE74D9DADC5A6EBA
+              D60C2597F9602F756EA5B5319A60A02ED1661B3E4A401014315EF8DE3D7DCF79
+              3C76EEBBF73E68ABF98F77E7FBFB7BCEF7FBBEDF73CEBD0FB8FFDCE30AB07F1B
+              DFD3E6C9D3756D13E72C9B69BA5BCCE7BA36480BF547183F71BCC1FFBBD0CD17
+              68DEDCAE9B0F6F768492EE6ED5811D34E1B1843338FB159ABEBBB4F7892F9B9B
+              9B694A426FD07A891D9E6BF3946A11C77E30BE3AB1A7C9DAAB69BAAFDDDBDE63
+              B2280A4DE14D6CCDB70D3E4DD73AEC82172D2B8400D3C4A8A2985AD529D6888A
+              D6D836813ABFB79131BE8FA62D20B01CDE5C0F04581AA3CA64B146ADDFBB252A
+              9AB16502B547EBD772603FB9DBB628F3810CA4BA52B062E1723CBE7C151CCC41
+              EE968381B32F6A8ED69758594D014AF66E4B72A75FBF40CE8504A6E1D41CD851
+              F2163664561A6C837786B0AB6B37AEDCBC62D02B42DF64EACDD5A7AB4E87151D
+              4C15C87870D8470E96C1498F67733699820BBD7BF143F8B0FC7DB81C2E215AC1
+              A34B6EA56C45DCA3C5C9A033BD3D5EA7CACF646F9462580FA3B9F323BC7CC287
+              EF83A7A42ECD958AF5991592B7427477BC11AF372450FBCD0BF9763B3E36D1BD
+              D82DD9F3A3177076B80763A1717CD5D722750215A4E50B6207C575ED7539AAD1
+              A90ACC197E9AB25455263E140E21D9918CB4E434BA44687F81E3C6D4183EE868
+              8678C6FF1E17C41E74AD9A8CFB08E4305400BA9625B50950C7B54E69CD495989
+              F7CADE81A09C92E81D390701572782D26E87E80766AB3643053810ADAFEA11C7
+              1FB8D80251E6BCD45C54B8CB51EE2EC399C12E1CA036CC157C66A98C192A8926
+              F10CE28CB319D6964CDE9DC4CE9FDEC5C14BAD10ED60D48832F75A7CF2E4C7A8
+              CEAAB29D376BE08CCDF2C41812A00DF827E9E61C613D824397BE46D3C9D7D17A
+              F930A623D358E048C29BC5DB91B5247117E966FC430D6048808401D518CF17A6
+              15A032739D04F1CB27A627D0D277089FFEB247BA3A35A7B449C10E311E544D4E
+              55E08E480061276D05AAAB6A98E12B33D7A33ECF23A5A6F16DB8FED788E4FBC6
+              FA2415287DD10A41EC801AC08FA9464D15027501D1821E55A7F2FD13FD883D2F
+              156D91F7BFA844D5C34F21F60CDD198EB156B49B5ECFD75483A102D2C0F82E7A
+              79B44A3E0E8923D858F422D217A5636356359D820A881B312579A9F40C4542F8
+              61E094E42D91583BCE60D891D2C6C16AFDF5DDC4AF21300DF116DC59FA367253
+              1F31D8443B3E3FBF175D43670DFA5981F19F03DEB675D45C3EAB23C69C0029C5
+              EB984EC48F54091789A621CA5EB02C1FAFAD6AA22B88634FCF6718B83D207993
+              7354314551377CD7E03765A745ED461C68F09FA1CC9A484BF308C70D71F35D1E
+              FB0D2353A3189DBA81E0ED60A2E05453FE8A5570B12CC511C41A6A8E3C5F435F
+              BE07C91A6D3231EA58B9345B8AFD1357258D470CB845975B63A0BECDB0F3553F
+              F25145337F4F3F4A453AC7BCEDDD0BC3CE3594E9AB1CB8287409417C9633EE2B
+              3D575C4247CEF648C7D6A07563ECFCE87FFDC7647E51EF7BFD8F15F80762C46D
+              FBB5F6EF2E0000000049454E44AE426082}
+            Properties.PopupMenuLayout.MenuItems = []
+            Properties.ReadOnly = True
+            Properties.ShowFocusRect = False
+            Style.BorderStyle = ebsNone
+            TabOrder = 2
+            Height = 39
+            Width = 167
+          end
+        end
+        object cbFiltroMonedasCxC: TcxComboBox
+          Left = 423
+          Top = 173
+          Properties.DropDownListStyle = lsFixedList
+          Properties.Items.Strings = (
+            'Pesos - DOP')
+          Style.BorderColor = clWindowFrame
+          Style.BorderStyle = ebs3D
+          Style.HotTrack = False
+          Style.ButtonStyle = bts3D
+          Style.PopupBorderStyle = epbsFrame3D
+          TabOrder = 14
+          Text = 'Pesos - DOP'
+          Width = 120
+        end
+        object cbFiltrosCxC: TcxComboBox
+          Left = 594
+          Top = 173
+          Properties.DropDownListStyle = lsFixedList
+          Properties.Items.Strings = (
+            'Ultimos 30 d'#237'as')
+          Style.BorderColor = clWindowFrame
+          Style.BorderStyle = ebs3D
+          Style.HotTrack = False
+          Style.ButtonStyle = bts3D
+          Style.PopupBorderStyle = epbsFrame3D
+          TabOrder = 15
+          Text = 'Ultimos 30 d'#237'as'
+          Width = 244
+        end
+        object dxLayoutControl1Group_Root: TdxLayoutGroup
+          AlignHorz = ahClient
+          AlignVert = avClient
+          ButtonOptions.Buttons = <>
+          Hidden = True
+          ShowBorder = False
+          Index = -1
+        end
+        object OpcionesCxC: TdxLayoutGroup
+          Parent = dxLayoutControl1Group_Root
+          AlignHorz = ahClient
+          AlignVert = avTop
+          CaptionOptions.AlignHorz = taCenter
+          CaptionOptions.Text = 'Opciones'
+          ButtonOptions.Buttons = <>
+          ButtonOptions.DefaultHeight = 24
+          ButtonOptions.DefaultWidth = 24
+          ButtonOptions.ShowExpandButton = True
+          LayoutDirection = ldHorizontal
+          Index = 0
+        end
+        object ReportesCXC: TdxLayoutGroup
+          Parent = dxLayoutAutoCreatedGroup2
+          AlignHorz = ahLeft
+          CaptionOptions.AlignHorz = taCenter
+          CaptionOptions.Text = 'Reportes'
+          ButtonOptions.Buttons = <>
+          ButtonOptions.DefaultHeight = 24
+          ButtonOptions.DefaultWidth = 24
+          ButtonOptions.ShowExpandButton = True
+          ItemIndex = 5
+          Padding.Top = 10
+          Padding.AssignedValues = [lpavTop]
+          Index = 0
+        end
+        object DashboardCxC: TdxLayoutGroup
+          Parent = dxLayoutAutoCreatedGroup2
+          AlignHorz = ahClient
+          AlignVert = avClient
+          CaptionOptions.Text = 'New Group'
+          CaptionOptions.Visible = False
+          ButtonOptions.Buttons = <>
+          ItemIndex = 1
+          Index = 1
+        end
+        object dxLayoutItem1: TdxLayoutItem
+          Parent = dxLayoutGroup1
+          AlignHorz = ahLeft
+          AlignVert = avTop
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnClientes
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutItem2: TdxLayoutItem
+          Parent = dxLayoutGroup1
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnConducesClientes
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 1
+        end
+        object dxLayoutItem3: TdxLayoutItem
+          Parent = dxLayoutGroup2
+          AlignHorz = ahLeft
+          AlignVert = avTop
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnFacturas
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutGroup1: TdxLayoutGroup
+          Parent = dxLayoutAutoCreatedGroup1
+          AlignHorz = ahClient
+          AlignVert = avTop
+          CaptionOptions.Text = 'New Group'
+          CaptionOptions.Visible = False
+          ButtonOptions.Buttons = <>
+          ItemIndex = 4
+          LayoutDirection = ldHorizontal
+          ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutItem4: TdxLayoutItem
+          Parent = dxLayoutGroup2
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnFacturasRecurrentes
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 1
+        end
+        object dxLayoutGroup2: TdxLayoutGroup
+          Parent = dxLayoutAutoCreatedGroup1
+          AlignHorz = ahLeft
+          CaptionOptions.Text = 'New Group'
+          CaptionOptions.Visible = False
+          ButtonOptions.Buttons = <>
+          ItemIndex = 2
+          LayoutDirection = ldHorizontal
+          ShowBorder = False
+          Index = 1
+        end
+        object dxLayoutAutoCreatedGroup1: TdxLayoutAutoCreatedGroup
+          Parent = OpcionesCxC
+          AlignHorz = ahClient
+          Index = 0
+          AutoCreated = True
+        end
+        object dxLayoutItem5: TdxLayoutItem
+          Parent = dxLayoutGroup1
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnConducesVendedores
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 2
+        end
+        object dxLayoutItem6: TdxLayoutItem
+          Parent = dxLayoutGroup1
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnCotizaciones
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 3
+        end
+        object dxLayoutItem7: TdxLayoutItem
+          Parent = dxLayoutGroup1
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnCuadresDeCajas
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 4
+        end
+        object dxLayoutItem8: TdxLayoutItem
+          Parent = dxLayoutGroup2
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnPagosRecibidos
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 2
+        end
+        object dxLayoutItem10: TdxLayoutItem
+          Parent = ReportesCXC
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnReporteAntiguedadSaldoCxC
+          ControlOptions.OriginalHeight = 35
+          ControlOptions.OriginalWidth = 300
+          ControlOptions.ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutItem11: TdxLayoutItem
+          Parent = ReportesCXC
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnReporteEstadoCuentaCxC
+          ControlOptions.OriginalHeight = 35
+          ControlOptions.OriginalWidth = 300
+          ControlOptions.ShowBorder = False
+          Index = 1
+        end
+        object dxLayoutItem12: TdxLayoutItem
+          Parent = ReportesCXC
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnReporteFacturasPendientesCxC
+          ControlOptions.OriginalHeight = 35
+          ControlOptions.OriginalWidth = 300
+          ControlOptions.ShowBorder = False
+          Index = 2
+        end
+        object dxLayoutItem13: TdxLayoutItem
+          Parent = ReportesCXC
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnReporteListadoFacturasCxC
+          ControlOptions.OriginalHeight = 35
+          ControlOptions.OriginalWidth = 300
+          ControlOptions.ShowBorder = False
+          Index = 3
+        end
+        object dxLayoutItem14: TdxLayoutItem
+          Parent = ReportesCXC
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnReporteListadoPagosCxC
+          ControlOptions.OriginalHeight = 35
+          ControlOptions.OriginalWidth = 300
+          ControlOptions.ShowBorder = False
+          Index = 4
+        end
+        object dxLayoutItem15: TdxLayoutItem
+          Parent = ReportesCXC
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnReporteListadoNotasCreditosCxC
+          ControlOptions.OriginalHeight = 35
+          ControlOptions.OriginalWidth = 300
+          ControlOptions.ShowBorder = False
+          Index = 5
+        end
+        object dxLayoutAutoCreatedGroup2: TdxLayoutAutoCreatedGroup
+          Parent = dxLayoutControl1Group_Root
+          AlignHorz = ahClient
+          AlignVert = avClient
+          LayoutDirection = ldHorizontal
+          Index = 1
+          AutoCreated = True
+        end
+        object dxLayoutItem16: TdxLayoutItem
+          Parent = dxLayoutGroup3
+          CaptionOptions.Text = 'Monedas'
+          Control = cbFiltroMonedasCxC
+          ControlOptions.OriginalHeight = 26
+          ControlOptions.OriginalWidth = 120
+          ControlOptions.ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutItem17: TdxLayoutItem
+          Parent = dxLayoutGroup3
+          CaptionOptions.Text = 'Filtros'
+          Control = cbFiltrosCxC
+          ControlOptions.OriginalHeight = 26
+          ControlOptions.OriginalWidth = 244
+          ControlOptions.ShowBorder = False
+          Index = 1
+        end
+        object dxLayoutGroup3: TdxLayoutGroup
+          Parent = DashboardCxC
+          CaptionOptions.Text = 'New Group'
+          ButtonOptions.Buttons = <>
+          ItemIndex = 1
+          LayoutDirection = ldHorizontal
+          ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutItem18: TdxLayoutItem
+          Parent = dxLayoutAutoCreatedGroup3
+          AlignHorz = ahLeft
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = cardTotalCxC
+          ControlOptions.OriginalHeight = 100
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutItem19: TdxLayoutItem
+          Parent = dxLayoutAutoCreatedGroup3
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = cardTotalVencido
+          ControlOptions.OriginalHeight = 100
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 1
+        end
+        object dxLayoutItem20: TdxLayoutItem
+          Parent = dxLayoutAutoCreatedGroup3
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = cardTotalNoVencido
+          ControlOptions.OriginalHeight = 100
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 2
+        end
+        object dxLayoutAutoCreatedGroup3: TdxLayoutAutoCreatedGroup
+          Parent = DashboardCxC
+          LayoutDirection = ldHorizontal
+          Index = 2
+          AutoCreated = True
+        end
+        object dxLayoutSeparatorItem1: TdxLayoutSeparatorItem
+          Parent = DashboardCxC
+          CaptionOptions.Text = 'Separator'
+          Padding.Bottom = 5
+          Padding.Top = 5
+          Padding.AssignedValues = [lpavBottom, lpavTop]
+          Index = 1
+        end
+      end
+    end
+    object tabCompras: TcxTabSheet
+      Caption = 'Compras'
+      ImageIndex = 1
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
+      object dxLayoutControl3: TdxLayoutControl
+        Left = 0
+        Top = 0
+        Width = 1269
+        Height = 538
+        Align = alClient
+        TabOrder = 0
+        object btnNotasDeCreditos: TcxButton
+          AlignWithMargins = True
+          Left = 756
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Notas de cr'#233'ditos'
+          OptionsImage.ImageIndex = 4
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 4
+        end
+        object btnProveedores: TcxButton
+          Left = 28
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Proveedores'
+          OptionsImage.ImageIndex = 10
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 0
+        end
+        object btnOrdenCompra: TcxButton
+          Left = 210
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Orden de compra'
+          OptionsImage.ImageIndex = 3
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 1
+        end
+        object btnCompras: TcxButton
+          Left = 392
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Compras'
+          OptionsImage.ImageIndex = 12
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 2
+        end
+        object btnGastosMenores: TcxButton
+          Left = 574
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Gastos menores'
+          OptionsImage.ImageIndex = 13
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 3
+        end
+        object btnPagosRealizados: TcxButton
+          Left = 28
+          Top = 88
+          Width = 175
+          Height = 40
+          Caption = 'Pagos realizados'
+          OptionsImage.ImageIndex = 14
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 5
+        end
+        object cxButton19: TcxButton
+          Left = 28
+          Top = 188
+          Width = 300
+          Height = 35
+          Caption = '1.'
+          OptionsImage.Margin = 15
+          TabOrder = 6
+        end
+        object dxLayoutGroup11: TdxLayoutGroup
+          AlignHorz = ahClient
+          AlignVert = avClient
+          ButtonOptions.Buttons = <>
+          Hidden = True
+          ShowBorder = False
+          Index = -1
+        end
+        object dxLayoutGroup12: TdxLayoutGroup
+          Parent = dxLayoutGroup11
+          AlignHorz = ahClient
+          AlignVert = avTop
+          CaptionOptions.AlignHorz = taCenter
+          CaptionOptions.Text = 'Opciones'
+          ButtonOptions.Buttons = <>
+          ButtonOptions.DefaultHeight = 24
+          ButtonOptions.DefaultWidth = 24
+          ButtonOptions.ShowExpandButton = True
+          LayoutDirection = ldHorizontal
+          Index = 0
+        end
+        object dxLayoutGroup13: TdxLayoutGroup
+          Parent = dxLayoutAutoCreatedGroup7
+          AlignHorz = ahLeft
+          CaptionOptions.AlignHorz = taCenter
+          CaptionOptions.Text = 'Reportes'
+          ButtonOptions.Buttons = <>
+          ButtonOptions.DefaultHeight = 24
+          ButtonOptions.DefaultWidth = 24
+          ButtonOptions.ShowExpandButton = True
+          Padding.Top = 10
+          Padding.AssignedValues = [lpavTop]
+          Index = 0
+        end
+        object dxLayoutGroup14: TdxLayoutGroup
+          Parent = dxLayoutAutoCreatedGroup7
+          AlignHorz = ahClient
+          AlignVert = avClient
+          CaptionOptions.Text = 'New Group'
+          CaptionOptions.Visible = False
+          ButtonOptions.Buttons = <>
+          Index = 1
+        end
+        object dxLayoutItem29: TdxLayoutItem
+          Parent = dxLayoutGroup15
+          AlignHorz = ahLeft
+          AlignVert = avTop
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnProveedores
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutItem30: TdxLayoutItem
+          Parent = dxLayoutGroup15
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnOrdenCompra
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 1
+        end
+        object dxLayoutItem31: TdxLayoutItem
+          Parent = dxLayoutGroup16
+          AlignHorz = ahLeft
+          AlignVert = avTop
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnPagosRealizados
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutGroup15: TdxLayoutGroup
+          Parent = dxLayoutAutoCreatedGroup6
+          AlignHorz = ahClient
+          AlignVert = avTop
+          CaptionOptions.Text = 'New Group'
+          CaptionOptions.Visible = False
+          ButtonOptions.Buttons = <>
+          LayoutDirection = ldHorizontal
+          ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutGroup16: TdxLayoutGroup
+          Parent = dxLayoutAutoCreatedGroup6
+          AlignHorz = ahLeft
+          CaptionOptions.Text = 'New Group'
+          CaptionOptions.Visible = False
+          ButtonOptions.Buttons = <>
+          LayoutDirection = ldHorizontal
+          ShowBorder = False
+          Index = 1
+        end
+        object dxLayoutAutoCreatedGroup6: TdxLayoutAutoCreatedGroup
+          Parent = dxLayoutGroup12
+          AlignHorz = ahClient
+          Index = 0
+          AutoCreated = True
+        end
+        object dxLayoutItem33: TdxLayoutItem
+          Parent = dxLayoutGroup15
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnCompras
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 2
+        end
+        object dxLayoutItem34: TdxLayoutItem
+          Parent = dxLayoutGroup15
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnGastosMenores
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 3
+        end
+        object dxLayoutItem36: TdxLayoutItem
+          Parent = dxLayoutGroup15
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnNotasDeCreditos
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 4
+        end
+        object dxLayoutItem38: TdxLayoutItem
+          Parent = dxLayoutGroup13
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = cxButton19
+          ControlOptions.OriginalHeight = 35
+          ControlOptions.OriginalWidth = 300
+          ControlOptions.ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutAutoCreatedGroup7: TdxLayoutAutoCreatedGroup
+          Parent = dxLayoutGroup11
+          AlignHorz = ahClient
+          AlignVert = avClient
+          LayoutDirection = ldHorizontal
+          Index = 1
+          AutoCreated = True
+        end
+        object dxLayoutGroup17: TdxLayoutGroup
+          Parent = dxLayoutGroup14
+          CaptionOptions.Text = 'New Group'
+          ButtonOptions.Buttons = <>
+          LayoutDirection = ldHorizontal
+          ShowBorder = False
+          Index = 0
+        end
+      end
+    end
+    object tabInventario: TcxTabSheet
+      Caption = 'Inventario'
+      ImageIndex = 2
+      object dxLayoutControl2: TdxLayoutControl
+        Left = 0
+        Top = 0
+        Width = 1269
+        Height = 538
+        Align = alClient
+        TabOrder = 0
+        object btnProductos: TcxButton
+          Left = 28
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Productos / Servicios'
+          OptionsImage.ImageIndex = 15
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 0
+        end
+        object btnInventario: TcxButton
+          Left = 392
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Inventario'
+          OptionsImage.ImageIndex = 23
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 2
+        end
+        object btnTransferencia: TcxButton
+          Left = 574
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Transferencias'
+          OptionsImage.ImageIndex = 21
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 3
+        end
+        object btnAjustes: TcxButton
+          Left = 756
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Ajustes'
+          OptionsImage.ImageIndex = 22
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 4
+        end
+        object btnAlmacenes: TcxButton
+          Left = 210
+          Top = 41
+          Width = 175
+          Height = 40
+          Caption = 'Almacenes'
+          OptionsImage.ImageIndex = 24
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 1
+        end
+        object btnListasDePrecios: TcxButton
+          Left = 28
+          Top = 88
+          Width = 175
+          Height = 40
+          Caption = 'Listas de precios'
+          OptionsImage.ImageIndex = 25
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 5
+        end
+        object btnActivosFijos: TcxButton
+          Left = 210
+          Top = 88
+          Width = 175
+          Height = 40
+          Caption = 'Activos fijos'
+          OptionsImage.ImageIndex = 26
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 6
+        end
+        object btnProduccion: TcxButton
+          Left = 392
+          Top = 88
+          Width = 175
+          Height = 40
+          Caption = 'Producci'#243'n'
+          OptionsImage.ImageIndex = 34
+          OptionsImage.Images = Imagenes16x16
+          OptionsImage.Margin = 15
+          TabOrder = 7
+        end
+        object cxButton32: TcxButton
+          Left = 28
+          Top = 188
+          Width = 300
+          Height = 35
+          Caption = '1.'
+          OptionsImage.Margin = 15
+          TabOrder = 8
+        end
+        object dxLayoutGroup4: TdxLayoutGroup
+          AlignHorz = ahClient
+          AlignVert = avClient
+          ButtonOptions.Buttons = <>
+          Hidden = True
+          ShowBorder = False
+          Index = -1
+        end
+        object dxLayoutGroup5: TdxLayoutGroup
+          Parent = dxLayoutGroup4
+          AlignHorz = ahClient
+          AlignVert = avTop
+          CaptionOptions.AlignHorz = taCenter
+          CaptionOptions.Text = 'Opciones'
+          ButtonOptions.Buttons = <>
+          ButtonOptions.DefaultHeight = 24
+          ButtonOptions.DefaultWidth = 24
+          ButtonOptions.ShowExpandButton = True
+          LayoutDirection = ldHorizontal
+          Index = 0
+        end
+        object dxLayoutGroup6: TdxLayoutGroup
+          Parent = dxLayoutAutoCreatedGroup5
+          AlignHorz = ahLeft
+          CaptionOptions.AlignHorz = taCenter
+          CaptionOptions.Text = 'Reportes'
+          ButtonOptions.Buttons = <>
+          ButtonOptions.DefaultHeight = 24
+          ButtonOptions.DefaultWidth = 24
+          ButtonOptions.ShowExpandButton = True
+          Padding.Top = 10
+          Padding.AssignedValues = [lpavTop]
+          Index = 0
+        end
+        object dxLayoutGroup7: TdxLayoutGroup
+          Parent = dxLayoutAutoCreatedGroup5
+          AlignHorz = ahClient
+          AlignVert = avClient
+          CaptionOptions.Text = 'New Group'
+          CaptionOptions.Visible = False
+          ButtonOptions.Buttons = <>
+          Index = 1
+        end
+        object dxLayoutItem21: TdxLayoutItem
+          Parent = dxLayoutGroup8
+          AlignHorz = ahLeft
+          AlignVert = avTop
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnProductos
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutItem22: TdxLayoutItem
+          Parent = dxLayoutGroup8
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnAlmacenes
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 1
+        end
+        object dxLayoutItem23: TdxLayoutItem
+          Parent = dxLayoutGroup9
+          AlignHorz = ahLeft
+          AlignVert = avTop
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnListasDePrecios
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutGroup8: TdxLayoutGroup
+          Parent = dxLayoutAutoCreatedGroup4
+          AlignHorz = ahClient
+          AlignVert = avTop
+          CaptionOptions.Text = 'New Group'
+          CaptionOptions.Visible = False
+          ButtonOptions.Buttons = <>
+          LayoutDirection = ldHorizontal
+          ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutItem24: TdxLayoutItem
+          Parent = dxLayoutGroup9
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnActivosFijos
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 1
+        end
+        object dxLayoutGroup9: TdxLayoutGroup
+          Parent = dxLayoutAutoCreatedGroup4
+          AlignHorz = ahLeft
+          CaptionOptions.Text = 'New Group'
+          CaptionOptions.Visible = False
+          ButtonOptions.Buttons = <>
+          LayoutDirection = ldHorizontal
+          ShowBorder = False
+          Index = 1
+        end
+        object dxLayoutAutoCreatedGroup4: TdxLayoutAutoCreatedGroup
+          Parent = dxLayoutGroup5
+          AlignHorz = ahClient
+          Index = 0
+          AutoCreated = True
+        end
+        object dxLayoutItem25: TdxLayoutItem
+          Parent = dxLayoutGroup8
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnInventario
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 2
+        end
+        object dxLayoutItem26: TdxLayoutItem
+          Parent = dxLayoutGroup8
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnTransferencia
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 3
+        end
+        object dxLayoutItem27: TdxLayoutItem
+          Parent = dxLayoutGroup8
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnAjustes
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 4
+        end
+        object dxLayoutItem28: TdxLayoutItem
+          Parent = dxLayoutGroup9
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = btnProduccion
+          ControlOptions.OriginalHeight = 40
+          ControlOptions.OriginalWidth = 175
+          ControlOptions.ShowBorder = False
+          Index = 2
+        end
+        object dxLayoutItem35: TdxLayoutItem
+          Parent = dxLayoutGroup6
+          CaptionOptions.Text = 'New Item'
+          CaptionOptions.Visible = False
+          Control = cxButton32
+          ControlOptions.OriginalHeight = 35
+          ControlOptions.OriginalWidth = 300
+          ControlOptions.ShowBorder = False
+          Index = 0
+        end
+        object dxLayoutAutoCreatedGroup5: TdxLayoutAutoCreatedGroup
+          Parent = dxLayoutGroup4
+          AlignHorz = ahClient
+          AlignVert = avClient
+          LayoutDirection = ldHorizontal
+          Index = 1
+          AutoCreated = True
+        end
+        object dxLayoutGroup10: TdxLayoutGroup
+          Parent = dxLayoutGroup7
+          CaptionOptions.Text = 'New Group'
+          ButtonOptions.Buttons = <>
+          LayoutDirection = ldHorizontal
+          ShowBorder = False
+          Index = 0
+        end
+      end
+    end
+    object tabBancos: TcxTabSheet
+      Caption = 'Bancos'
+      ImageIndex = 7
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
+      object Panel8: TPanel
+        AlignWithMargins = True
+        Left = 20
+        Top = 20
+        Width = 1229
+        Height = 125
+        Margins.Left = 20
+        Margins.Top = 20
+        Margins.Right = 20
+        Margins.Bottom = 10
+        Align = alTop
+        BevelOuter = bvNone
+        Caption = 'Panel2'
+        Color = clSilver
+        ParentBackground = False
+        ShowCaption = False
+        TabOrder = 0
+        object cxButton35: TcxButton
+          Left = 31
+          Top = 21
+          Width = 175
+          Height = 40
+          Caption = 'Bancos / Cuentas'
+          OptionsImage.ImageIndex = 27
+          OptionsImage.Margin = 15
+          TabOrder = 0
+        end
+        object cxButton36: TcxButton
+          Left = 212
+          Top = 21
+          Width = 175
+          Height = 40
+          Caption = 'Depositos'
+          OptionsImage.ImageIndex = 28
+          OptionsImage.Margin = 15
+          TabOrder = 1
+        end
+        object cxButton37: TcxButton
+          Left = 574
+          Top = 21
+          Width = 175
+          Height = 40
+          Caption = 'Estados de cuentas'
+          OptionsImage.ImageIndex = 29
+          OptionsImage.Margin = 15
+          TabOrder = 2
+        end
+        object cxButton38: TcxButton
+          Left = 393
+          Top = 21
+          Width = 175
+          Height = 40
+          Caption = 'Notas d'#233'bitos / Cr'#233'ditos'
+          OptionsImage.Margin = 15
+          TabOrder = 3
+        end
+        object cxButton15: TcxButton
+          Left = 755
+          Top = 21
+          Width = 175
+          Height = 40
+          Caption = 'Conciliaciones'
+          OptionsImage.ImageIndex = 18
+          OptionsImage.Margin = 15
+          TabOrder = 4
+        end
+        object cxButton43: TcxButton
+          Left = 31
+          Top = 67
+          Width = 175
+          Height = 40
+          Caption = 'Movimientos bancarios'
+          OptionsImage.Margin = 15
+          TabOrder = 5
+        end
+      end
+    end
+    object tabContabilidad: TcxTabSheet
+      Caption = 'Contabilidad'
+      ImageIndex = 3
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
+      object Panel5: TPanel
+        AlignWithMargins = True
+        Left = 20
+        Top = 20
+        Width = 1229
+        Height = 125
+        Margins.Left = 20
+        Margins.Top = 20
+        Margins.Right = 20
+        Margins.Bottom = 10
+        Align = alTop
+        BevelOuter = bvNone
+        Caption = 'Panel2'
+        Color = clSilver
+        ParentBackground = False
+        ShowCaption = False
+        TabOrder = 0
+        object cxButton13: TcxButton
+          Left = 31
+          Top = 21
+          Width = 175
+          Height = 40
+          Caption = 'Catalogos de cuentas'
+          OptionsImage.ImageIndex = 16
+          OptionsImage.Margin = 15
+          TabOrder = 0
+        end
+        object cxButton14: TcxButton
+          Left = 212
+          Top = 21
+          Width = 175
+          Height = 40
+          Caption = 'Entradas de diarios'
+          OptionsImage.ImageIndex = 20
+          OptionsImage.Margin = 15
+          TabOrder = 1
+        end
+        object cxButton16: TcxButton
+          Left = 393
+          Top = 21
+          Width = 175
+          Height = 40
+          Caption = 'Cierres de per'#237'odos'
+          OptionsImage.ImageIndex = 17
+          OptionsImage.Margin = 15
+          TabOrder = 2
+        end
+      end
+    end
+    object tabRecursosHumanos: TcxTabSheet
+      Caption = 'Recursos humanos'
+      ImageIndex = 4
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
+      object Panel10: TPanel
+        AlignWithMargins = True
+        Left = 20
+        Top = 20
+        Width = 1229
+        Height = 125
+        Margins.Left = 20
+        Margins.Top = 20
+        Margins.Right = 20
+        Margins.Bottom = 10
+        Align = alTop
+        BevelOuter = bvNone
+        Caption = 'Panel2'
+        Color = clSilver
+        ParentBackground = False
+        ShowCaption = False
+        TabOrder = 0
+        object cxButton39: TcxButton
+          Left = 31
+          Top = 21
+          Width = 175
+          Height = 40
+          Caption = 'Empleados'
+          OptionsImage.ImageIndex = 30
+          OptionsImage.Margin = 15
+          TabOrder = 0
+        end
+        object cxButton40: TcxButton
+          Left = 212
+          Top = 21
+          Width = 175
+          Height = 40
+          Caption = 'Nominas'
+          OptionsImage.ImageIndex = 31
+          OptionsImage.Margin = 15
+          TabOrder = 1
+        end
+      end
+    end
+    object tabConfiguraciones: TcxTabSheet
+      Caption = 'Configuraciones'
+      ImageIndex = 5
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
+    end
+    object cxTabSheet1: TcxTabSheet
+      Caption = 'Punto de Venta'
+      ImageIndex = 6
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
+      object Panel11: TPanel
+        AlignWithMargins = True
+        Left = 20
+        Top = 20
+        Width = 1229
+        Height = 125
+        Margins.Left = 20
+        Margins.Top = 20
+        Margins.Right = 20
+        Margins.Bottom = 10
+        Align = alTop
+        BevelOuter = bvNone
+        Caption = 'Panel2'
+        Color = clSilver
+        ParentBackground = False
+        ShowCaption = False
+        TabOrder = 0
+        object cxButton41: TcxButton
+          Left = 31
+          Top = 21
+          Width = 175
+          Height = 40
+          Caption = 'Abrir Caja'
+          OptionsImage.ImageIndex = 32
+          OptionsImage.Margin = 15
+          TabOrder = 0
+        end
+        object cxButton42: TcxButton
+          Left = 393
+          Top = 21
+          Width = 175
+          Height = 40
+          Caption = 'Cerrar Caja'
+          Enabled = False
+          OptionsImage.ImageIndex = 17
+          OptionsImage.Margin = 15
+          TabOrder = 1
+        end
+        object cxButton45: TcxButton
+          Left = 212
+          Top = 21
+          Width = 175
+          Height = 40
+          Caption = 'Facturar'
+          Enabled = False
+          OptionsImage.ImageIndex = 33
+          OptionsImage.Margin = 15
+          TabOrder = 2
+        end
+      end
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 668
+    Width = 1269
+    Height = 19
+    Panels = <>
+  end
+  object Imagenes24x24: TcxImageList
+    SourceDPI = 96
+    Height = 24
+    Width = 24
+    FormatVersion = 1
+    DesignInfo = 11666280
+    ImageInfo = <
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+          F800000006624B474400FF00FF00FFA0BDA7930000023D49444154480DED53CF
+          6B134114FEDE241029B150DB7812951205FF817AD0837810ECA1FE002B0A5E54
+          A859052FD6A41E64EBA15D15F1A09BA8D75EAAE2C18842FF001545CF823F82E2
+          45AC3FA03DA86033BE37D95D669B6E1273EEF2DEFBBEF7CDCC9B79B3BBC0EAD3
+          E606C88C8F1D1B468AEE63F3C61E64B38B00DD82533C6FC696057D78508B4477
+          6B8DB592B470658DA5A0CDDAB5801E47656A8735D6354D9B95B7679E30AE6107
+          CADE55C673D0EA08E353F6CEAD7279880FF98217FC448636E14471D1EE807531
+          3D2B917D14AEDB3800271D99D6C5609E2FC585376FE04CBCE6810FEC39ACCFEC
+          42F0E8D1412FBC7F91848B26DCB83F9D67DCCFFE0B94BAC168AC790391090F04
+          0075A881FCDAEFD54A204C86B970122D12709629D7A31914C6BF3237C682C178
+          20FEA28CA20FDAD744B335570A8B1B6EE670B839D50FA2E3CCEAA82F5D638C4C
+          45CC26A78AAF827400B9CCEE801B90C2E226098352634C7B78E3473873E12DF3
+          C854C49208E168D290D17D37CB850B866B75DDA015C8E2715AF6CC4F11175B66
+          CFE0949AFE9DF61DB4AC190DFEE62E2E459945D2165F993AA5E42E575E115355
+          2C8B275F4CEA7B3B0D7619924FE77BD3DC76A9E3BA5A4FE2F4848B654F7207E9
+          BE8BD0F078FE3C7BD796DC415072FB9E7D57B89393FC49DD7939F730D6D1D0F0
+          81ADB4547F2C5315F4DEE773D5F7C26D4FEE209C45286CD8B2AD8F4FE2845288
+          F4B73ED2BB2E97EFED1FC86BC248A8DBD87E038DCAE7776FFE7007657BA1709D
+          56D5851FF39F16BE7FFB481A55D156FDBF6FE01F14C78B69C7C5171100000000
+          49454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+          F800000006624B474400FF00FF00FFA0BDA7930000025449444154480DED534F
+          48146114FF7DDF4C68B209A61E8228A935F01E7650C482A2840C8B3A149D0C6C
+          37A14BB66B07DB3AE858872ECDAE74ED124887B60C84084F467FEE512DD11F82
+          502BD08B4BCEBCDE373BB3CCEECEECB69E1DBEF7DEEF7BBF376FBEDFE31B60EB
+          A93101E1F0231707A0895974EC694224B2068819C413D71D2EC0F50D3DBFA0EB
+          D6C2CBD9933F02E89294F4ED3410A9ED0E80C69099EC519B2093823AADBF72B1
+          F7CCB37D41BC3F5750E0CFA48DBBBCBDC666229E1CE588FED37329FEF64D854B
+          4C504ED3A8BFA82433DD0DA2D75CF3070D622F86136B9237658B1EB9897348A5
+          74170707128D767EDBF622499470B1A99A2B5CA94065D3468EC37E1ED551C4C7
+          5F302E59AEA26161698717B2C7730E694E4521C407C67908AD03B1B125C690CA
+          5598C0E3424E9E2DC4526F93F86CE9764FB17981BECA81FB89875E73DE2358C1
+          CCF441D8F4960B56B0B4BE8B47B5C1387CDD9F6C8594DFB8A011B6DD85D11B1F
+          193B4B3ABEDC5D4EBC73536D686F38E2E2F020E508934D7CDCA7FEE69C0B1991
+          623C1338EFC1C068A622DC38E67024EF39D1E78247A40AD206A950872DF2B5AE
+          F877641D0DAA95AEB38ADB4105D5EFB97A239E0C57A9F81A26ABF03F1DCE347A
+          9DB849177E3AD39862D9C9FFEE4B740B57C653287BC215E82D1320185CBFCCB6
+          E915AEC06D79E8D8A93BACE4125FA9076FE69F9428EA1E183A202C7B4E954AD0
+          8957F3D99CC27E0B57E05509C4767776B5F049E25ECA8B62C31E6CDED91E6D6E
+          6D8B92C0A097F7C7DA1F2064BE7F7A9F670569FF8B0A932EB3ABBF97BFAEFE5A
+          F922085995DBB2BA27F00F6A92A0EBD9AA87480000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+          F800000006624B474400FF00FF00FFA0BDA793000001D349444154480DED54CD
+          2B445114FFDD37238AA67CCF429486E20F30A59428C562644159D829C66C64E5
+          85B019C3C682C6C7D68E9529CA86B221EC1516230BE463310BA578D779F3DCE7
+          9ADEBC79BDD8CDE99CFBFBDD73EE3BE79EFBEE7B405E729C0033E323433DF0B2
+          6DD4D516A3A42405C6571056A7F5385FC711613B9CC9211B45A758AA0892460E
+          2F38D7A90F9C4D616DB1459F90B543928B24707C65D8C52D32A5437678CDC9C6
+          D63EF12232201E5B261CA76283846764BFD4E3010A0B0C97473130DBC82C03AB
+          D12014E594620FA8A8AFE1AF031FC41D2B1D9199D7BA7E44D5779D04E0C773B2
+          95D0B55A17608C5E04DB31B26AFD06BA1BAD0BE8B9B8F65D00FF5420A29EEB75
+          C8FC64AE357B0752CA4B543D4AD35CF4585EF0734D656F066FD626AA335C76D3
+          4260D28C2B26FB1BF20685CDC8A91C7580B149F35ECB0F3BE1B93AB84F27892F
+          B5A5D1C560BFB3F8421460AAE3BC9CCF23A2CE4112FB0E3C65B3E088D1FA2732
+          576ADFC177CA6057EF121886E9F3DE3C3BD8FDB922146FE9E96B649FDA1E5128
+          E0DD2707891B9D0BB3EF40AC6208D7343495D26EC6844B20FBD042BEB2CA80AF
+          BC22C01942C22FD059018EB5BBEBCB77EA202E1E14C8BD4A22F5FA749B7A794E
+          D21F2C21FC79747C025F29D86956C51E952A0000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+          F800000006624B474400FF00FF00FFA0BDA793000001D949444154480D636018
+          05031D028C3007BC7FFDF23F8C8D4C03057F00157D07E29FFF19FE4531FC67FE
+          CBC0F87F2E508D30108390208840C782A2E2402D0C0C4C20094BCFD54073402C
+          4C0C54C5011415042A90D8B9FDC2BE9D3BCE1E04F25580186430080399980866
+          260BBAD4B3FB77E142CF1FDC83B38D1D5DE16C5218181648292AC3F523B3E182
+          688C8B4F2F8345F4A575C1343A816101361FE072FDCD57B719A61F9DC3F0F5E7
+          77866CDB54060B055374F319302C407635321B43275060EEF1C50CA6B2C60C72
+          42B20CBDFB2731AC4E5C0C144545181690E2034D0935863D370F3064DA2433AC
+          4A58846A3294876101B2AB91D950F52854A2790C838EA436C382934B188EDC3D
+          CE50E15A84220FE23081087271E0DC6886CF3F3E31802C3A76FF245663307C80
+          AE0A1464A0E48A2DA2F3EC3318A61D9EC5C0C2C8C290619B8CAE15CC27680128
+          984018AC1A8D7054B16510E716058B6A496A80697402C302908B418A408682D8
+          20D783F8D87C0012C76530480E84312C00190C920061101B84416C723145914C
+          8CA5701F78C51DC2AA9E8D9589818D8D9941489095C156FB37031313034371D3
+          0586C7CFBF83D57FF9FA1B4CE322187149A08B9B79AD5063FECFBC8B01585633
+          FCFBE77A7C67D81D7435A3FCC11902001F4D7ECD926590670000000049454E44
+          AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+          F800000006624B474400FF00FF00FFA0BDA793000002AE49444154480DED545F
+          48535118FFCEFDB3EEE656D214B6084AD1462444CE1E0AC9AD30C98774F814B9
+          62A03D54C6A80C5F7C0929738444E44B3EE53FA2870C1F13B104230B4CEB31B5
+          7A980F256C38753A774FDF3976E7655B57DF7CF1F2FDCEF77DBFEFDFE19C7B2F
+          C0EEB3D32740B6B3018FC753248A623BA5D403007644CBC8C848076A8A30942D
+          0760738720085FB14B1E422FDF1289C4D9B1B1B1DF7A32DD16D289749F10D286
+          5CAAB9731F810A971447AEC4AC4821D48622194631A8C8A4767F0E6FCA1AC311
+          07DF93D2334EE0E544A216530C65CB01ABEB60EFBD66C968E23F6D8217E3EBB6
+          8C401AC1B7A37178DEB95EAFF73AA259E3EA4E241799DD33F49D290ECDF61D5F
+          5F6244B63AC633A42E1993AC92244EAB2A2DC0001505F239BEBA56F3BE59BC0F
+          B2AD01B94C598B3DF776D2DBD9EAF0F2E75981C41606BB55A8574C70B0AAC404
+          E78E8AE4C34CF270DF38A907C9DA0E90F463CE1E845EE2A0581FDAAD4BD9EB00
+          F80B903A229743AAEE6DB4C8FE53321CC815A0CE2DE7BB9CA49C540FCE00A54D
+          00EA66738A368126523534F7BF3A2D3935C0E7963F6AA4A6EBDC26CEDD98B830
+          00E1518085E90D8447E1CAF09901C0C7A80EC3901A50E6909F21318BD064A6C8
+          99DF75B535746B39B91C8EC44580D84F8EC8AA08A219C281D6D0CD6C7565C516
+          D68BF7490D20BEC108484A292C4CE12E1192E20E4E1E7B40009E60A6AD3F5A03
+          313587A30F6DE4F6E27FE26960B2BC2DBD8E54BE8A629C0BD6730D95971B7D78
+          D6F7BA4A5F9F4CA8226DFD11F865B3E7156E448DD7E8C29FD98EC2EE43AC2EF8
+          E5E22715E0D1707FF71B56C5079CBFD4D049090419A1C159500CF80FD25C43AD
+          AA49989FDBFC4E783285C76F07BAEF0ACC496FCEB8ED36DFC8C5FB61861E04EE
+          30F7DF77405A98A3C7CAE26285E69BADB6779AADD72BB1CD1C009235479FBF6B
+          EFCC09FC057C01E1C3F75A47B50000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+          F800000006624B474400FF00FF00FFA0BDA7930000038349444154480DD555DF
+          6B1457143E67667613336B628CD148D0682068A815A4BE044A6B0BFE0906B160
+          432B28FE00C59858D1728922C6282D85F820A2411F047D2CF4A514953EB40F7D
+          51B115514C2460E28F4D56771393CCCCED77EEEE4C769C557C2B5DCEB9E73BDF
+          3DF7DCB9E79E9925FABFFFF8430EF0F5F7032759D377F158BE3874BCFBDB3897
+          F4AC249564907C5D92D51F27B924F3411B10F3B2E452AAC425C26225EA523F2C
+          62DFFB8534FD3CEB540DB651766AC4777769A25358E9422301E7B1E6EE554E7E
+          F05EAE36E5BADE0E3CC85781ED775E56879F84814E088CF5BD6358D8414C1D29
+          7FA6E7B1764799699DD69A66A6A7C89B9B3561A9749AD2D5350EE27EC403EC74
+          33DE62A2E2292DDF3983A04EA891E804DF1CED5F13B075076C1A1AC9D4EB1CBD
+          CABE20DFF3224E80653B54B7A4916A32B5E2C634E0E0CBCB7DBD3784B4641045
+          F2B3B0B1E4F95C96269E8D2592238E02DFA389F1A754C84D881B530EAC9F9452
+          A63A6683DD6A3083884D54F69B9B9DA1DCCBE7654C65987BF19C24B67C16656D
+          7FE42D6813CE6C704EEDC993D61B50AF3F8414CD4FE2C9B4A050753F0541B351
+          CDA723161D919FCC86AED80714589F5E39D1FB8F38C829A6A85BB65CB3DDB523
+          BFC1FB7C6CF811F928033021C7CD5FAF5EF8C2E0D2B079DB8E5B809F41C97652
+          D4D4D20AC8C3693BFFD179A5A6E018B1CC581AAE5FEFF491CDB48A1F00967866
+          FEAB04CB8C8E38B98F70A23CB970B10DCCC53057C9846DD9628CA24D371A101B
+          38E2A4A3C2A92EA5AA432C966510DDAE06D65B3E5D04FE046ABA475A54705175
+          BF3547A6F68163F512EB9E224F54B3B096EA972E2FB9FA2EDBD6D64BAAFB6F21
+          CC06DBD5A995966F3F0491821A91CE78363A8C8AD17B7F8CB7AD71450BA5D2E6
+          E0616CC19FA66557CE1C2A9812B5D29B51CD743B9C152B0BEA1A1A05BE576B97
+          2C7D3B397A826F4872596836504A0568D3FD20628D99A95B4C0D4DCDE812F3CE
+          607A5EA4731A963753A66ED13C5944B3DAE68345880F4808C4761D1BB80ABB15
+          0AD1E3387E163BB6E3922B7D8BF06D930AEBBB48B3020BCC4ECCFAECA5BE9E6E
+          F846CC090CC2802F612FCCEF58B6AF907756B7D885F5F00F2093575DE3E269EB
+          8D562D704171011BEF2DDC5FB561CEAE6AC17FC611C4DE4CCD04C7612341AE08
+          BF13E06423985C099D17D67F0EF5F574CC139551EC049543C0328F618C8BA624
+          178F305EF2F60C1D1FB40EEEE03EDACA59BCDDF7CAFDFF0CFF0B024E244275A9
+          7CEE0000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+          F800000006624B474400FF00FF00FFA0BDA7930000020A49444154480D636018
+          EA8099140FF86596D6A81B5BDADD3C7BFC10B1FA88B620A1B62BE1FDCB67137F
+          FFFCE1A4A267F8E0EEE5F31789B184280B4086333030CE65666161F8FEE533D0
+          5C467FA0250F89B18409A81A2F8AAFE9CA061A3EEF3F03C33F2E3EBE70464686
+          70A0867FFFFF33CE778D4E01CA017978105E1F800C6764649C0C34FC2F23E3FF
+          A8054D65ABEF5D3E7F4D59D7F006D0D220A0B9DECA7A466FEE5D3E771AC8C68A
+          705A80CD709809A458C208D2F4D9D35094E9175BE67FC6FF5C20FE1D3E519DFB
+          3C425E20B6E29777DB543EBDBE0262A3E32BAC3CBAB759393D41E26A7FBE6DD3
+          FEF515AC8EF1FFFFAF7FFFFE9BCE77E0EC1BB0055F9CCD2B1918FEB78114520D
+          33FEAFE4D973BA836024536A210BC880FF6CBFE6FCFCC6A2F6FDE7DF04062A00
+          4E7696796C8CFFE6808C0207118871415F5F1A18E34F406C187EF9E3078C8997
+          16E7E04095FFFB5742F7CA95972041B80520CE657DFDE7405A0288C1E8EAA74F
+          609A10A1CDC787ACE4B1EEC58B723001D438F8FFFF1C4C8202FA2CB25E140BFE
+          3332526C013048705B00943C8F6C3B396C601E3883AC0FC5077FA8E003165656
+          140B808E46B68F81E1B29EDE1B0646466190E8875FBF4014412CC0C60651F3FF
+          FF23DD4B97E4211C08C902A190484646900BDC4122708D200E111858309E4457
+          8661013098328082A1FFFFFF47093E748DE87C60D8FF05EA5D8E2E3ECA271802
+          0002C9AE9E045899AA0000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D4948445200000018000000180806000000E0773D
+          F800000006624B474400FF00FF00FFA0BDA7930000029C49444154480DED534B
+          4C1351143DD30FE98F9601CBC762B4206A84560AA506177E12415CB8204AE246
+          13630C89C4C4A56E88F1138D3B342C347143FC24B2715117EED8801BB54524B8
+          90A08090D014520A85DAD2F1BEC94CE9C830EDC2259377DF7DF79EFBCEFDBC0C
+          B0F3E599009707CFC29E5B1E9E3318FBC0718290FA7373ECD1D85216D4381494
+          C0D3DBDC45B4FDC4E324612B22705CCFD8DDCF83CCD012CD04BEDB3E67C6C0F5
+          0B40971A095D1ED4A5859ED0C350440D673E8A616AAB787B9BCE09029E514095
+          8CF2C546908DC5784A76313DC709E81EBDFF25C88C7F85C52B7C6A55EBF51CFC
+          078B51E732532C87F19F2BF83AB9828D0C99D22222D56EC82F4590529935CAF9
+          22B4D63B60B7E8296273C556D318FE164334A6E866CBDBE836AF00F4906FC976
+          924047C8915A1BDA9A4BB3E465963D3855738DC170580DE8682983976258ACE8
+          049C1287640286EC29E7A056B5ADA814DE8A0EEC2DF1C1697523B23A952D625F
+          A549AD1B9191EA14B5BC258E1EB6A3DDCF67AB6680D968C765DF53782BCFC06A
+          E471A9B10F35A52D0C128575733650065F9D8DD9EB6C9345916003C2B103D516
+          FA97144F435537C2622CC1BB890778FEE90A92E955F87777CA1CA2E6E84A83DB
+          069D3ED32A3AA44D31A2F17BA151B45749D0A68AAD2F88869B6FC2EFE5710C84
+          6F88B6DA16BE130EE7FA151DE402B9E7F9F8778C4CBF86DFD589EEC0000EED3A
+          8E78329A1BB2ED59D1C1B651048C4CBFC244640801D7799C705F452A934478FE
+          3D21DAABA00E4E12E145EF632CADCDE1C38F27585C9B859B6FD66696D082122C
+          2717506DAF47DBFEEB08545F80C35489686246A2D056058D28341784D9E84043
+          F96918F4261A4D101F67DE68334B684109040818FEF5128B895954D86A3134F5
+          42BA9E5F159440A6618FCC44B677F47F99C05F007CBED7620668400000000049
+          454E44AE426082}
+      end>
+  end
+  object Imagenes16x16: TcxImageList
+    SourceDPI = 96
+    FormatVersion = 1
+    DesignInfo = 15336296
+    ImageInfo = <
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000001004944415438116360A0
+          1030C2F4EF33E5096264FC9FE46065C10E13C341FF6460FC3F97B17FDF7A903C
+          0B880061464686050C0C8CBC0CC480FF8CB64065600398800C18224E3344351F
+          8462604036002646128DD7802F3F7E329CB97197E1E9EB77380DC56BC0CD874F
+          191EBC78CD70F6E65DF20C9010126060616666901611C669003C16B0A91015E4
+          67B0D65567E06267C3260D16C369C08B771F184E5CBDCDF0E7EF5FB042551909
+          067D1505067480D3804F5FBF334808F1C3D57FFFF90BCE4666E034404D5612A8
+          0E8481141E843716F0E8834B211BF0192E4A98F109A604EE85FFFF1912981819
+          C2191881B902268B8DFEFFEF3F0323C30A6C5264890100632633F41039FDD300
+          00000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000210494441543811AD534D
+          6B5351103DF735E4A1D2A8A98A0A42A59A57348B421105175929084D4CE242C5
+          8DE052342876D3521145B056AAF841F137487D315A0585E2224A83555A50B02A
+          7E7FD088A520040279B99EB9341734B8D2C79C993373E64E6EF226C03F3EEA6F
+          E753B7525EA0D53AD175DDF97837EBBF12FE279A06246F66125AE921366E21AC
+          B1B104AD4EDCCEFA455B24619D7EC17AFC748E74987008C4DB364BC0F31F2F4C
+          A40B34706C2C93BF426ECC0E48FAE99D14EFB16A0EB747DA71287E108E7270E3
+          F528A6CAD3948CD595563B789371C94CB3101E1E64B4F9F1EE1C226E04955A05
+          27B7F5A335DC4AD998C3AF78DE303A7360979FEE20EF22ACAD59B21AF73F3CC0
+          D0E4304ADF9E60D5E2955623E94E1692EB19115A7031DE40A8C5F8A78738D0B9
+          1F61C7C5A56797510DAA561312D4421EE33B730392261B99BE8EAB53234875F4
+          E042E21CDC16B7A9470A6640BDDE32234903B1E51B7166FB294CCE3E45FFA301
+          C80F1A5FB1A9219B1856FAA51033606CCFE85B0594A4202857BEA333EAE148D7
+          61ECF3F6426B8DD94A59A4061EE733F9F7E063063082EFA6973120305F9D475F
+          7100CBDCA5685B14C5E989B3F8FCF38B48022EA8965EE1E0079B681CB7F0285F
+          D1452666B0178D91023373768B036E63EE4ED6BF6604BADF0630078724A0F4A0
+          06B64A6EA1F484AA3BBD5CA0A2AD91340D60CD18FF4C6B6BC0064942C09BC2EE
+          C257E1FF1DBF0024199992B55E07700000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000001E24944415438116360A0
+          1030C2F4FF0FD566FBF28EAB9A9181319E8191818FE1FFFFFB4CFF195BB8F69D
+          5A0F53838D061BF09F8181F1ABB3F9D67F26E69E7F23E2194EDF7FC060C6CBC5
+          C03C772A03E3AB97893CFB4E2F60C007BE3899457E4A8FFDFFEEF5EBFFEFDEBD
+          FBEFE7E707A6DF5F3CFFFFAB87CD87772EC6FC20FD6BF71E95DFB8EF6827880D
+          C34C6006D37FD77FB68E0C0CCCCC0C3F7EFC6078F2E40958F8BFAC3CC33F2555
+          FE3566BE1F2A26CCF97FF5FAAD0740D79615F74CFF58D93F2700A408620088C5
+          C80822815EFFCF202E2ECEB079F366301F4440A5189E3D7BC2F0E1C34786AF9F
+          3EF1FD67648800C9410CF8CFB08FE9D03E0686BF7F1938393919162F5ECC2022
+          22C2C0F8F821C3AF870F189E088A81D432F00889329CBC78854140508881839D
+          4D1424C80222B88514967FBD733389A5A7D9F16F4C3203B3A83883353B330373
+          471DC31D8F20064B4353903214CCC4C4F4072400713790058BC6BF822275CC9F
+          3E30FC94966378E71BC6F0554B1F288B0D31AE36D4500E831B005372FEC61D60
+          3831307CFEFA8DE1F18BD70CB212A228B496B23C5429C40048184085C8A106DE
+          00702CA039FD3390CFCBCBCDC500F32F3A0D94076617864F201AC300C6FF8C09
+          FF19FF8703B307460083348031E3FF6F4C8C7FDBC06C4A090039F3A491A6D486
+          A10000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000000D34944415438116360A0
+          103022EB3F7AF2A5252303A30CB21836F67F86FF4FACCDC58F83E45840041C33
+          3114FEFFFF3F14CEC7C56064580D94021BC004645084505D0034EAD9AB6F0CCF
+          5F7E639014E7623877E90D50041519E989304801E560A2180648897131803048
+          81948B1C88C28B310C18812EA05E34DA076E5B55D576066F226AAB34C1881124
+          17FCFF8F218B260057F19FF11F4C0A610023E34598202EFA05309181E41819FE
+          819331880D4F0707F54E7514FE767FCAC1CD240E92C0866FDD79FF59448CFB8A
+          BD99D8116CF264890100D53045CD49D6BB7C0000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000190494441543811C5523D
+          4B0341149CBD5CE25D82562945B4D21F20D8898D08821FA004216010FC802892
+          4A0C22A885443B4503B1B48C0A6211043F40B4124B1B1B21A085692C4434CA65
+          9DDD8B9A9358E778F3E6CDBC7D8FBDE3805A3F425F602696474B73232CFB0C4E
+          B00FB3B3C55DC890058C4520B6F4997F92A9FDA0350E7F5D3D04B2305FFB399C
+          E3708EBDD62CE400B9E003168720EE5903E9B50C20F388CFAFBA0BD63327BAB1
+          9D3A8710233C7C4A1D223E8967A2C701DEC8E3D85AEDE0F0246074818F41FC86
+          81038ADEE8E6B2C3C96ED6DB7C8508F99C6820386724C8D788CF5D90E15D603A
+          873403F0D9A35188670EA7A87F23936AA2182636081DDE05130B4F74E9C918F9
+          27B828A28012A66916107EDF27EB70BF812E2B92403BD22959E1B8A572049288
+          2C7DB806507D014A2B80B8FC3EE461AB7855A9CD4A51AE1F218D3608795BD65E
+          7AB1C3341E081DA6CEDE34C5FF618737505FDFDB51CA2C297F4F950A42A5BFE8
+          E8194C046C3BF9F6FEDA79737C74A7FAD53CE51B2AFD8594527073C05F9224B7
+          5BCD733BB5CE5F0FA56A46FB86786A0000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000000AC494441543811636018
+          68C00873807DE0D66F403627101383BE1F5CEFCD0552C802224058535F8258CD
+          20E59C07D783280606B80B76DFFBFD1F22441CE9AAC40AD60B77014C5BDC8CEB
+          3026567A5186268A388601664A7C280A0871300CC8719326A407451EC380ED97
+          DE8115DC7DF11D4CA313E8166018A02ACE09D623CC8D210516472798D00548E5
+          635873FB25C4E9B8BC60A6CC87620786019E7A4210057A108A1049B117085940
+          7B790008391C487825FB920000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000000CE4944415438116360A0
+          1030C2F4EFBAF77B35901302E3E3A3FF3330AC7153620D05A961021194601674
+          CD058BEF30BCFBFA1B5D18CC17E266659810AB0266C30816180346CB8B72C098
+          183436390C030A3D643034E213C030E0CECBEF0CEFBE607A4145821328FE8741
+          459C13C53CEA07E26DA00BEEBEF80EB6451968ABA79E10980D224EDEFD4C9A0B
+          40064DD9F59401E42D9001D8304618A802FD28CC0D1116E26145B11124876E08
+          6DC300D9360F7D210650F8A0C702C4AD482AC181A6872480C444D70C92A2D80B
+          204328C200888E325297ADCA410000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000001064944415438116360A0
+          1030C2F44F38F93394819161158C8F4C73B23232FCF8F3BF26DF94BD15591CC4
+          66021184B010172383990C73CBA433BF7AD0D5B2A00B5CBFFF9661DD9E5B70E1
+          2017350669035106293E2606530686E229A77F31E798B215C21460B8808F9B8D
+          414349188E41FC6FBFFF333CFDF88FE1FF7F0606315EC682FED33F3C610660B8
+          405A8C9721D89917260FA6DF7FFBCF70EADB5F301B4430FE67E401D1208C61C0
+          A7AFBF40E20C4F5F7D06D3C804C870908B90C530BC802C490C1BC3059FBFFE04
+          EBBB76EF2D98462640B68330B218F55DC0CBCD0EB6400B181360061201934312
+          62A0BE0B480D038C40044515C889E8690124860D53EC056C869224060065E03D
+          2080A0EA740000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA7930000023A494441543811AD524D
+          681351109E799B50C4932278107F5ABD46A5D58B4D0CE2A16E6ABD48F550BC14
+          3C14C116E96E50AC90F420EC867A10C55EF42282F42008DDA43D1892A6410AE6
+          D00A7A2852510B5EBC15856EDE38F3D28D45F4A4CB7CF3F3CDCFBE373C807FFC
+          F06FFDDEA27D18B5EA94BC65856B374ECDAD8AFF3B703BE157ED7B4C540831C7
+          FC51465B1060093438E3E9A0DA26D9510C2385F2C01E40BCCECD2F08E02B29EA
+          D318DB1702EE460D69E63E9382575ED51E310D5BAA3D40C7C3B3CCB562848F6E
+          6F71FE69F1D39167A5F584FCD549051789E81622DEF76AFD29AE35D26A30AE51
+          C33AA4FD6E32B89A98E8EE410B7C54389DB87D222359F774D103C23945549058
+          1013257093C5E76223F09D2791D4BC46FA80A01F317F80017C4D9F80CA77CBE7
+          0EDD3C535A3327F02B039D859A3D4404DC67CAB81096B8F03280FEB63CD938B8
+          C54247BCD9103F6EE171B16600C4F44E02E81222C272BE9143842C9F227B6CA2
+          FB71C47F0FE35CCA63117F08A74439BDB36FB930F0EB7697C402DEC1175E5A07
+          E30E779C174EA048F7886D86FABD58254A40486356A8F68A6F8038CAF7F01071
+          9A105CC3892272D8D4E5FE6CA13DC0490657B4A2A6B7600F4B6225FF66861FCE
+          25C6D04ABEF14438AF66E700A94F699421426D5B1A87DE42E61A8F5CE465C6A0
+          891BD9F4ECBBA9FAE00EBDB971921FD6189FE802018CBAA9E001971BF9B57513
+          B6945FEB7FA801662CA2116E181496ED6B85DA194F966A1247F8E380283955C9
+          2478D0AEA6155BCD265FAE47FC7FB53F0113CACD6DEEDE8DAB0000000049454E
+          44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000252494441543811BD524B
+          4F1351183DB7EF17D3D29744844E4BA980D1869060A54A0CD1900841DC98B8D5
+          1FC042B7265D1977484CDC9818171A17263EA2C68D84428082D16023B488D094
+          481FA8D4C1D6D6749A8EBDD3B41691851B2773EEF73867CE9DEFCE00FFF33A73
+          E3EC519FCF27A9DD535A5BFC2D170481BCB32E5DA93BC23C59FB1819F9A24F35
+          6C4CAE3FAF684925F9330E8F0E1BBEFFCCDECCA4D343361BCBB00E3BC2A11012
+          89CDADB7D703E68A7E97C1E0D860EB36F7E376812F785C6D2E256BB74122F9FD
+          D6AFE7DEA058E42FBDBCFCE20E35A91A0C8C0E0D6C7D4D8DA9D42AB6BDA35DCA
+          E7F30806DF43AD52E198D7838D580C91D5087A4F9E807F7C323A7F6DC65E3538
+          34E24E02C47AEA741F319A8CC8F33CEEDDBD8F42A14035703A5BE0EDED412E97
+          03C33078FAF899A0D3EBFBA6AFBEF2CBA88280F0CDB62622914AC0711C78BE80
+          56570BA54468753AF1615A24139B309B4D44A152D0111CA2C10187FD8256A39A
+          0A84E788C7D90D8BCE044BF771AADF0583528F656D184A859CA124A10BC5B95B
+          E7B7D9E626A6CBDE0542CAEDA9E569ACC45760D4D5A3DFDD0FAD5243A5486552
+          9858F4C71F5D7CD8583D5E86D1CD1A3406AC7D8E60351941924B22180D2297CF
+          21968A6321BA80742E8D990FB3254363E9CB902275AB1A28E4B2306D947E9C52
+          10B952DC790BB414179A94219E413905B82C87DA11DCAC1BA14F4BB0305674B2
+          9DE208DEB61E718462511037DF6110589947511060D4D68B9EFB0D0DA0A045E2
+          5B9C0611E38B13A8536A95B4A81AC865EA07871B3B90CD664450722F1CDCE704
+          91C9437BF1FFD4FF05B96BC849ED87D7990000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000242494441543811A5524B
+          6B1351183D771EC9E461934ED3346D4A024AF141A1825409143115514A415745
+          500ABA281617E24217BA722308D21F208A8B42115C8888B810B5F868178A5ADB
+          A2B620516A9E764C34C9E4310FEFDCB63889EE3ACC77EF77CEF79D731F5C6093
+          1F69D6FBC65FB47A8CF2154F67F7A89A4D2DD66A8EF1ECCDFD1F9AFB36708341
+          DB992761A1AE2F105F9B9F0822609AD07E150C4E534F646E1DBEB321B2CF9C1D
+          B8ABF9AB86E85A135B0542C0399C1C8FFA0D0BFE2F043BD9DDA2EE93A25E8872
+          0738410047F7E7AC2958592EB893F6465BDE601029BFAA0C445C080B3390491E
+          6553424AEAC0732E5D786D13D953BAC65F383311CBC47606820BCB3FD1DBD38A
+          ACA2D222C157452FED6E5F893B8E2FFDE3D370077B7BB8CB54C1C4D61C945D08
+          CA12FAB7391E886A6DDEE29AA3C180E75B2641F0B1A949031127C8A944A58967
+          B0E10816633E1C8AA2BA9A801400B41250CD5D83B2789DD6E23400B92F06656E
+          96E5C0B3864BB4C8D0E4D950F2C0709583E9B4F0EDF47071A4FDCB210FAF4E59
+          18DE08B03A779EE504233C4BE81038FDB22B183AF8DE592A5D78E7DC231C95A7
+          31F5630897E6C706D349E9D891E8DBB5E3D68B40FD3755D09FE02EDB41D7D81B
+          B766161FF395EF5B298D47F9019C4B5CC47D250EA2E54048862DF4F49317DB3B
+          B3F89CF262700735A2CDCCA066944ED247B78BD43320BA0E47BE807BF9182D57
+          2016B330FC399A0321BF86B04F4341D518B606664060F65BC070F531F196C437
+          0BAE8708DDD74BF3591AC0F49217C19675031D55466E66F8030C74B654FEBCCE
+          D40000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA7930000016B494441543811C5523D
+          4B0341107DBB39434E0936824DC08F42EC2DAC140B83580856B656120822DA04
+          C5E61011CB347E909F105124950822A29D9641309DC114492B9253CC8DB37B77
+          31771C899DCBCC9B99F7668763F6802E878E31DE45D692D4180154C03C24CA74
+          8A3C11846D450F13FAEEFAEA2BC6465348983768F52F516263060E4AAC99ECA0
+          2F5C341B5824A030B08F2D0170AA1480734E72993452234918B23808BB32256A
+          13121463A56DF40D38ECF558B2FA6C0C5758B84576FBC01DC095B6A3C36B1E99
+          D6794F9073C8E6EE823B9038C71F8E003DAACBAA3538C0685D32E9B07735DE69
+          DE6F080E58DBADB310E4980859150DBBE873BD9AFDBEDF287002CBE275BA94E1
+          86303A7BFC40F76156D789CF071D3D30BCD8196A20390941E54EB29DBF9B439C
+          BFB16B33340621C34F59E02F5809D25E65388A3FF32A6EF5B38E38BDB0BC1937
+          CD9DA6FD31FB74557A515214A778A920EC4424F80F8BF739C4C155A33857F96F
+          FC012B8C65B971AEE53E0000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000116494441543811636018
+          68C00876404EFC4306450519060ECEBD0C7FB97C19F2F27E82C5892018C16ACA
+          D25D1964E4791958985601F96781F813101342FB19B22ADA2006C0944EEDD8C5
+          C0C8E00AE3E2A7991C18B2CA0E323120032686B5C85C3CEC5320CD2079540358
+          FE6E000AFE03624268224C01AA01A9D52F8112A862400134F488E1D50F505881
+          850929062B42211819A6333434FC8189B1C018A8F4BF260606C6C3A862501EC7
+          CF23501698620193A8C45386FF4C1A0C8CFFAFA00A43799F394580AC27400C46
+          2C601295480746E52CA00BC25085A13C967F20F1D5501E50298C85449BBB0714
+          B07172567EFFF1D5EECC8E4D374152D8C440E24C20021DFFFFFF9F1198C2D858
+          FFFD075210596C621099812601134E458D67DCE72A0000000049454E44AE4260
+          82}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000001B3494441543811CD52DF
+          4B545110FEE69CFB63EDCA6ABB998590D42A8810D94B3DAD14D173CFBDF4A7F4
+          4FF42FF8E853AF1644840A854482B05B8961069BB610917AF7DC734EDF3D8A8A
+          B8BED4439739DFCC993B337C337380BFFCA45FBEF710BCAEDC075C9331D721EA
+          02E07768B721F25C9AFBEBB4119570E6998F1EA266E710A991F09F15832EE1A7
+          7D4C7597E79C02096E62A3188162981602C5F3184222776805E9CF40C4623C66
+          078CB34CA2625340CC62BDF2EE4ACF390CBCD7F852A00F83905CC27FC4E043BB
+          7DC37979C4614F92F7A556F7CD4C96ACA05ABC4355BDA58B7DB3FDD333285D65
+          2B78B1B4F2A97EB1DA089713607E7791BC7A8A09B580ACC622075B803C7121F7
+          68065FB7771A1F37B790C631B4D670DEC114052C3770AF5E07B6018CEAFE5B18
+          BF7219039514B9314CB250A210C59AEF48C32C03BFBA40D6B1C02103960B72C4
+          60E35B676F37CF551C45BB5AC40036F12E1F2A9C92E6500DD930E30F1878CEE1
+          2590D381E377707BAAB1B8DF330FC820B5F698C160AA3BA39FE79E55AEAAEF48
+          A355386CCAECDE56C8268441500779DF6A8D39A7AE41AB8C0C7ACAC88F5BD313
+          6B22C2E985907F0F7F004FE7A2973038DEE50000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000113494441543811636018
+          68C0087380CFBAC0790C8CFFA3817C3620C6877EFD676058BC3570430A481113
+          880063C6FFF1409A9066A0120636A0AD090C508030808101990D96E662E16230
+          10D507B3D10866181F43134C82978D87214D2F852159379141454005268C41E3
+          342040C51FAC78CFC37D0C19FAA960363602A7012FBEBE60D010526778F6F519
+          43C9C1726C7AC1622C60120BB1FBE15E86675F9E3324EAC433E88BEA32CCB93C
+          1F8B2A2C010753D56CDDC020CF27CFB0E6D63A062D212D9830068DD3054BAE2F
+          6348D74B65606766C3693BC8349C06DC7C778BA1E35437032836EE7EB807528B
+          15231BF00FA80225505F7D7BC500C2407174F4172680D0F09F712150F03F1013
+          42FF818A16300C1A00004E443E8301E10F090000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000000C5494441543811636018
+          68C00872C0FF9506D60C8CFFF602D9EC404C0CFA0954EFC4187AE518135835D3
+          5F29204DAC66A05206A05A46691083054430FC657CCCF0FFCF3E06867F9C603E
+          4182E93B0323CB639032B017408CFF33185601E950202606AD66CC6008032984
+          7801C422130F030320B140C0FFA71F3030300083FBF64B0686000306062E3620
+          1F8A8832801DAAEAEF7F54CD2033880A447E2E0686FF4017E8C930307CFC0ED2
+          86C050B3C102E0840166A111F2420C0CF2C862FF191E217307960D00F87D215A
+          DBA58A7D0000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA7930000015E4944415438116360A0
+          103082F4FF5FC4C0CDF097C11DC87ECC98C8701A48138D58C02A79F99218F8F9
+          27313032FCFF7F90E93D58ECD7CF8D8CAE2F92C06C3C04C4000E4E45061E6E90
+          32908B84400CA051AE609A00C144409EA034C4807FFF76317CFBF6F8CFD73F6F
+          4118C87EC2F0EBF70E98EEFFF31992FE2F60D80DA4836062301AE464189B61C2
+          D275A1204E4174D06A100DC3FFF748DF61E0E35586F1C1F49B77258C5EAF7A21
+          6100168112FF190A272C8118041561F8CD5C21CC0AE3C0684646691013D30046
+          867E7417E41F907BC4C0C02500D200C74C8C7F416C4C0340A2E8F8DBB758865F
+          BFCC518581A1021420CE80976F948169C495E13FC37460425B07D40747C41920
+          2B5D050D4497FFA7A07A710522305A2C80B1015505A1FEB294F032439808125B
+          2032FDFF7FFC1F23D0088432308BF13FD0F1601612010D444CD5486A60CCFFDB
+          44EC1958585003F1FFFF058CEE2F5FC1D4904D0300C6F263589D061131000000
+          0049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000144494441543811A55131
+          4EC340109C3D8EA4096D522024641AD25283506C8907F0100A24E00920D1D043
+          45CF0702B64211F1040A8A483488500129A228CE310BF205E2D80861ED78E776
+          E6D6B767E09F8F14ED0FC370C739B7ABBA31E62A8EE36BE5B358982DE8BAD56A
+          1D88C8A5314697CB7C1D064130E8F57A77E43F227782288A1AFCF2235D474992
+          9C3183B57DD68EADB52BED76BBAFB50C262359A67183BC32994C2E983F63381C
+          9E9354D234558D741AB906946A043A9DCE40B3A2DBEDBE6B66F325CDDFE14770
+          A7A88F05B714D789E270B8B7556CCB1E5ED4E44F900A365928DF4C0304CD7484
+          2DA50ADF80C2DC3FA2A61C04DE3B6D907301CF9CBC4FCC917CC97A36873CBD02
+          22403D77755373698366834636E0BB304A1B54170BF779C1DF8113FC32ADDF03
+          9782C37DADFD09EC1B6EC6359CB0BC4694C5835D455C66F893F601C545512AF7
+          58E5330000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000173494441543811636018
+          08E0B9CD932F74552827C86E261041081BCF4C63F55E17180F5217B03E4080F9
+          27FBEEEF2C7F62407C461031F1E4CFD5FF191942406C0CFC9F216CF7EBA03D8C
+          BF59F701151FFBCFC0600DA4376D0EDC5007520B6433304C3AF1CBE21FE37F59
+          90003A66FAFFF7789E05D793C07581C2BF18FFDF62FCCF78644BD07A7F747544
+          F18376044932FC6760420E0316627482C24042F475D43A8F750B4161F0878161
+          27300CE600F5CE067BA1FFE48F222606464BA00006023AB977E79BC09BB8C280
+          A858D8EAB3F53DEB7F46977F0C0C110CFF191FC20210C3364202B030405607F6
+          02B2002EF66717F3E0FF7FFE1C04C93332B338F0EE3DB906C406072231D1C8C4
+          F0DFE11F337313235017101F6060604018F09FF17F31038E84F48F81390CA878
+          3503236B3BD3FFDF51C084C4C4F897A11D28064640C3C03441E28BB3F96E0686
+          FF0F1940C1FE8F419167EF29679026B017400C4298F93F730A87DDB1C720753F
+          0E59614DB52039923100085E8113A00C0B950000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000000F5494441543811DD4F4B
+          0AC230109D86D656042922AD08AE3C801B51102FE1C28D47D46B88A0B8F10A7E
+          EB6751C552ADD2D88964A85045DD08864C66F2DEBC9709C0AF9782030C869B36
+          E64FA351B77A2A8AB8C2BB98674B0FDCC319CBA7616675281533925798ACBECD
+          6202142FD71E183A032B6F0053C4CF10A60839271C7B8BF67D0A32481B2A542B
+          7970363E14AC34096511C7C7939D84810C2ED75088DD7D4064BC88E3D82B3932
+          D054462F274D800289CF571E5E4590C139787F02EC15EAE8208394C6C0D9FAC0
+          438053E047D4E38EE3D82B5932C899BAC412737FB486E9E2485CA75516351988
+          DB8BA359B32316234AFFB56F05B752A5E5C0DC8C0000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000000DA4944415438116360A0
+          1030C2F44F38F93394819161158C8F4C73B23232FCF8F3BF26DF94BD15591CC4
+          66021184B010172383990C73CBA433BF7AD0D51265004893141F1383A93453F1
+          94D3BFFA417C1826CA806FBFFF333CFDF88FE1FF7F0606315EC682FED33F3C61
+          06B0C018F8E8F7DFFE339CFAF617AE84F13F230F8C43940B608AB1D1585D70FA
+          F67B86A76FBF63A80FB090C210C36A00BA2A69614E065355417461301FAB0152
+          C21C0CBC9CA852379E7C66D090E1056B4226681306CFDEFE40090392BD00F22F
+          08233B15179B622F506C002E97112D0E0075263275134E77E60000000049454E
+          44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000101494441543811636018
+          68C00872C0FF590C560CFF19A4416CBCF80FC309C66C86C7C86A58C09C7F0C07
+          1818185881183F6262580654100DC47004310049F3ABCF0C0C8B8F3330FCFBCF
+          C020C4CDC0906C0357CBC0C0886909CC00B82A315E068662373897208389A00A
+          34057775195CEE693398C184315C0092F8F99281E10FD02B203632FEFB8D4106
+          C8F7FACFC8900134C84FF932C31EAC067C38CFC0F0F50E502926B2040A813030
+          90188A806CEC06887B00A5B0A3D5F7A732AC06467916070743084809C961008C
+          9C1B8C2C0C81526719BE810CC0EA0590042E0CF4F7656439980B7E230BE264FF
+          67C05007738115031383004E8D3089DF0C3761CCC14303001C03330A709E0BEA
+          0000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA7930000007D494441543811636018
+          D4608EFA86FF73D537ACC6E748267C92C4C8516C0023B22DB335375930FDFB57
+          0C13FBCFC0100254F004C83F01C460947C332014CC80122C501A4C31FEFB2F0B
+          D204E64009205F06C80C0162D2D1D008449430C0F42463D83F26C6C798E25414
+          01C612C234F46844C8205824472342EB60650100B17922BFD1ABA3CE00000000
+          49454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000123494441543811636018
+          68C0087640469419033BFB4E0675751686FF0C8D0CD9153DFF6730DC03CA2902
+          3136748F3183411924C1042218387F5F66E0E34D6760649806C4F50C7D7D9C40
+          71B0E6775F1918365D8460101B280E424A2002841941041CCFEC1161F8FBE739
+          C37FC6C8FFCCE5ABE1E25818401780F532A1C8A597BC01F20F3130FC0F05D244
+          21264C558C7B181819FD31C5B18B6031E0DF5BA00BD8BF32B00269EC9A80A28F
+          80188C58C0242AF11EC4E5F9D72C0CA271E0170C0C1560296C06802580AE7085
+          3230A9FF7F6FC204310D60FAFF84E11F3080FF33E802A3F4094C210A9D5DF318
+          C607AA843191E8691DFD405E3A1083D2039042435915D8F5212BB3F60E3D62ED
+          137A8890180BB202143623033390CF04C408844D0C213B402C0018563FB2698E
+          21400000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA7930000018A494441543811CD4F3B
+          4B0341109EDDBBCBE545522924A2C43662249DA0954488108362671A2D141B5B
+          05B1D422B58D689326962A1131A062211656C1E407284AA2102CCCF3DEEBCD15
+          C24522C14677F79BFD8699F96606E0AF0FE936C0432432CE399DBB182792B435
+          522CDE23EFC437012CE4BDDEB4212B13343E4F1998377F6A50D171078DC646A7
+          D09740311A8D11879806C318E5E61679652A497CC13EAB61AD5205C74D8EE927
+          471A505A628ABC192914AE3048CC8EC3D4E3C980244FD2588268C914F18582E0
+          1239382B3C630ECC4687A02DEB507B2C039FCB32E3FA9C51A778AB359BCBA434
+          3696E0A693FBCAC2D2802FD00F6E376715A109AC67F183D7BD94F5A369B534B0
+          263ACE94F5CBDC9AB5C2D34BE3C229D23826F40A4936F2A141EF0C8F052E91D6
+          9949760E0F803164A6D3E51142607B65D55C91D631C5124082209402CF0948BB
+          42D7555BCC26E0F77841107E165055BB00B5C9FDC2B126A8BE4B614565F0D16C
+          00D7C30A95B736380412C67E9680A21AFEB6A4A3DF13DA9266E6717ED3FC83F7
+          09786988CBA16B50690000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000001A2494441543811A5524B
+          2F035114FEEE94A645A9856725DD090B9A48442CB0C102A563A7FC020B2BF1F8
+          05EA57D8B250C63391D8B1B164451022AC9A90B6526ACC75CEED236DA92EDAE9
+          B9E7F57DDF9C393340993F518A3FBE3B350C4BABCFC5D96CDFD77B537B975CFB
+          57C01FD657A4906B0C2C306909E93B0A18575A41239B16215F689AE523901096
+          D6411E7F0A142133BECBB2B40D0E32569109329EC8211A7B99732104E63A8368
+          A96EC6EBC71B36AFB79CB164BC877B19CB9B2097CC005F433786DA0670F67C8E
+          FED63EC493EF5CCEB3AC00917961EACE955A25663B67104944903013B879BD85
+          5DB3E713858C7341094C84F57E1A3BBB6D6FAD17839E013CC75EE0B039F12D4D
+          CC9F2E40D2C5240819DAD7778F395602F49E23947C92A9FF53EC096E471D967A
+          17E1B2BB605A26A2C9A8EA31F92060ACA61220FB1D4C86F5114B48831ACE7A87
+          1B9E1A0F9AAA1A71F7768F87E82395019A72E53060ACAB247D88B457CEBF1318
+          25904148872AE41C54FF45E6769E0017FE122946667C6A071CA58D9673426190
+          94BFC8D343CA50E1D8AA5EEA180BEBEDFEEDE9DE52B8B2FB3FE8949819395969
+          E30000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000001D3494441543811BD52BF
+          6FD340187D675F726E1C17A27460CA48175840A022D1018A1424247E09890958
+          3A227543FC5898D81163870E0C4C20A2A20C20354BF813905051A14D07502B37
+          AA1A377662DFF19DDD5817293021EC7BEFDEF7BDEFBEF3D906FEE7F5F8E5F2D9
+          E72B2B8EB9A765067FD24A29D668B51F142CFE31DC1F9E36EB98194CD2EF5AED
+          8B96C233C07A73E3D285D78C3165D6713330F5EAA7762DB1D90BDAE19B33ECDD
+          A9D7EB81E98F34F92399CDCD665344E2D813C6704A4AF9F4F695F9F5CC99CC63
+          0D1A6B9FAF49862526E5AB9B0BF3AB93978C67F306771BF7BE1E0CF76707C100
+          C22D82D97F7DBF6B1F6EBD5FD0ADF2AA401ECCF63B21AE56AE23E8F4B5972289
+          13F83F7CFCFAB2839DF55D44BD48E72F6BD2B0348D50828BF3B53962779482FF
+          7D0FBDCD10E1E600871B11FC0D1F3296B93FD660BBBB85876F17B1DDEDE40571
+          7F087578F4E5685D1202517F90FB56AE4878CE34EE9F5B4459781465C3161CC9
+          AE85F86706CE6D148A7666128F35A894ABE911AAE519B2B2E19D703175C68273
+          D24689663153001785CC24367FA46E58092A8F5A4B28575D3874938FD2716AE0
+          4DA58FCD8B1C1A94DF23A4236F20159B13D3A246480D85A373EB8833084F6845
+          590516F3AD34F817F41B6FEB8F4305F1E7B20000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000191494441543811636018
+          68C088CB01BA15BA828C2CAC13191819FFFFFFFDABE072C7E5F7D8D4623540B7
+          CE389491E1FF3486FF0C22604D8C0C6FFE3330665D6E3ABB1ACC4722500C40D8
+          CA100B52A324C5C9003484E1DEF3EF202E10332E42770DDC00B0ADFFFF4F05AA
+          12E5E562FE6FA5CDCF2826C806E432303C7BFB8BE1C4D58F0C5F7FFC05F15FFF
+          6764CC86B986052402C2409FAE02D1205B4DD57919D958991878D9451994044D
+          80C2DB197C2C85194EDFF80C728D28542DD872B801ACCC4C2F9C8C042460B64A
+          F26A30046AD53230313233FCFBFF97E1F2CB5D0CD6BAFC0C8A406F1DBCF0FE0D
+          D0543062029340C2DD5CB012A619C8655017B161B8F8623BC386EB2D0C527C9A
+          20213096126663F030172A05738004DC00011EB6AF403E1CDD7C7398415FC293
+          4145C89CE1C0FD3970711003592DDC00900432FEF5F73BC3E20B050C2C4CEC0C
+          6E2A79C852286C7818A088023936F2710CDF7F7F64F8FCF30D8310A73450043B
+          C2E9825DB7418990894182578D61FBED09D875034571BAE0FB9FCF60BF83BCF0
+          F5D73BA0D2C18A00676B74B1879026980000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000001BC494441543811A591CF
+          4B545114C73FF78DF67C3010B5084CD45CD5A2DC148611C1B81277216888A47F
+          41B4E93F6813F6174844AB70D3A645B8088A8472A19B265149FC35384A048A68
+          CFF7A699DB39EF0E383F5E1874B9DF7BBFE77CCF399C732FFCE7327FCBB71FC8
+          4270DDE9E13793E3C8F1FAD3AB379D653F06FD78FE0A5EE58B83BF6CE782DB4E
+          AD3F9B3AB09F0928F9AB64B29DDC780B4779283C87B8B04539BA269D9CD49668
+          EE200A6E4A4027FE65F87D08F10E947E82A59B4CA2897CBA9B0B18EBBA8AF760
+          ED31B45E84F3774F331A5852606A6E2812BC48B473270B72176404E8790A6D3D
+          709C07838C102E8A86C4BE1444CA930258F34C8C4964993B8454BC11A2E206CB
+          E3B0342A63ECAD4365A466FE896A0E2D92239CBC818C7285C985F37681AB0FDE
+          B4BF537B667877C8DCA2A4BC0A4F0695B67005AACEBA4B133A26FC7D752AD73B
+          0D49078D42D758D785728B372B2FDFA75AC7C32BF3AD1E839BAF360FD4AE857B
+          835A8FF0EDD7DBFBB62DCEC9DFBD57081F484B9650520BA8509C2EFE8AC3EC7D
+          8572F5A5C18DE0D9EF54B0F235362D8847DD8D6E6B6C79559D460FC5D4A7C15E
+          4CE692F23361CB3F9EDC9BFD7A66DCBF04FC015DB991CEBB271DBC0000000049
+          454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000000C4494441543811636018
+          F28011E4034BCFD5FF4134A9F8F8F650461690263515111045323E0ED40136C0
+          D94E06C8646078FEF21B98462624C5B9C05C6C722009B0013C5CAC2036839808
+          27C3E5EBEFC16C10A1AB29C8804F0EA486094460C372D2DCD88431C4C02EE0E6
+          06530C1F3FFF621017E5002BFAF9EB2F98C626C7CFC706960311385D00922406
+          830D00F91384411A40E1C0CEC6CCF0F2F50F10171C06E872B7EE7E02CB8108B0
+          DBBF7CFB0D6283F1AB37DFC134CC2BF8E4400AC12E003146300600A7E62E24C6
+          3177040000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000206494441543811636018
+          68C088CB01C6C6C6AC02020206FFFEFD13DDBF7FFF365CEAB01AE0EBEBCBF5E5
+          CB979D8C8C8C36208DFFFFFF9F0BC439070E1CF801E2236326640E8CFDFFF7D7
+          2290667911A61F89B66CFFB4A45882047898CA61F2C8340B3207C616E462729F
+          19CFCE2025C0C401120B316615CC58F4DD19C86E0462140437C0C9C9291668AB
+          3F33337361B2E5F75FACFF18195EBF07AAFD0FC48C0C0C49163F7F3DFDE0A20B
+          0C932AA0775603C3651D5086016C4084BF9B3923C3DFE93E866C4C27EEFD91B0
+          D7168E6760FC7B03A8002C0FA4FF880A73A40A1EFA76C04289559C9599C14480
+          DDF9F9FA1D7B8F8315582831B8E6BB7171031532288B301A307A6DB8FB7FADE1
+          6C060EB14C9018C3F7D7331943CEDD3F3EC54BC44299991D28A6F28F81C171FD
+          0E86E3CC400EC3F66ACDBB0C4C0C290C0C8CEC32424C3BEF2BA5DF78FFF97BBE
+          E1AF4DE20C9FEE32CC7D62C721641B7F2247F7B13250BD2A107FB450E648695C
+          72FD0BD077402E50E7B589CA551A7C1F9A926EE64530B0722D6662FCC7EEC7BB
+          87810118069BBEB830FCFBCFF483E5CFD7E8D96A9357DF78CF57AB5974BF0DA4
+          93D1333A9AEFCF7FCE9DEC4C7F2C14B8DF337C14326760666105C961E0BFBFFF
+          3008BE3FCE70F7AB30C3EF7FCCC79919BF7B30FDF9CFE10E5469F1F31F0BC3CD
+          CFA2383503D53030B3B2305CFF2CC6F0EB1F33C8619650BD20A9A18C0121F3A9
+          C40B2247600000000049454E44AE426082}
+      end
+      item
+        Image.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000023040400A96C5C520C4FBFB17B9EEEE057FA8A801182020000000000000
+          000000000000000000000000000000000000000000000000000000000000011D
+          262607C1FFFF5CD7FFFF82E0FFFF80E0FFFF37CEFFFF057DA5A500000000A885
+          36ADF7C34FFFF7C34FFFF7C34FFFF7C34FFFF7C34FFFF7C34FFFF7C34FFF2F75
+          7B9A29CAFFFF77DEFFFF4DD3FFFF4DD3FFFF80E0FFFF17B7ECEC000000006A53
+          226DF7C34FFFEEB847FFB17114FFA8660CFFE4AC3FFFF7C34FFFCFA442D6055D
+          7A7B38CEFFFF6CDBFFFF25C8FFFF56D5FFFF82E0FFFF1FC2F9F9000000000B09
+          040B7D632881AE802EEB3192C5FF1C95DFFF9B6E26FDE0A337F1F49A25FFB6A2
+          5CFF10C4FFFF6BDBFFFF4FD3FFFF6ADBFFFF5BD7FFFF0A94C2C2000000000000
+          0000000000000127414117A1FFFF1DA4FFFF014E828268400E6DF39621FFEB8F
+          20FF5E8E88FF10C4FFFF39CDFFFF28CAFFFF07C1FFFF02303F40000000000000
+          0000000000003075A5A54DB7FFFF4DB7FFFF45ACF2F218252D367B4C1181B166
+          1FEA5E82B5FF339AEBFF598F95FC407573B20F272B3700000000000000000000
+          000004141E1E4AB1F7F74DB7FFFF4DB7FFFF4DB7FFFF25608787000000001025
+          3D413F95F4FF4098F5FF1F497A82000000000000000000000000000000000000
+          00001D334B764898D6FF45A4E8FF49AEF4FF45A4E8FF345F87BA000000002D6D
+          A4A545AAFFFF45AAFFFF41A0F1F20C1D2B2B0000000000000000000000000000
+          00001C212F6349658FFF4B93CEFF4DB4FBFF4DACF0FF33415CB107111C1E43A5
+          F7F745AAFFFF45AAFFFF45AAFFFF245885870000000000000000000000000000
+          0000050608113F4B6ADF485579FF495D84FF46597FF81C222F631E293776418A
+          CAFF3E99E8FF42A2F4FF3E99E8FF315271BA0000000000000000000000000000
+          0000000000000F121A373D4866D7444F71EE05060912000000001A1A1A634353
+          61FF4484BAFF45A7FAFF449EEAFF2E353AB20000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000050505113A3B
+          3BE0424242FF434B52FF424A52FE1B1D1F680000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000E0E
+          0E37383838D73E3E3EEE05050512000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000137494441543811A5513D
+          4BC440149C5D57AFD136578820B1F15A6B4592803F40F06F5808A73F41C1C65E
+          2B7B0BDB680256FE040B8B808D78567E14215CB2CEAAD9C34BB2228637BBB36F
+          E6BDEC4B807F3EA2AB3E0CC32DADF5B6D1A5941749925C193E8D99E984390741
+          3014429C4B29CD7191CBBEEFFBEF5996DD92FF88C60DA228EAF3CD0F741DA469
+          7AC21DCCED3177A8945A8AE378647235644DEA9DC635F2B9AAAACEB87F469EE7
+          A72497455178DCDDC1D97708ED764D543B823E863716B8A1B44A7487C69DEA61
+          53ECE2D998EC08A5C03A13EE621A2030280B6C186A601B5068FD23C6D48080F5
+          4E1A345CC0D31B30225A249B5296B590C7174008C05B6811BF53CE06833E5D6C
+          C0B5339C0D7AB39D7556B0DF400BFC32ADAD812EC1E1BECEF606EA15D7E3791C
+          31BD42B8E25E2D237119FEA47D00C0594B029C29B3BA0000000049454E44AE42
+          6082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA7930000018D494441543811C5523D
+          48425114FEEEF369EF39048163483A05D126D8D4D0120485436A34E4D20FF423
+          4E81B64843585B1182AD41145644531005512DD1D8D2621435D8D2108F34F2DD
+          CEBDEF093E9356E59CEF3BDF770EE71D2E02EDFE3179C062E219819E6E68FA05
+          6ADE51249355E913F07890033CC60E9E8A24FF84221DAF360D7747140C43508D
+          31E9FD07F9F502F2B98C18B1166C14CE91CC1C83E3126013A2C127FD5D3C1E88
+          8A9ABC011E0DF6CB7A7B2D4C17CD02CAADD0D60251895470443482AD6C27DB7B
+          F900637DA44584A0192551405152C477985FBE228673815A3B21D303973E450C
+          B65FCAD2D796E0FA89B0DDB28142CE0F609C7293528673C1CC4A995CF2788258
+          063DDEB6BC4628130B44EFF0550E8965A8129B8121448FC49B6D7A237A0EA411
+          CB7ED77BAD17C05CA5C9EBFA9083B5EA4DA3561B855DBF812BBD60FCC1D64EFA
+          D47D64BC52CA50253A618EFE0F3B7441CC69DB4A35855FB4158DD6AB060E0F47
+          521E5D4F7F558CC1FBB3D347D16AE5095F11D09C9C73C6008FDBE44456B79567
+          75DA8DBF9B9D6DEBC68ABDC20000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA793000001464944415438116360A0
+          103022EBFF3F8BC18AE13F8334B2180AFB2FC34F064E865D8C890C3F60E22C30
+          0698FEC770808181811588B12326A0F02F864020B90188C108D50024CDDBAF30
+          307C06DAC30474A3B32603832017583D8840B100DD00900230D6976160F8FD17
+          CC64E06183D0D8489C06480960538E2906F215A628092283CF80DF44B81E450D
+          309218188A7AE7067FFBFEB59E83F12B27F3FFBFCCB80CF9CFC8F8FF1703D7D3
+          5FBFFFB7CC6A28DA0552070E037B034D261D3971DD9F9F7EA898195B292ACAA9
+          2A7EFBFC5B119DAD24ABA2F4F7D3475B5E6EAE85710D1D727003408C2B57AF31
+          7CFDFA8DE1C5CB970CF8D95F1938D9980599FEB1A883F481D3C19BF7EF853575
+          F5183E7DFAC4C0C2C1C5808FFDE1E3C7BFAF3F7DBBC7C6F4E528C8007018A454
+          4D10FFC7F45B17244008FF67FCFFFBCF77C6338B7B4ABF12524B943C00A6AC7A
+          C43E4402700000000049454E44AE426082}
+      end>
+  end
+end

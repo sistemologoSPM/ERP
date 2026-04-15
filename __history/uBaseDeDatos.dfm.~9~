@@ -1,0 +1,54 @@
+object dmBaseDeDatos: TdmBaseDeDatos
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  Height = 251
+  Width = 407
+  object db: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
+      'fo=False;Initial Catalog=ERP;Data Source=LAPTOP-OLDNPPCQ;'
+    LoginPrompt = False
+    Provider = 'SQLOLEDB.1'
+    Left = 80
+    Top = 56
+  end
+  object qSecuencias: TADOQuery
+    Connection = db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From Secuencias')
+    Left = 128
+    Top = 112
+  end
+  object qNuevoGUID: TADOQuery
+    Connection = db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select NewID() Guid')
+    Left = 224
+    Top = 112
+    object qNuevoGUIDGuid: TGuidField
+      FieldName = 'Guid'
+      ReadOnly = True
+      FixedChar = True
+      Size = 38
+    end
+  end
+  object qFechaActual: TADOQuery
+    Connection = db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select GetDate() FechaActual')
+    Left = 232
+    Top = 176
+    object qFechaActualFechaActual: TDateTimeField
+      FieldName = 'FechaActual'
+      ReadOnly = True
+    end
+  end
+end

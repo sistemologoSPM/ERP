@@ -1,0 +1,270 @@
+inherited frmFormList: TfrmFormList
+  Caption = 'frmFormList'
+  ClientHeight = 528
+  ClientWidth = 973
+  OnShow = FormShow
+  ExplicitTop = -53
+  ExplicitWidth = 989
+  ExplicitHeight = 567
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited StatusBar1: TStatusBar
+    Top = 509
+    Width = 973
+    ExplicitLeft = 0
+    ExplicitTop = 509
+    ExplicitWidth = 973
+  end
+  object Panel3: TPanel [1]
+    AlignWithMargins = True
+    Left = 10
+    Top = 0
+    Width = 958
+    Height = 499
+    Margins.Left = 10
+    Margins.Top = 0
+    Margins.Right = 5
+    Margins.Bottom = 10
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'Panel3'
+    Color = clSilver
+    ParentBackground = False
+    TabOrder = 1
+  end
+  object dxLayoutControl1: TdxLayoutControl [2]
+    Left = 0
+    Top = 0
+    Width = 973
+    Height = 509
+    Align = alClient
+    TabOrder = 2
+    object btnNuevo: TcxButton
+      Left = 26
+      Top = 33
+      Width = 100
+      Height = 35
+      Caption = 'Nuevo'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA79300000061494441543811636018
+        D4608EFA86FF73D537ACC6E748267C92C4C80D03031861FE0405188C4D88066A
+        5A937C332014A48E0544803048104423E3FF0C0C2140F12740B113408C40FF19
+        8F2338785820578DF4680406E01A0662030C4F58D2560A00EDD7162017530483
+        0000000049454E44AE426082}
+      TabOrder = 0
+    end
+    object GridListado: TcxGrid
+      AlignWithMargins = True
+      Left = 26
+      Top = 110
+      Width = 714
+      Height = 331
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BorderStyle = cxcbsNone
+      TabOrder = 2
+      object GridListadoDBTableView1: TcxGridDBTableView
+        Navigator.Buttons.CustomButtons = <>
+        Navigator.Buttons.Insert.Visible = False
+        Navigator.Buttons.Append.Visible = False
+        Navigator.Buttons.Delete.Visible = False
+        Navigator.Buttons.Edit.Visible = False
+        Navigator.Buttons.Post.Visible = False
+        Navigator.Buttons.Cancel.Visible = False
+        Navigator.Buttons.Refresh.Visible = True
+        Navigator.Buttons.SaveBookmark.Visible = False
+        Navigator.Buttons.GotoBookmark.Visible = False
+        Navigator.Buttons.Filter.Visible = False
+        Navigator.InfoPanel.DisplayMask = '[RecordIndex] de [RecordCount]'
+        Navigator.InfoPanel.Visible = True
+        Navigator.Visible = True
+        FindPanel.DisplayMode = fpdmAlways
+        FindPanel.InfoText = 'Introduzca texto para buscar...'
+        FindPanel.ShowClearButton = False
+        FindPanel.ShowCloseButton = False
+        FindPanel.ShowFindButton = False
+        DataController.Summary.DefaultGroupSummaryItems = <>
+        DataController.Summary.FooterSummaryItems = <>
+        DataController.Summary.SummaryGroups = <>
+        OptionsData.CancelOnExit = False
+        OptionsData.Deleting = False
+        OptionsData.DeletingConfirmation = False
+        OptionsData.Editing = False
+        OptionsData.Inserting = False
+        OptionsSelection.CellSelect = False
+        OptionsView.NoDataToDisplayInfoText = '<No hay datos para mostrar>'
+        OptionsView.Indicator = True
+      end
+      object GridListadoLevel1: TcxGridLevel
+        GridView = GridListadoDBTableView1
+      end
+    end
+    object btnImprimir: TcxButton
+      Left = 133
+      Top = 33
+      Width = 125
+      Height = 35
+      Caption = 'Imprimir'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA79300000168494441543811636460
+        40808AEE39FF113CDCAC8ED21446982C0B8C01A3DB4B92614CAC7465CF5C1471
+        26141E191C8A0D60CCAA9DB4EFCF9F7F0E0C0CFF195F30AA31100324FEDF022A
+        63FCCFC2C2B48FE5CF9FBF0E9EEE2E8C40C0306FE743065B5B6BA0246E74F8F0
+        51062F0F5786FFFFFF336EDFB9C709E405A05E78A0E2D6892463267F9F01A809
+        24C2083200C400634E7656868F9F3E83D9D8888F9F3E317071B0309C7AA80897
+        4689461B2D418623D7AE337CFFF91BAE009901B2C0565B08598801C50059314E
+        864820465141800337E0E9B3E70C172F5D21A01C28CDC8C060A0A7C320252909
+        E430205C202D25C9F0F8C94386B88840B0042E62D18AF570CD20352CCCCCCCB7
+        F7EE3D20F19F91F13F0F0F3B9FA60CAA1F418AD0F19E7D073F3102A3919985E5
+        390BCB4706DD3FDCBFA5C18A78D8EF8268F4F40E120361583EF9FBF3972188FF
+        86E3E313100DC7A0DC084C207811480D5C0390C102C4280897ED288A90380073
+        337DD212BBFED30000000049454E44AE426082}
+      TabOrder = 1
+    end
+    object btnAceptar: TcxButton
+      Left = 861
+      Top = 462
+      Width = 100
+      Height = 35
+      Caption = 'Aceptar'
+      ModalResult = 1
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA793000001AC494441543811A5534B
+        4B424114FE46AF97489030B24C2308A92468D1427113B56ED1A28769ED7213D4
+        DF2970DD839082A05F20B87013113D082230C82741504699399D3376CDC4DBC6
+        CB7C6766CEF9BE337367CE001D7EA2559FCAA75C9AD4366A1273141CE6B80432
+        42C8D30AF49D69F754897D0688630C8174361D25729C3C7642BBF62AA588853C
+        814323D84890CEA597A404071A3E83D4D2134D2C860603C7EC57E464EEAC4F97
+        9F77E470104CDB97ACC22A348E3F8B1A7C416FF0C9C2335D56B6A8FF579C2DE7
+        B07D1E47E1AD4854F4C08A4D1EA80410629E2766C8BC3C60F77A1FCE2E277A09
+        8A27A134F5041223CA49E6BDFA61AC42332057CE23717B84017B3F964717A059
+        D42F800EDBC7048D4D33928F495C942EB1EA8F28F7DECD015CDD7D888C8561B3
+        DA94AFD9D41308DC53CA490ECC7A67502817C1429E9B89E9F4F9D0616112A43C
+        513D195E25EA0F63C8E181DBEE46747CA5EDCA10501A4A04B4BBC64AAD022145
+        7B31F0F71AB93C85408C36406743969A6ED1CDC45C48EB5C0344FBF9051A05DD
+        C1046D678D86658259E3528E1855C824D270F78B96C734C111DAD695D963E278
+        47F806EAF58A92249AF3460000000049454E44AE426082}
+      TabOrder = 3
+    end
+    object dxLayoutControl1Group_Root: TdxLayoutGroup
+      AlignHorz = ahClient
+      AlignVert = avClient
+      ButtonOptions.Buttons = <>
+      Hidden = True
+      ItemIndex = 1
+      ShowBorder = False
+      Index = -1
+    end
+    object dxLayoutItem1: TdxLayoutItem
+      Parent = BarraHerramientas
+      AlignHorz = ahLeft
+      AlignVert = avCenter
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnNuevo
+      ControlOptions.OriginalHeight = 35
+      ControlOptions.OriginalWidth = 100
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem2: TdxLayoutItem
+      Parent = Listado
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = GridListado
+      ControlOptions.OriginalHeight = 468
+      ControlOptions.OriginalWidth = 648
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutSeparatorItem1: TdxLayoutSeparatorItem
+      Parent = Acciones
+      CaptionOptions.Text = 'Separator'
+      Index = 1
+    end
+    object dxLayoutItem5: TdxLayoutItem
+      Parent = Acciones
+      CaptionOptions.Text = 'New Item'
+      Index = 2
+    end
+    object dxLayoutItem7: TdxLayoutItem
+      Parent = BarraHerramientas
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnImprimir
+      ControlOptions.OriginalHeight = 35
+      ControlOptions.OriginalWidth = 125
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object BarraHerramientas: TdxLayoutGroup
+      Parent = dxLayoutControl1Group_Root
+      AlignHorz = ahClient
+      AlignVert = avTop
+      CaptionOptions.Text = 'New Group'
+      CaptionOptions.Visible = False
+      ButtonOptions.Buttons = <>
+      ItemIndex = 1
+      LayoutDirection = ldHorizontal
+      Index = 0
+    end
+    object Acciones: TdxLayoutGroup
+      Parent = Listado
+      AlignHorz = ahRight
+      AlignVert = avClient
+      CaptionOptions.AlignHorz = taCenter
+      CaptionOptions.Text = 'Acciones'
+      SizeOptions.Width = 200
+      SizeOptions.MaxWidth = 200
+      ButtonOptions.Buttons = <>
+      ShowBorder = False
+      Index = 1
+    end
+    object Listado: TdxLayoutGroup
+      Parent = dxLayoutControl1Group_Root
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.Text = 'New Group'
+      CaptionOptions.Visible = False
+      ButtonOptions.Buttons = <>
+      ItemIndex = 1
+      LayoutDirection = ldHorizontal
+      Index = 1
+    end
+    object dxLayoutLabeledItem1: TdxLayoutLabeledItem
+      Parent = Acciones
+      CaptionOptions.AlignHorz = taCenter
+      CaptionOptions.Text = 'Acciones'
+      Index = 0
+    end
+    object liBotonAceptar: TdxLayoutItem
+      Parent = BarraHerramientasBottom
+      AlignHorz = ahRight
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnAceptar
+      ControlOptions.OriginalHeight = 35
+      ControlOptions.OriginalWidth = 100
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object BarraHerramientasBottom: TdxLayoutGroup
+      Parent = dxLayoutControl1Group_Root
+      CaptionOptions.Text = 'New Group'
+      ButtonOptions.Buttons = <>
+      ShowBorder = False
+      Index = 2
+    end
+  end
+  inherited ApplicationEvents1: TApplicationEvents
+    Top = 136
+  end
+end

@@ -1,0 +1,1179 @@
+inherited frmProductosCreate: TfrmProductosCreate
+  Caption = ''
+  ClientHeight = 723
+  ClientWidth = 852
+  Menu = MainMenu1
+  OnShow = FormShow
+  ExplicitWidth = 868
+  ExplicitHeight = 782
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited StatusBar1: TStatusBar
+    Top = 704
+    Width = 852
+    ExplicitTop = 704
+    ExplicitWidth = 852
+  end
+  inherited dxLayoutControl1: TdxLayoutControl
+    Width = 852
+    Height = 704
+    ExplicitWidth = 810
+    ExplicitHeight = 704
+    inherited cxButton1: TcxButton
+      Left = 726
+      Top = 643
+      TabOrder = 29
+      ExplicitLeft = 726
+      ExplicitTop = 643
+    end
+    object cbCategorias: TcxDBLookupComboBox [1]
+      Left = 585
+      Top = 92
+      DataBinding.DataField = 'ListadoProductosCategorias'
+      DataBinding.DataSource = dsProductos
+      Properties.KeyFieldNames = 'CategoriaId'
+      Properties.ListColumns = <
+        item
+          FieldName = 'Categoria'
+        end>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 1
+      Width = 235
+    end
+    object cbProductosTipos: TcxDBLookupComboBox [2]
+      Left = 151
+      Top = 92
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 0
+      Width = 350
+    end
+    object cxDBTextEdit1: TcxDBTextEdit [3]
+      Left = 151
+      Top = 123
+      DataBinding.DataField = 'Nombre'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 2
+      Width = 350
+    end
+    object cxDBMemo1: TcxDBMemo [4]
+      Left = 151
+      Top = 154
+      DataBinding.DataField = 'Descripcion'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 4
+      Height = 86
+      Width = 350
+    end
+    object cxDBLookupComboBox1: TcxDBLookupComboBox [5]
+      Left = 585
+      Top = 123
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 3
+      Width = 235
+    end
+    object cxDBTextEdit2: TcxDBTextEdit [6]
+      Left = 585
+      Top = 216
+      DataBinding.DataField = 'Referencia'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 7
+      Width = 235
+    end
+    object cxDBLookupComboBox2: TcxDBLookupComboBox [7]
+      Left = 585
+      Top = 154
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 5
+      Width = 235
+    end
+    object cxDBCurrencyEdit1: TcxDBCurrencyEdit [8]
+      Left = 414
+      Top = 378
+      DataBinding.DataField = 'CostoUnitario'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 13
+      Width = 129
+    end
+    object cxDBCurrencyEdit2: TcxDBCurrencyEdit [9]
+      Left = 144
+      Top = 409
+      DataBinding.DataField = 'PrecioVenta'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 14
+      Width = 125
+    end
+    object cxDBDateEdit1: TcxDBDateEdit [10]
+      Left = 414
+      Top = 503
+      DataBinding.DataField = 'FechaCantidadInicial'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 20
+      Width = 129
+    end
+    object cxDBTextEdit3: TcxDBTextEdit [11]
+      Left = 144
+      Top = 534
+      DataBinding.DataField = 'CantidadInicial'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 21
+      Width = 125
+    end
+    object cxDBCurrencyEdit3: TcxDBCurrencyEdit [12]
+      Left = 414
+      Top = 534
+      DataBinding.DataField = 'CantidadMinima'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 22
+      Width = 129
+    end
+    object DBLookupComboBox1: TDBLookupComboBox [13]
+      Left = 144
+      Top = 378
+      Width = 125
+      Height = 24
+      DataField = 'ListadoDeMonedas'
+      DataSource = dsProductos
+      TabOrder = 12
+    end
+    object DBLookupComboBox2: TDBLookupComboBox [14]
+      Left = 144
+      Top = 503
+      Width = 125
+      Height = 24
+      DataField = 'ListadoAlmacen'
+      DataSource = dsProductos
+      TabOrder = 19
+    end
+    object cxDBCheckBox1: TcxDBCheckBox [15]
+      Left = 36
+      Top = 247
+      Caption = 'Activo fijo'
+      DataBinding.DataField = 'EsActivoFijo'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 8
+    end
+    object cxDBCurrencyEdit4: TcxDBCurrencyEdit [16]
+      Left = 414
+      Top = 440
+      DataBinding.DataField = 'PrecioVenta'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 17
+      Width = 129
+    end
+    object btnAgregarImpuesto: TcxButton [17]
+      Left = 10000
+      Top = 10000
+      Width = 100
+      Height = 30
+      Caption = 'Agregar'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA79300000061494441543811636018
+        D4608EFA86FF73D537ACC6E748267C92C4C80D03031861FE0405188C4D88066A
+        5A937C332014A48E0544803048104423E3FF0C0C2140F12740B113408C40FF19
+        8F2338785820578DF4680406E01A0662030C4F58D2560A00EDD7162017530483
+        0000000049454E44AE426082}
+      TabOrder = 23
+      Visible = False
+    end
+    object btnQuitarImpuesto: TcxButton [18]
+      Left = 10000
+      Top = 10000
+      Width = 100
+      Height = 30
+      Caption = 'Quitar'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA79300000153494441543811A553B1
+        4AC350143DB7D63A488A8BAE82741304970A2E828A200E2E3A286E7611F40704
+        27C11F5010FC03110441703142D77670722B82B308C5D4C110733DF7B5516CD5
+        C61AEEC93BB9E7DCFB5E5E5E807F5ED25E1F2C4C8F64A2684B054BD446098B07
+        815CC6B9F0D8BBBA7DB444822F0D1AF3C575284E280E121D41732386963CBF7A
+        9A88CC3569305B5C1581091FB9A6D27157155DF1AEABE7A63873B038392C617F
+        8D893C9126EA3150C8FB95A78C7387B91D8E698B69C5509F62DB886B20D0657B
+        F80BB8C9AE266B457C8F3135426467E630B07740D619AFFBBB88CA7E22148CB8
+        1518E915592BE4ECF71C27083743549E32DA0DB6E9702B50C8453777BB2E0A57
+        E31A20171ED2F04CA48DFA9BE0C8CCAE811D4F559498E0DBF0FE7BD841DAB433
+        6036D7C088775339836083FC85F836F8B51A0A5D4B4EA19998B3E1136D3FD378
+        4BB9FBE9676AE9BD0FEF62D9629946489CCB0000000049454E44AE426082}
+      TabOrder = 24
+      Visible = False
+    end
+    object cxGrid1: TcxGrid [19]
+      Left = 10000
+      Top = 10000
+      Width = 477
+      Height = 188
+      TabOrder = 25
+      Visible = False
+      object cxGrid1DBTableView1: TcxGridDBTableView
+        Navigator.Buttons.CustomButtons = <>
+        DataController.Summary.DefaultGroupSummaryItems = <>
+        DataController.Summary.FooterSummaryItems = <>
+        DataController.Summary.SummaryGroups = <>
+      end
+      object cxGrid1Level1: TcxGridLevel
+        GridView = cxGrid1DBTableView1
+      end
+    end
+    object cxImage1: TcxImage [20]
+      Left = 601
+      Top = 299
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 26
+      Height = 200
+      Width = 200
+    end
+    object btnCargarFoto: TcxButton [21]
+      Left = 601
+      Top = 506
+      Width = 200
+      Height = 30
+      Caption = 'Cargar foto'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA793000000BF4944415438116360A0
+        1030C2F54FEF580D6713C3C8AC080529630211B4C3931AF81840188F0DB85DB0
+        AA818D81956333030BC75A868606165C66E036E00DC73486FF0C76408D2E0C62
+        1C13803456C48C55745A473650BC068861C88CC1CBF535C3B63DA76102301A11
+        0B3091196D5E0CFF983601B9E886FF6160F8EFC99055B9072807479806C0A4A6
+        B503A389711584FB3F0CA87135848D4AE20E03547538793843978181E93103E3
+        FF35609DFF816C300393A0D805C3C000CC5021510400FF5023284F89C0160000
+        000049454E44AE426082}
+      TabOrder = 27
+    end
+    object btnTomarFoto: TcxButton [22]
+      Left = 601
+      Top = 543
+      Width = 200
+      Height = 30
+      Caption = 'Tomar foto'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA7930000015C494441543811D5513D
+        4B0341107D7B17BDE89D680249103FE2A148500BDB087682BD4D6CECAD6CC5DF
+        61636D1A031656567682D8048C8242D414778526908F229722646F9DDB8BB97C
+        FD811C336FDECEBC99656F8089FFD8B817A8B96689F22679604294F8F1DC7A90
+        F019F303A0DE38976022D53D1F74E37078F013EC8367F4338F0703724DE125FE
+        7D37A2201D55E5F1A9CA5168B848CE329C6E4CE1E2B50D9E31646F482A86E068
+        398499AF77DCDE1565E530BD09D3DCC24B8343916D322D4191D8070BD30CAB35
+        0BD9FB3CCA7507958E8AEB671B9AFD8D7A1B382F10F4E94706983AC3DBE70FC0
+        185862118844C10C038FC532D6A8D6D72BE9C8806A5B201ED5014DF35DCA8098
+        11466DF07259191960390289ED1496E2F352E041181CFB7B3BB05BAE771CF0DE
+        2FA1DDF7B6A0AB0C2749056EE597C4F494780259CB45ABD3938CDD824DEA1572
+        385CE0AAC489C6C8C99A1EA7189815D089677FCFBE5DDEC509E9660000000049
+        454E44AE426082}
+      TabOrder = 28
+    end
+    object Panel1: TPanel [23]
+      Left = 42
+      Top = 471
+      Width = 511
+      Height = 25
+      BevelOuter = bvNone
+      Caption = 'Inventario Inicial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 18
+    end
+    object Panel2: TPanel [24]
+      Left = 42
+      Top = 346
+      Width = 511
+      Height = 25
+      BevelOuter = bvNone
+      Caption = 'Precio de venta'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 11
+    end
+    object cxDBLookupComboBox3: TcxDBLookupComboBox [25]
+      Left = 585
+      Top = 185
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 6
+      Width = 235
+    end
+    object cxDBCheckBox2: TcxDBCheckBox [26]
+      Left = 133
+      Top = 247
+      Caption = 'Fecha vencimiento'
+      DataBinding.DataField = 'TieneFechaVencimiento'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 9
+    end
+    object cxDBCheckBox3: TcxDBCheckBox [27]
+      Left = 270
+      Top = 247
+      Caption = 'Serie'
+      DataBinding.DataField = 'TieneSerie'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 10
+    end
+    object cxDBCurrencyEdit5: TcxDBCurrencyEdit [28]
+      Left = 144
+      Top = 440
+      DataBinding.DataField = 'TotalImpuesto'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 16
+      Width = 125
+    end
+    object cxDBCurrencyEdit6: TcxDBCurrencyEdit [29]
+      Left = 414
+      Top = 409
+      DataBinding.DataField = 'MargenGanancias'
+      DataBinding.DataSource = dsProductos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 15
+      Width = 129
+    end
+    inherited dxLayoutControl1Group_Root: TdxLayoutGroup
+      ItemIndex = 1
+    end
+    inherited Cuerpo: TdxLayoutGroup
+      AlignHorz = ahClient
+      ItemIndex = 4
+    end
+    object dxLayoutItem1: TdxLayoutItem
+      Parent = dxLayoutGroup1
+      AlignHorz = ahLeft
+      AlignVert = avTop
+      CaptionOptions.Text = 'Tipos de productos'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cbProductosTipos
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 350
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem3: TdxLayoutItem
+      Parent = dxLayoutGroup1
+      AlignHorz = ahLeft
+      AlignVert = avTop
+      CaptionOptions.Text = 'Categorias'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cbCategorias
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 235
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem4: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup6
+      AlignHorz = ahLeft
+      AlignVert = avTop
+      CaptionOptions.Text = 'Nombre'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBTextEdit1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 350
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem6: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup2
+      AlignHorz = ahLeft
+      AlignVert = avClient
+      CaptionOptions.AlignVert = tavTop
+      CaptionOptions.Text = 'Descripci'#243'n'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBMemo1
+      ControlOptions.OriginalHeight = 60
+      ControlOptions.OriginalWidth = 350
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem5: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup6
+      AlignHorz = ahLeft
+      AlignVert = avTop
+      CaptionOptions.Text = 'Marca'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBLookupComboBox1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 235
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutGroup1: TdxLayoutGroup
+      Parent = Cuerpo
+      AlignVert = avTop
+      CaptionOptions.Text = 'New Group'
+      ButtonOptions.Buttons = <>
+      LayoutDirection = ldHorizontal
+      ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem8: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup1
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Referencia'
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBTextEdit2
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 235
+      ControlOptions.ShowBorder = False
+      Index = 2
+    end
+    object dxLayoutItem9: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup1
+      AlignHorz = ahLeft
+      AlignVert = avTop
+      CaptionOptions.Text = 'Modelo'
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBLookupComboBox2
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 235
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutAutoCreatedGroup2: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      LayoutDirection = ldHorizontal
+      Index = 2
+      AutoCreated = True
+    end
+    object dxLayoutGroup2: TdxLayoutGroup
+      Parent = dxLayoutAutoCreatedGroup7
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.Text = 'New Group'
+      Offsets.Top = 5
+      ButtonOptions.Buttons = <>
+      LayoutDirection = ldTabbed
+      Padding.AssignedValues = [lpavLeft, lpavRight, lpavTop]
+      ShowBorder = False
+      TabbedOptions.TabHeight = 35
+      TabbedOptions.TabWidth = 125
+      Index = 0
+    end
+    object dxLayoutGroup3: TdxLayoutGroup
+      Parent = dxLayoutGroup2
+      CaptionOptions.Text = 'Precio'
+      Offsets.Top = 10
+      ButtonOptions.Buttons = <>
+      ItemIndex = 3
+      Index = 0
+    end
+    object dxLayoutGroup4: TdxLayoutGroup
+      Parent = dxLayoutGroup2
+      CaptionOptions.Text = 'Materia prima'
+      Offsets.Top = 10
+      ButtonOptions.Buttons = <>
+      Index = 2
+    end
+    object dxLayoutItem7: TdxLayoutItem
+      Parent = dxLayoutGroup6
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.Text = 'Costo unitario'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBCurrencyEdit1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 125
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem10: TdxLayoutItem
+      Parent = dxLayoutGroup8
+      AlignHorz = ahLeft
+      AlignVert = avClient
+      CaptionOptions.Hint = 'Precio de venta sin impuestos'
+      CaptionOptions.Text = 'Precio venta'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBCurrencyEdit2
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 125
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem11: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup4
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.Text = 'Fecha cantidad inicial'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBDateEdit1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 125
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem14: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup5
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Cantidad inicial'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBTextEdit3
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 125
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem15: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup5
+      AlignHorz = ahClient
+      AlignVert = avBottom
+      CaptionOptions.Text = 'Cantidad minima'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBCurrencyEdit3
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 125
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem12: TdxLayoutItem
+      Parent = dxLayoutGroup6
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Monedas'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = DBLookupComboBox1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 125
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem13: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup4
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Almac'#233'n'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = DBLookupComboBox2
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 125
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutGroup6: TdxLayoutGroup
+      Parent = dxLayoutGroup3
+      AlignHorz = ahClient
+      AlignVert = avTop
+      CaptionOptions.Text = 'New Group'
+      ButtonOptions.Buttons = <>
+      ItemIndex = 1
+      LayoutDirection = ldHorizontal
+      ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutGroup7: TdxLayoutGroup
+      Parent = dxLayoutGroup2
+      CaptionOptions.Text = 'Impuestos'
+      Offsets.Top = 10
+      ButtonOptions.Buttons = <>
+      ItemIndex = 1
+      Index = 1
+    end
+    object dxLayoutItem16: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup8
+      AlignVert = avClient
+      CaptionOptions.Visible = False
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBCheckBox1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 80
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutAutoCreatedGroup4: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutGroup3
+      LayoutDirection = ldHorizontal
+      Index = 5
+      AutoCreated = True
+    end
+    object dxLayoutAutoCreatedGroup5: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutGroup3
+      LayoutDirection = ldHorizontal
+      Index = 6
+      AutoCreated = True
+    end
+    object dxLayoutItem17: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup9
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.Hint = 'Precio de venta con impuestos'
+      CaptionOptions.Text = 'Precio Total'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBCurrencyEdit4
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 125
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutGroup8: TdxLayoutGroup
+      Parent = dxLayoutGroup3
+      AlignHorz = ahClient
+      AlignVert = avTop
+      CaptionOptions.Text = 'New Group'
+      ButtonOptions.Buttons = <>
+      ItemIndex = 1
+      LayoutDirection = ldHorizontal
+      ShowBorder = False
+      Index = 2
+    end
+    object dxLayoutItem18: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup3
+      AlignVert = avClient
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnAgregarImpuesto
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 100
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem19: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup3
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnQuitarImpuesto
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 100
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutAutoCreatedGroup3: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutGroup7
+      LayoutDirection = ldHorizontal
+      Index = 0
+      AutoCreated = True
+    end
+    object dxLayoutItem21: TdxLayoutItem
+      Parent = dxLayoutGroup7
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.Text = 'cxGrid1'
+      CaptionOptions.Visible = False
+      Control = cxGrid1
+      ControlOptions.OriginalHeight = 200
+      ControlOptions.OriginalWidth = 250
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem20: TdxLayoutItem
+      Parent = dxLayoutGroup5
+      AlignHorz = ahCenter
+      AlignVert = avTop
+      CaptionOptions.Text = 'cxImage1'
+      CaptionOptions.Visible = False
+      Control = cxImage1
+      ControlOptions.OriginalHeight = 200
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutAutoCreatedGroup7: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      AlignVert = avClient
+      LayoutDirection = ldHorizontal
+      Index = 4
+      AutoCreated = True
+    end
+    object dxLayoutGroup5: TdxLayoutGroup
+      Parent = dxLayoutAutoCreatedGroup7
+      AlignHorz = ahRight
+      CaptionOptions.Text = 'Foto producto'
+      CaptionOptions.Visible = False
+      SizeOptions.Width = 250
+      ButtonOptions.Buttons = <>
+      Index = 1
+    end
+    object dxLayoutItem22: TdxLayoutItem
+      Parent = dxLayoutGroup3
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = Panel1
+      ControlOptions.AutoColor = True
+      ControlOptions.OriginalHeight = 25
+      ControlOptions.OriginalWidth = 673
+      ControlOptions.ShowBorder = False
+      Index = 4
+    end
+    object dxLayoutItem23: TdxLayoutItem
+      Parent = dxLayoutGroup3
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = Panel2
+      ControlOptions.AutoColor = True
+      ControlOptions.OriginalHeight = 25
+      ControlOptions.OriginalWidth = 502
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem24: TdxLayoutItem
+      Parent = dxLayoutGroup5
+      AlignHorz = ahCenter
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnCargarFoto
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem25: TdxLayoutItem
+      Parent = dxLayoutGroup5
+      AlignHorz = ahCenter
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnTomarFoto
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 200
+      ControlOptions.ShowBorder = False
+      Index = 2
+    end
+    object dxLayoutAutoCreatedGroup6: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      AlignHorz = ahClient
+      AlignVert = avTop
+      LayoutDirection = ldHorizontal
+      Index = 1
+      AutoCreated = True
+    end
+    object dxLayoutItem26: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup1
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Unidades'
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBLookupComboBox3
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 235
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutAutoCreatedGroup8: TdxLayoutAutoCreatedGroup
+      Parent = Cuerpo
+      LayoutDirection = ldHorizontal
+      Index = 3
+      AutoCreated = True
+    end
+    object dxLayoutItem27: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup8
+      CaptionOptions.Text = 'Fecha vencimiento'
+      CaptionOptions.Visible = False
+      Control = cxDBCheckBox2
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 130
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem28: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup8
+      CaptionOptions.Text = 'TieneSerie'
+      CaptionOptions.Visible = False
+      Control = cxDBCheckBox3
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 54
+      ControlOptions.ShowBorder = False
+      Index = 2
+    end
+    object dxLayoutAutoCreatedGroup1: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutAutoCreatedGroup2
+      AlignHorz = ahClient
+      AlignVert = avClient
+      Index = 1
+      AutoCreated = True
+    end
+    object dxLayoutItem29: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup9
+      AlignHorz = ahLeft
+      AlignVert = avClient
+      CaptionOptions.Text = 'Impuestos'
+      Padding.Left = 10
+      Padding.AssignedValues = [lpavLeft]
+      Control = cxDBCurrencyEdit5
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 125
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem30: TdxLayoutItem
+      Parent = dxLayoutGroup8
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.Text = 'Ganancias'
+      Padding.Left = 10
+      Padding.Right = 10
+      Padding.AssignedValues = [lpavLeft, lpavRight]
+      Control = cxDBCurrencyEdit6
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutAutoCreatedGroup9: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutGroup3
+      AlignHorz = ahClient
+      AlignVert = avTop
+      LayoutDirection = ldHorizontal
+      Index = 3
+      AutoCreated = True
+    end
+  end
+  object qProdutos: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From Productos')
+    Left = 40
+    Top = 40
+    object qProdutosProductoId: TIntegerField
+      FieldName = 'ProductoId'
+    end
+    object qProdutosTipoProductoId: TIntegerField
+      FieldName = 'TipoProductoId'
+    end
+    object qProdutosCategoriaId: TIntegerField
+      FieldName = 'CategoriaId'
+    end
+    object qProdutosMarcaId: TIntegerField
+      FieldName = 'MarcaId'
+    end
+    object qProdutosUnidadDeMedidaId: TIntegerField
+      FieldName = 'UnidadDeMedidaId'
+    end
+    object qProdutosNombre: TStringField
+      FieldName = 'Nombre'
+      Size = 200
+    end
+    object qProdutosReferencia: TStringField
+      FieldName = 'Referencia'
+      Size = 50
+    end
+    object qProdutosDescripcion: TMemoField
+      FieldName = 'Descripcion'
+      BlobType = ftMemo
+    end
+    object qProdutosFechaCantidadInicial: TDateTimeField
+      FieldName = 'FechaCantidadInicial'
+    end
+    object qProdutosCantidadInicial: TWideStringField
+      FieldName = 'CantidadInicial'
+      FixedChar = True
+      Size = 10
+    end
+    object qProdutosCantidadMinima: TBCDField
+      FieldName = 'CantidadMinima'
+      Precision = 18
+    end
+    object qProdutosCostoUnitario: TBCDField
+      FieldName = 'CostoUnitario'
+      Precision = 18
+    end
+    object qProdutosPrecioVenta: TBCDField
+      FieldName = 'PrecioVenta'
+      Precision = 18
+    end
+    object qProdutosMonedaId: TIntegerField
+      FieldName = 'MonedaId'
+    end
+    object qProdutosEstadoId: TIntegerField
+      FieldName = 'EstadoId'
+    end
+    object qProdutosCreadoPor: TStringField
+      FieldName = 'CreadoPor'
+      Size = 50
+    end
+    object qProdutosFechaCreacion: TDateTimeField
+      FieldName = 'FechaCreacion'
+    end
+    object qProdutosModificadoPor: TStringField
+      FieldName = 'ModificadoPor'
+      Size = 50
+    end
+    object qProdutosFechaModificacion: TDateTimeField
+      FieldName = 'FechaModificacion'
+    end
+    object qProdutosListadoProductosTipos: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoProductosTipos'
+      LookupDataSet = qProductosTipos
+      LookupKeyFields = 'TipoProductoId'
+      LookupResultField = 'TipoProducto'
+      KeyFields = 'TipoProductoId'
+      Lookup = True
+    end
+    object qProdutosLookupProdcutosCategorias: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoProductosCategorias'
+      LookupDataSet = qCategorias
+      LookupKeyFields = 'CategoriaId'
+      LookupResultField = 'Categoria'
+      KeyFields = 'CategoriaId'
+      Lookup = True
+    end
+    object qProdutosListadoProductosMarcas: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoProductosMarcas'
+      LookupDataSet = qProductosMarcas
+      LookupKeyFields = 'MarcaId'
+      LookupResultField = 'Marca'
+      KeyFields = 'MarcaId'
+      Lookup = True
+    end
+    object qProdutosListadoUnidadesDeMedida: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoUnidadesDeMedida'
+      LookupDataSet = qProductosUnidadesDeMedidas
+      LookupKeyFields = 'UnidadDeMedidaId'
+      LookupResultField = 'UnidadDeMedida'
+      KeyFields = 'UnidadDeMedidaId'
+      Lookup = True
+    end
+    object qProdutosListadoDeMonedas: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoDeMonedas'
+      LookupDataSet = qMonedas
+      LookupKeyFields = 'MonedaId'
+      LookupResultField = 'Moneda'
+      KeyFields = 'MonedaId'
+      Lookup = True
+    end
+    object qProdutosAlmacenId: TIntegerField
+      FieldName = 'AlmacenId'
+    end
+    object qProdutosListadoAlmacen: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ListadoAlmacen'
+      LookupDataSet = qAlmacen
+      LookupKeyFields = 'AlmacenId'
+      LookupResultField = 'Almacen'
+      KeyFields = 'AlmacenId'
+      Size = 0
+      Lookup = True
+    end
+    object qProdutosEsActivoFijo: TBooleanField
+      FieldName = 'EsActivoFijo'
+    end
+    object qProdutosModeloId: TIntegerField
+      FieldName = 'ModeloId'
+    end
+    object qProdutosCodigo: TStringField
+      FieldName = 'Codigo'
+      Size = 50
+    end
+    object qProdutosTieneFechaVencimiento: TBooleanField
+      FieldName = 'TieneFechaVencimiento'
+    end
+    object qProdutosTieneSerie: TBooleanField
+      FieldName = 'TieneSerie'
+    end
+    object qProdutosTotalImpuesto: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'TotalImpuesto'
+      Calculated = True
+    end
+    object qProdutosMargenGanancias: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'MargenGanancias'
+      Calculated = True
+    end
+  end
+  object qProductosTipos: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From ProductosTipos')
+    Left = 528
+    Top = 32
+  end
+  object dsProductos: TDataSource
+    DataSet = qProdutos
+    Left = 80
+    Top = 184
+  end
+  object qCategorias: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From ProductosCategorias')
+    Left = 440
+    Top = 24
+  end
+  object qProductosMarcas: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From ProductosMarcas')
+    Left = 112
+    Top = 8
+  end
+  object qProductosUnidadesDeMedidas: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From ProductosUnidadesDeMedidas')
+    Left = 232
+    Top = 24
+  end
+  object qMonedas: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From Monedas')
+    Left = 616
+    Top = 32
+  end
+  object qAlmacen: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From Almacenes')
+    Left = 664
+    Top = 48
+  end
+  object MainMenu1: TMainMenu
+    Left = 765
+    Top = 48
+    object Configuraciones1: TMenuItem
+      Caption = 'Configuraciones'
+      object Cat1: TMenuItem
+        Caption = 'Categorias'
+      end
+      object Marcas1: TMenuItem
+        Caption = 'Marcas'
+      end
+      object Unidadesdemedidas1: TMenuItem
+        Caption = 'Unidades de medidas'
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Salir1: TMenuItem
+        Caption = 'Salir'
+      end
+    end
+  end
+  object qMarcasModelos: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    DataSource = dsMarcas
+    Parameters = <
+      item
+        Name = 'MarcaId'
+        DataType = ftInteger
+        Size = -1
+        Value = Null
+      end>
+    SQL.Strings = (
+      'Select * From ProductosMarcasModelos'
+      'Where MarcaId=:MarcaId')
+    Left = 344
+    Top = 16
+  end
+  object dsMarcas: TDataSource
+    DataSet = qProductosMarcas
+    Left = 296
+    Top = 176
+  end
+end
