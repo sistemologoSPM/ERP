@@ -1,0 +1,37 @@
+program ERP;
+
+uses
+  Vcl.Forms,
+  uMenu in 'uMenu.pas' {frmMenu},
+  uBase in 'uBase.pas' {frmBase},
+  uBaseFormInsert in 'uBaseFormInsert.pas' {frmBaseFormInsert},
+  uBaseFormList in 'uBaseFormList.pas' {frmBaseFormList},
+  uFormShadow in 'uFormShadow.pas' {frmShadow},
+  uClientes in 'uClientes.pas' {frmClientes},
+  uClientesCreate in 'uClientesCreate.pas' {frmClientesCreate},
+  uBaseDeDatos in 'uBaseDeDatos.pas' {dmBaseDeDatos: TDataModule},
+  uClientesValoresPorDefecto in 'uClientesValoresPorDefecto.pas' {frmClientesValoresPorDefecto},
+  uClientesHistorial in 'uClientesHistorial.pas' {frmClientesHistorial},
+  uConducesClientesCreate in 'uConducesClientesCreate.pas' {frmConducesClientesCreate},
+  uConducesClientes in 'uConducesClientes.pas' {frmConducesClientes},
+  uMensaje in 'uMensaje.pas' {frmMensaje},
+  uBaseBuscar in 'uBaseBuscar.pas' {frmBaseBuscar},
+  uClientesBuscar in 'uClientesBuscar.pas' {frmClientesBuscar},
+  uClientesCategorias in 'uClientesCategorias.pas' {frmClientesCategorias},
+  uClientesCategoriasHistorial in 'uClientesCategoriasHistorial.pas' {frmClientesCategoriasHistorial},
+  uClientesCategoriasCreate in 'uClientesCategoriasCreate.pas' {frmClientesCategoriasCreate},
+  uClientesTerminosPagos in 'uClientesTerminosPagos.pas' {frmClientesTerminosPagos},
+  uClientesTerminosPagosCreate in 'uClientesTerminosPagosCreate.pas' {frmClientesTerminosPagosCreate},
+  uClientesTerminosPagosHistorial in 'uClientesTerminosPagosHistorial.pas' {frmClientesTerminosPagosHistorial},
+  uProductos in 'uProductos.pas' {frmProductos},
+  uProductosCreate in 'uProductosCreate.pas' {frmProductosCreate};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmMenu, frmMenu);
+  Application.CreateForm(TdmBaseDeDatos, dmBaseDeDatos);
+  Application.Run;
+end.

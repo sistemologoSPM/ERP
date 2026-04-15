@@ -1,0 +1,75 @@
+unit uClientesCategoriasHistorial;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uBaseFormList, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, Vcl.Menus, cxStyles, cxCustomData, cxFilter, cxData,
+  cxDataStorage, cxEdit, cxNavigator,
+  cxDataControllerConditionalFormattingRulesManagerDialog, Data.DB, cxDBData,
+  dxLayoutControlAdapters, dxLayoutContainer, cxGridLevel, cxClasses,
+  cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView,
+  cxGrid, Vcl.StdCtrls, cxButtons, dxLayoutControl, Vcl.ExtCtrls, Vcl.ComCtrls,
+  uBaseDeDatos, Data.Win.ADODB;
+
+type
+  TfrmClientesCategoriasHistorial = class(TfrmBaseFormList)
+    dsHistorial: TDataSource;
+    qHistorial: TADOQuery;
+    qHistorialHistorialId: TIntegerField;
+    qHistorialTabla: TStringField;
+    qHistorialClavePrimaria: TIntegerField;
+    qHistorialCampo: TStringField;
+    qHistorialvalorAnterior: TMemoField;
+    qHistorialValorNuevo: TMemoField;
+    qHistorialUsuario: TStringField;
+    qHistorialFechaCambio: TDateTimeField;
+    GridListadoDBTableView1Campo: TcxGridDBColumn;
+    GridListadoDBTableView1valorAnterior: TcxGridDBColumn;
+    GridListadoDBTableView1ValorNuevo: TcxGridDBColumn;
+    GridListadoDBTableView1Usuario: TcxGridDBColumn;
+    GridListadoDBTableView1FechaCambio: TcxGridDBColumn;
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    CategoriaId:Integer;
+    CategoriaNombre:String;
+    { Public declarations }
+  end;
+
+var
+  frmClientesCategoriasHistorial: TfrmClientesCategoriasHistorial;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmClientesCategoriasHistorial.FormShow(Sender: TObject);
+begin
+  inherited;
+qHistorial.Close;
+qHistorial.Parameters.ParamValues['CategoriaId']:= CategoriaId;
+qHistorial.Open;
+
+frmClientesCategoriasHistorial.Caption:= 'Historial de cambios Categoria: '+UpperCase(CategoriaNombre);
+
+end;
+
+end.

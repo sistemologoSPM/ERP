@@ -1,0 +1,57 @@
+unit uMensaje;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uBase, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, cxClasses, dxLayoutContainer, dxLayoutControl,
+  Vcl.ComCtrls, Vcl.Menus, dxLayoutControlAdapters, Vcl.StdCtrls, cxButtons;
+
+type
+  TfrmMensaje = class(TfrmBase)
+    dxLayoutControl1Group_Root: TdxLayoutGroup;
+    dxLayoutControl1: TdxLayoutControl;
+    cxButton1: TcxButton;
+    dxLayoutItem4: TdxLayoutItem;
+    cxButton2: TcxButton;
+    dxLayoutItem5: TdxLayoutItem;
+    dxLayoutGroup1: TdxLayoutGroup;
+    LiMensaje: TdxLayoutLabeledItem;
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    Mensaje:String;
+    { Public declarations }
+  end;
+
+var
+  frmMensaje: TfrmMensaje;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmMensaje.FormShow(Sender: TObject);
+begin
+  inherited;
+  LiMensaje.CaptionOptions.Text:= Mensaje;
+end;
+
+end.

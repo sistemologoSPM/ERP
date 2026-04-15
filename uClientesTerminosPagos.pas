@@ -1,0 +1,193 @@
+unit uClientesTerminosPagos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uBaseFormList, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, Vcl.Menus, cxStyles, cxCustomData, cxFilter, cxData,
+  cxDataStorage, cxEdit, cxNavigator,
+  cxDataControllerConditionalFormattingRulesManagerDialog, Data.DB, cxDBData,
+  dxLayoutControlAdapters, dxLayoutContainer, cxGridLevel, cxClasses,
+  cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView,
+  cxGrid, Vcl.StdCtrls, cxButtons, dxLayoutControl, Vcl.ExtCtrls, Vcl.ComCtrls,
+  uBaseDeDatos, Data.Win.ADODB, cxImageComboBox, uMensaje,
+  uClientesTerminosPagosCreate, uClientesTerminosPagosHistorial;
+
+type
+  TfrmClientesTerminosPagos = class(TfrmBaseFormList)
+    qTerminosDePagos: TADOQuery;
+    dsTerminosDePagos: TDataSource;
+    btnCambiarEstado: TcxButton;
+    btnModificar: TcxButton;
+    btnHistorialCambios: TcxButton;
+    dxLayoutItem3: TdxLayoutItem;
+    dxLayoutItem4: TdxLayoutItem;
+    qTerminosDePagosTerminoPagoId: TIntegerField;
+    qTerminosDePagosDias: TIntegerField;
+    qTerminosDePagosEstadoId: TIntegerField;
+    qTerminosDePagosCreadoPor: TStringField;
+    qTerminosDePagosFechaCreacion: TDateTimeField;
+    qTerminosDePagosModificadoPor: TStringField;
+    qTerminosDePagosFechaModificacion: TDateTimeField;
+    qTerminosDePagosEstado: TStringField;
+    qTerminosDePagoscambios: TIntegerField;
+    GridListadoDBTableView1TeminoPago: TcxGridDBColumn;
+    GridListadoDBTableView1Dias: TcxGridDBColumn;
+    GridListadoDBTableView1Estado: TcxGridDBColumn;
+    ClientesTerminosDePagosActualizarEstado: TADOStoredProc;
+    qTerminosDePagosTerminoPago: TStringField;
+    procedure qTerminosDePagosAfterScroll(DataSet: TDataSet);
+    procedure btnCambiarEstadoClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure btnNuevoClick(Sender: TObject);
+    procedure btnModificarClick(Sender: TObject);
+    procedure btnHistorialCambiosClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    TerminoPagoId:Integer;
+    { Public declarations }
+  end;
+
+var
+  frmClientesTerminosPagos: TfrmClientesTerminosPagos;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmClientesTerminosPagos.btnCambiarEstadoClick(Sender: TObject);
+var
+  Mensaje:String;
+  EstadoId:Integer;
+
+begin
+  inherited;
+
+  TerminoPagoId:= qTerminosDePagos.FieldByName('TerminoPagoId').AsInteger;
+  Mensaje:= '¿Esta seguro que desea deactivar el termino de pago seleccionado?';
+  EstadoId:= 2;
+
+  if qTerminosDePagos.FieldByName('EstadoId').AsInteger = 2 then
+    Begin
+       Mensaje:= '¿Esta seguro que desea activar el termino de pago seleccionado?';
+       EstadoId:= 1;
+    End;
+
+  frmMensaje:= TfrmMensaje.Create(self);
+  frmMensaje.Mensaje:= Mensaje;
+
+  if frmMensaje.ShowModal = mrOk then
+    Begin
+      ClientesTerminosDePagosActualizarEstado.Parameters.ParamValues['@TerminoPagoId']:= TerminoPagoId;
+      ClientesTerminosDePagosActualizarEstado.Parameters.ParamValues['@EstadoId']:= EstadoId;
+      ClientesTerminosDePagosActualizarEstado.Parameters.ParamValues['@Usuario']:= dmBaseDeDatos.GetUsuarioActual;
+
+      ClientesTerminosDePagosActualizarEstado.ExecProc;
+
+      qTerminosDePagos.Close;
+      qTerminosDePagos.Open;
+
+      qTerminosDePagos.Locate('TerminoPagoId', TerminoPagoId,[] );
+      GridListadoDBTableView1.Control.SetFocus;
+
+    End;
+
+  frmMensaje.Free;
+
+
+
+
+end;
+
+procedure TfrmClientesTerminosPagos.btnHistorialCambiosClick(Sender: TObject);
+begin
+  inherited;
+
+ frmClientesTerminosPagosHistorial:= TfrmClientesTerminosPagosHistorial.Create(self);
+ frmClientesTerminosPagosHistorial.TerminoPagoId:= qTerminosDePagos.FieldByName('TerminoPagoId').AsInteger;
+ frmClientesTerminosPagosHistorial.TerminoPagoNombre:= qTerminosDePagos.FieldByName('TerminoPago').AsString;
+ frmClientesTerminosPagosHistorial.ShowModal;
+ frmClientesTerminosPagosHistorial.Release;
+
+end;
+
+procedure TfrmClientesTerminosPagos.btnModificarClick(Sender: TObject);
+begin
+  inherited;
+
+  frmClientesTerminosPagosCreate:= TfrmClientesTerminosPagosCreate.Create(Self);
+  frmClientesTerminosPagosCreate.TerminoPagoId:= qTerminosDePagos.FieldByName('TerminoPagoId').AsInteger;
+  TerminoPagoId:= frmClientesTerminosPagosCreate.ShowModal;
+  frmClientesTerminosPagosCreate.Release;
+
+
+  qTerminosDePagos.Close;
+  qTerminosDePagos.Open;
+
+  qTerminosDePagos.Locate('TerminoPagoId', TerminoPagoId, []);
+  GridListadoDBTableView1.Control.SetFocus;
+end;
+
+procedure TfrmClientesTerminosPagos.btnNuevoClick(Sender: TObject);
+begin
+  inherited;
+
+
+  frmClientesTerminosPagosCreate:= TfrmClientesTerminosPagosCreate.Create(Self);
+  frmClientesTerminosPagosCreate.TerminoPagoId:= 0;
+  TerminoPagoId:= frmClientesTerminosPagosCreate.ShowModal;
+  frmClientesTerminosPagosCreate.Release;
+
+
+  qTerminosDePagos.Close;
+  qTerminosDePagos.Open;
+
+  qTerminosDePagos.Locate('TerminoPagoId', TerminoPagoId, []);
+  GridListadoDBTableView1.Control.SetFocus;
+
+end;
+
+procedure TfrmClientesTerminosPagos.FormShow(Sender: TObject);
+begin
+  inherited;
+
+  qTerminosDePagos.Close;
+  qTerminosDePagos.Open;
+end;
+
+procedure TfrmClientesTerminosPagos.qTerminosDePagosAfterScroll(
+  DataSet: TDataSet);
+begin
+  inherited;
+
+  btnCambiarEstado.Caption:= 'Desactivar';
+  btnCambiarEstado.OptionsImage.ImageIndex:=1;
+
+  if DataSet.FieldByName('EstadoId').AsInteger = 2 then
+    Begin
+      btnCambiarEstado.Caption:= 'Activar';
+      btnCambiarEstado.OptionsImage.ImageIndex:=0;
+    End;
+
+     btnHistorialCambios.Enabled:= DataSet.FieldByName('Cambios').AsInteger > 0;
+
+end;
+
+end.

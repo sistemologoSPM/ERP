@@ -1,0 +1,185 @@
+inherited frmClientesTerminosPagosCreate: TfrmClientesTerminosPagosCreate
+  BorderStyle = bsDialog
+  Caption = ''
+  ClientHeight = 378
+  ClientWidth = 414
+  OnShow = FormShow
+  ExplicitWidth = 420
+  ExplicitHeight = 407
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited StatusBar1: TStatusBar
+    Top = 359
+    Width = 414
+  end
+  inherited dxLayoutControl1: TdxLayoutControl
+    Width = 414
+    Height = 359
+    inherited cxButton1: TcxButton
+      Left = 288
+      Top = 298
+      TabOrder = 2
+      OnClick = cxButton1Click
+      ExplicitLeft = 288
+      ExplicitTop = 298
+    end
+    object txtTerminoPago: TcxDBTextEdit [1]
+      Left = 124
+      Top = 146
+      DataBinding.DataField = 'TerminoPago'
+      DataBinding.DataSource = dsTerminosDePagos
+      Properties.ValidationErrorIconAlignment = taRightJustify
+      Properties.ValidationOptions = [evoShowErrorIcon]
+      Properties.OnValidate = txtTerminoPagoPropertiesValidate
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 0
+      Width = 264
+    end
+    object cxDBSpinEdit1: TcxDBSpinEdit [2]
+      Left = 124
+      Top = 177
+      DataBinding.DataField = 'Dias'
+      DataBinding.DataSource = dsTerminosDePagos
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      TabOrder = 1
+      Width = 121
+    end
+    inherited dxLayoutControl1Group_Root: TdxLayoutGroup
+      ItemIndex = 1
+    end
+    object dxLayoutItem1: TdxLayoutItem
+      Parent = dxLayoutGroup1
+      AlignHorz = ahClient
+      CaptionOptions.Text = 'Plazos de pagos'
+      Control = txtTerminoPago
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem3: TdxLayoutItem
+      Parent = dxLayoutGroup1
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'D'#237'as'
+      Control = cxDBSpinEdit1
+      ControlOptions.OriginalHeight = 24
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutGroup1: TdxLayoutGroup
+      Parent = Cuerpo
+      AlignVert = avCenter
+      CaptionOptions.Text = 'New Group'
+      ButtonOptions.Buttons = <>
+      ShowBorder = False
+      Index = 0
+    end
+  end
+  object qTerminosDePagos: TADOQuery
+    Active = True
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    BeforePost = qTerminosDePagosBeforePost
+    OnNewRecord = qTerminosDePagosNewRecord
+    Parameters = <
+      item
+        Name = 'TerminoPagoId'
+        Attributes = [paSigned]
+        DataType = ftInteger
+        Precision = 10
+        Size = 4
+        Value = Null
+      end>
+    SQL.Strings = (
+      'Select * From ClientesTerminosDePagos'
+      'Where TerminoPagoId=:TerminoPagoId')
+    Left = 40
+    Top = 256
+    object qTerminosDePagosDias: TIntegerField
+      FieldName = 'Dias'
+    end
+    object qTerminosDePagosEstadoId: TIntegerField
+      FieldName = 'EstadoId'
+    end
+    object qTerminosDePagosCreadoPor: TStringField
+      FieldName = 'CreadoPor'
+      Size = 50
+    end
+    object qTerminosDePagosFechaCreacion: TDateTimeField
+      FieldName = 'FechaCreacion'
+    end
+    object qTerminosDePagosModificadoPor: TStringField
+      FieldName = 'ModificadoPor'
+      Size = 50
+    end
+    object qTerminosDePagosFechaModificacion: TDateTimeField
+      FieldName = 'FechaModificacion'
+    end
+    object qTerminosDePagosTerminoPago: TStringField
+      FieldName = 'TerminoPago'
+      Size = 150
+    end
+    object qTerminosDePagosTerminoPagoId: TAutoIncField
+      FieldName = 'TerminoPagoId'
+      ReadOnly = True
+    end
+  end
+  object dsTerminosDePagos: TDataSource
+    DataSet = qTerminosDePagos
+    Left = 136
+    Top = 256
+  end
+  object qHistorialCambios: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <
+      item
+        Name = 'HistorialId'
+        Attributes = [paSigned]
+        DataType = ftInteger
+        Precision = 10
+        Size = 4
+        Value = Null
+      end>
+    SQL.Strings = (
+      'Select * From HistorialDeCambios '
+      'Where HistorialId=:HistorialId')
+    Left = 286
+    Top = 205
+    object qHistorialCambiosHistorialId: TIntegerField
+      FieldName = 'HistorialId'
+    end
+    object qHistorialCambiosTabla: TStringField
+      FieldName = 'Tabla'
+      Size = 50
+    end
+    object qHistorialCambiosClavePrimaria: TIntegerField
+      FieldName = 'ClavePrimaria'
+    end
+    object qHistorialCambiosCampo: TStringField
+      FieldName = 'Campo'
+      Size = 50
+    end
+    object qHistorialCambiosValorAnterior: TMemoField
+      FieldName = 'ValorAnterior'
+      BlobType = ftMemo
+    end
+    object qHistorialCambiosValorNuevo: TMemoField
+      FieldName = 'ValorNuevo'
+      BlobType = ftMemo
+    end
+    object qHistorialCambiosUsuario: TStringField
+      FieldName = 'Usuario'
+      Size = 50
+    end
+    object qHistorialCambiosFechaCambio: TDateTimeField
+      FieldName = 'FechaCambio'
+    end
+  end
+end

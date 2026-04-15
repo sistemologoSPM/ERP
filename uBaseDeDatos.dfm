@@ -1,0 +1,159 @@
+object dmBaseDeDatos: TdmBaseDeDatos
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  Height = 338
+  Width = 558
+  object db: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
+      'fo=False;Initial Catalog=ERP;Data Source=LAPTOP-OLDNPPCQ;'
+    LoginPrompt = False
+    Provider = 'SQLOLEDB.1'
+    Left = 80
+    Top = 56
+  end
+  object qSecuencias: TADOQuery
+    Connection = db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From Secuencias')
+    Left = 128
+    Top = 112
+  end
+  object qNuevoGUID: TADOQuery
+    Connection = db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select NewID() Guid')
+    Left = 224
+    Top = 112
+    object qNuevoGUIDGuid: TGuidField
+      FieldName = 'Guid'
+      ReadOnly = True
+      FixedChar = True
+      Size = 38
+    end
+  end
+  object qFechaActual: TADOQuery
+    Connection = db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select GetDate() FechaActual')
+    Left = 232
+    Top = 176
+    object qFechaActualFechaActual: TDateTimeField
+      FieldName = 'FechaActual'
+      ReadOnly = True
+    end
+  end
+  object ImgenesEstados: TcxImageList
+    SourceDPI = 96
+    FormatVersion = 1
+    DesignInfo = 14352759
+    ImageInfo = <
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000198494441543811AD533B
+          2F4451109EB92BD6462151EA84B8AB225EA5AD5088D8E51760E90409DB48242A
+          F18A281462D74F70AD6A1B149B88AC90A8ECDE422868741A8F70C7372772B35E
+          5BE064E67C33DFCC7CF724E75CA23F2EFE693E65A76D8F38AC75E1978BB1FC80
+          ABF167FF22B01DDE897862ADA0B10D5E6C39119A1E75A3D962D22A4E52B63389
+          E10370D768EE7C2E2FAB56278F23C274C34C87A9B0338EBA6FFE09B61AD35DEC
+          4986F095B81B5DF33B8A82A4ED2488788144BAE36E6C5F4BFE0930BC04C2F969
+          18358A1762DA9321E645CDD58DC066BD5387A419C75E07963461594643EB96BD
+          570B242360596C6B12AC089D2996724BAC53AD33899931024AFCD68D40805EF3
+          2AF0F4F8D0A258CA3DF65AB51E60CFCC18816177F012640ED734032C692C3CC3
+          444743F9D815611901205942B3C0DE64C3EE1CF05B4B8677E751E811E204D018
+          9BFD7DD38784E22A52476FA4ECB9EAA4F2E58EEF43C1767C610A7C1FF809BCC6
+          0DC4C63E0828F3FE94F5BE3B34F75DE858881218CEFA1C822F02E08CE167AA21
+          F19A4CC2D6F948A1FFD6C4FFBDBD0194E381D75A57F9770000000049454E44AE
+          426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000006624B474400FF00FF00FFA0BDA79300000183494441543811B5524F
+          4B4241109F592D0F4175E8D22983F23D338AFA001541248154427E010B3F41F4
+          0D3A790FF495F728F5092178EED2A52892488220A26B6007517ABBCD6C05FEE9
+          29052DF36767E6B7B3B33B03F0DFEBC8CC2E5AC1D331B77B447B2065E6572D33
+          7F6905721B0A144A254A203D8F9691B7DBB16CB724481BF68C5050A4C00B78D4
+          0369006F6314518501F080EDC3407696B52BA7CDDC12B82C6BD25EA04A1C7E56
+          078402052EBF23D0E620DC19F1C5B75B3FC10AD913E48808076BA4BB93907BF4
+          9C24FF0F03750225619C8C060AB822DD95B6EFA2B783DEBA8D808A81C8E2379C
+          F1E7861D1FBEA2526BF1CA66F1B3026A9765D85B56303BDD2B99F48939C6BCF7
+          79CBAC75022E0741EE8214FBECECC554F649A21C796AC1A58DC232FDAEC3AD6A
+          0934198C6932F5969269AD050F49BC12BDE67622A21C7AAB9FC79E63B5D45421
+          241C9924D08A029CDFB95FBFA1BD26A1E597E0C3BCA5AC099AE15275A0BF7A0C
+          C71E7480DB3C42531A6E3ECC5857CE9839FF8F13E77AE28F810F100B813FD58C
+          4AA00000000049454E44AE426082}
+      end>
+  end
+  object qValoresPorDefecto: TADOQuery
+    Connection = db
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * From ValoresPorDefecto')
+    Left = 342
+    Top = 162
+    object qValoresPorDefectoClientesTipoClienteId: TIntegerField
+      FieldName = 'ClientesTipoClienteId'
+    end
+    object qValoresPorDefectoClientesCategoriaId: TIntegerField
+      FieldName = 'ClientesCategoriaId'
+    end
+    object qValoresPorDefectoClientesTerminoDePagoId: TIntegerField
+      FieldName = 'ClientesTerminoDePagoId'
+    end
+    object qValoresPorDefectoClientesSexoId: TIntegerField
+      FieldName = 'ClientesSexoId'
+    end
+    object qValoresPorDefectoClientesProvinciaId: TIntegerField
+      FieldName = 'ClientesProvinciaId'
+    end
+    object qValoresPorDefectoClientesTipoDocumentoId: TIntegerField
+      FieldName = 'ClientesTipoDocumentoId'
+    end
+    object qValoresPorDefectoClientesEstadoCivilId: TIntegerField
+      FieldName = 'ClientesEstadoCivilId'
+    end
+    object qValoresPorDefectoClientesListaPrecioId: TIntegerField
+      FieldName = 'ClientesListaPrecioId'
+    end
+    object qValoresPorDefectoClientesNacionalidadId: TIntegerField
+      FieldName = 'ClientesNacionalidadId'
+    end
+    object qValoresPorDefectoClientesTipoNCFId: TIntegerField
+      FieldName = 'ClientesTipoNCFId'
+    end
+    object qValoresPorDefectoMonedaId: TIntegerField
+      FieldName = 'MonedaId'
+    end
+    object qValoresPorDefectoAlmacenId: TIntegerField
+      FieldName = 'AlmacenId'
+    end
+    object qValoresPorDefectoProductosTipoProductoId: TIntegerField
+      FieldName = 'ProductosTipoProductoId'
+    end
+    object qValoresPorDefectoProductosCategoriaId: TIntegerField
+      FieldName = 'ProductosCategoriaId'
+    end
+    object qValoresPorDefectoProductosMarcaId: TIntegerField
+      FieldName = 'ProductosMarcaId'
+    end
+    object qValoresPorDefectoProductosModeloId: TIntegerField
+      FieldName = 'ProductosModeloId'
+    end
+    object qValoresPorDefectoProductosUnidadDeMedidaId: TIntegerField
+      FieldName = 'ProductosUnidadDeMedidaId'
+    end
+  end
+end

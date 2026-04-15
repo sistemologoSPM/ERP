@@ -1,0 +1,124 @@
+inherited frmBaseFormInsert: TfrmBaseFormInsert
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'frmBaseFormInsert'
+  ClientHeight = 305
+  ClientWidth = 596
+  ExplicitWidth = 612
+  ExplicitHeight = 344
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited StatusBar1: TStatusBar
+    Top = 286
+    Width = 596
+    ExplicitTop = 286
+    ExplicitWidth = 596
+  end
+  object dxLayoutControl1: TdxLayoutControl
+    Left = 0
+    Top = 0
+    Width = 596
+    Height = 286
+    Align = alClient
+    TabOrder = 1
+    object cxButton1: TcxButton
+      Left = 470
+      Top = 225
+      Width = 100
+      Height = 35
+      Caption = 'Guardar'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA793000000F6494441543811636018
+        68C0087380C98CDBFFBFBEB807E6B6DBF1806910F1F1C30786878F1E32E8E9E9
+        33AC7BC6CF70ED33FBC15FDCDFBC2FC5E97F05C93381087C18A479C9A2450825
+        8C0CF66C5FB9B6C20498600C9268A02130F528063032B180C53FFEFC0FA64184
+        BC9C3C434C5C1CC37F0646864F7F509483A419203AC04C06062E3139306BF243
+        300525C4181838D41836DD8272D1284C23D11410E2A2B8E048B232033B0B235E
+        3D3FFFFC67B0997B17AE06C50090E6D7EF3F307CFDFE13AE0099C1CDC9CE202A
+        28802CC4405D2F808CE6E2E060606541711848188CB18953D705999B9F323031
+        E20FC4BFFF116904ECAC012700E38237FEC6907B5A0000000049454E44AE4260
+        82}
+      TabOrder = 0
+    end
+    object dxLayoutControl1Group_Root: TdxLayoutGroup
+      AlignHorz = ahClient
+      AlignVert = avClient
+      ButtonOptions.Buttons = <>
+      Hidden = True
+      ShowBorder = False
+      Index = -1
+    end
+    object Encabezado: TdxLayoutGroup
+      Parent = dxLayoutControl1Group_Root
+      AlignVert = avTop
+      CaptionOptions.Text = 'New Group'
+      CaptionOptions.Visible = False
+      AllowRemove = False
+      ButtonOptions.Buttons = <>
+      Index = 0
+    end
+    object Cuerpo: TdxLayoutGroup
+      Parent = dxLayoutControl1Group_Root
+      AlignVert = avClient
+      CaptionOptions.Text = 'New Group'
+      CaptionOptions.Visible = False
+      AllowRemove = False
+      ButtonOptions.Buttons = <>
+      Index = 1
+    end
+    object Pie: TdxLayoutGroup
+      Parent = dxLayoutControl1Group_Root
+      AlignVert = avBottom
+      CaptionOptions.Text = 'New Group'
+      CaptionOptions.Visible = False
+      AllowRemove = False
+      ButtonOptions.Buttons = <>
+      LayoutDirection = ldHorizontal
+      Index = 2
+    end
+    object Titulo: TdxLayoutItem
+      Parent = Encabezado
+      AlignHorz = ahCenter
+      CaptionOptions.AlignHorz = taCenter
+      CaptionOptions.Text = 'Titulo'
+      Index = 0
+    end
+    object dxLayoutItem2: TdxLayoutItem
+      Parent = Pie
+      AlignHorz = ahRight
+      AlignVert = avCenter
+      CaptionOptions.Text = 'cxButton1'
+      CaptionOptions.Visible = False
+      Control = cxButton1
+      ControlOptions.OriginalHeight = 35
+      ControlOptions.OriginalWidth = 100
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object MensajeError: TdxLayoutLabeledItem
+      Parent = Pie
+      CaptionOptions.Glyph.SourceDPI = 96
+      CaptionOptions.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA79300000196494441543811A5533D
+        4B0341107D9BE4CE422E88A26D54D209424053588A0862A1A241221682013F50
+        444B7F80A562A3E23F90801A11D2187F405258D9899A5A042197229770EBCCDE
+        4762A228E698B7F3E6CDECDCDEEE1ED0E6239AE79726C7FA02B5DA861498A65C
+        84C0561410B7B66E9D1AD98737163C7C69604EC49720714EC94E428B51B16943
+        A68C5CE1C24B92E6D0D2783C210438E16B4EA6659452C805E3AE70C919555C9A
+        8AF50A4B7B22214CF88B7DD840349CCBBF0754B5A56F93F7270763A3D0E61649
+        728C793036E204CED81594D862AA1A08C8190E3C0422FDD03777A1CD27159807
+        22035E5A79DA643527C4910006251317D5EB3464A5828EBD7DA5540E0F50CBDE
+        28DE304499AB15306986E8EEF1A546EE8B2E09B1A7B73F931F2628D36613D057
+        D6609D1DAB585FDF01CA2678654A7006DE74B80D4486F6C16F60175F619D1CA1
+        7AC5A74AD5B60DBBF842A46E4222C3117D3ED0F631F2F5941229EA2809BF195F
+        A455BE035CE86FA2719F4F436099C432E15BA3E59A1232E9DD422E228D5D1D4D
+        3FD3909B79FCE96772F3FF779F408A81BE3F4395340000000049454E44AE4260
+        82}
+      CaptionOptions.Text = 'Mensaje de error'
+      CaptionOptions.Visible = False
+      Index = 1
+    end
+  end
+end

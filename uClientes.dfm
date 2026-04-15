@@ -1,0 +1,547 @@
+inherited frmClientes: TfrmClientes
+  Caption = 'Cat'#225'logo de clientes'
+  Menu = MainMenu1
+  WindowState = wsMaximized
+  ExplicitHeight = 587
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited dxLayoutControl1: TdxLayoutControl
+    inherited btnNuevo: TcxButton
+      OnClick = btnNuevoClick
+    end
+    inherited GridListado: TcxGrid
+      TabOrder = 4
+      inherited GridListadoDBTableView1: TcxGridDBTableView
+        DataController.DataSource = dsClientes
+        object GridListadoDBTableView1codigo: TcxGridDBColumn
+          Caption = 'C'#243'digo'
+          DataBinding.FieldName = 'codigo'
+          GroupSummaryAlignment = taLeftJustify
+          HeaderAlignmentHorz = taCenter
+          HeaderGlyphAlignmentHorz = taCenter
+        end
+        object GridListadoDBTableView1NombreCliente: TcxGridDBColumn
+          Caption = 'Nombre'
+          DataBinding.FieldName = 'NombreCliente'
+          Width = 200
+        end
+        object GridListadoDBTableView1Categoria: TcxGridDBColumn
+          DataBinding.FieldName = 'Categoria'
+          VisibleForEditForm = bTrue
+          Width = 150
+        end
+        object GridListadoDBTableView1TipoCliente: TcxGridDBColumn
+          Caption = 'Tipo de cliente'
+          DataBinding.FieldName = 'TipoCliente'
+          Width = 150
+        end
+        object GridListadoDBTableView1Documento: TcxGridDBColumn
+          DataBinding.FieldName = 'Documento'
+          Width = 150
+        end
+        object GridListadoDBTableView1Telefonos: TcxGridDBColumn
+          Caption = 'Tel'#233'fonos'
+          DataBinding.FieldName = 'Telefonos'
+          Width = 150
+        end
+        object GridListadoDBTableView1CorreoElectronico: TcxGridDBColumn
+          Caption = 'Correo electr'#243'nico'
+          DataBinding.FieldName = 'CorreoElectronico'
+          Width = 150
+        end
+        object GridListadoDBTableView1Estado: TcxGridDBColumn
+          DataBinding.FieldName = 'Estado'
+          PropertiesClassName = 'TcxImageComboBoxProperties'
+          Properties.Images = dmBaseDeDatos.ImgenesEstados
+          Properties.Items = <
+            item
+              Description = 'Activo'
+              ImageIndex = 0
+              Value = 'Activo'
+            end
+            item
+              Description = 'Inactivo'
+              ImageIndex = 1
+              Value = 'Inactivo'
+            end>
+          HeaderAlignmentHorz = taCenter
+          Width = 100
+        end
+      end
+    end
+    inherited btnImprimir: TcxButton
+      Width = 225
+      Caption = 'Imprimir listado de clientes'
+      ExplicitWidth = 225
+    end
+    object btnImportar: TcxButton [3]
+      Left = 378
+      Top = 33
+      Width = 150
+      Height = 35
+      Caption = 'Importar clientes'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA793000001124944415438116360A0
+        1030C2F4FFD87B59F9FFBF3FCD8C0C4CA230314CFAFF4FC6FF0C73D9DD0CD6C3
+        E458600CC67F7FAB181818231918FEC384B0D2FF19196C8112700398801C30FA
+        CFC8C80B661026F89095C00D401624858DDB80FFFF197EAC3C42D02CAC06FCFF
+        F693E16BFF46869FBBCE133400110B7B2EAE62F8FF3FF4DF8BF70C5F276D61F8
+        F7F2035ECDE28FE682F5627501D020BC9A91255990392036938420034F7D04C3
+        F7593B197E5F7CC0C03F3717248C82395C0DC0B68304B1BA8091838D812BC787
+        81CD451FA4062FC66A00580713230367A41D98898FC06D003E5D4872700318FF
+        FFFF8C248E8FF90959121E88FF9998DB18FFFE63FECFC4C085AC0099FD1F0898
+        FE33AC4016A3980D00563946A393C0E26D0000000049454E44AE426082}
+      TabOrder = 2
+    end
+    object btnPlantillaImportarClientes: TcxButton [4]
+      Left = 535
+      Top = 33
+      Width = 225
+      Height = 35
+      Caption = 'Plantilla para cargar clientes'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA7930000012A4944415438116360A0
+        1030C2F45BF6DA84FE67645805E323D3C2DCC20C9FBF7DAC395478A015591CC4
+        66011184B0BA843A83ADB2750BC32426C14379FB4A90D51365004883A5A205C3
+        7F4786628649FF980FE51D2804898130338800615977396D06468650101B1D73
+        B1713270B3720185FF33FCFCF3DB82D182E9D4939D8FEF0005188872C1CD97B7
+        18BA5EF682D48331E37F461E3003483001314508A70B12CCE3184E3E38CD20CA
+        23C2C0CBC1C3B0F5EA76AC16E134E0E987A70C79F6D90C927C120C251BCAB16A
+        0609E2F4C29E9BFB18640464181EBD7FCC70E7CD5D905AAC18A701F62A760CAF
+        BFBC6650145664501092C7AA192488D30B9AE2EA0C930F4D6590007AC150C690
+        E1C1BB8720F51818A701D38FCEC2508C4D00A717B029C62646B101D80C25490C
+        00B30D42BA5E366AE20000000049454E44AE426082}
+      TabOrder = 3
+    end
+    object btnVer: TcxButton [5]
+      Left = 764
+      Top = 147
+      Width = 165
+      Height = 30
+      Caption = 'Ver'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA79300000179494441543811AD52CB
+        4AC350109DB9ED57082EDAC626DDD807B85604FD9DA2E81FB85141C1C7427722
+        E827B873532D568BAF4D43D35671E1C2D23FC8BDD799A149ABB658D0308F3373
+        6626776E02F0C707C7F53FF91D572B3BCDBCD2F056C8659A8CBFEB8F01F78D60
+        1E11B7A9708E7420166BA860ADE066AE0649802F031EFC7619C0EE5081221D25
+        DA5A5829E59CFD888C073C3682658B7841C4B866A2440C152CE53DE79223C2EC
+        E8BDA83609C531E171A22CC05644CA09EA419049686C45C949BC82309DF7BC17
+        79A33298E5A68F6E0F36760FE0FAB6CE211C9D9CC1F1E9B9E04AED4EB86EAF27
+        710849974192CDB086A106BA2849196B008C1C927604600EE8FC42F68DB0CFCD
+        665A1BD5EEE7267336912AE652AFB2C26C36DB01FACE93754A55959B19C90001
+        0AD7C96BD2DF847604AE95BA7840DE4D5768BD55CAD2E264478B06B4E562CEA9
+        46743C801325CFD9B3D62E8E5A07116EE8175F28BA33875C1BA95C62140CFB7B
+        DF9F02A51CC919D32A79DEBBE0FF369F93A67264F221D2060000000049454E44
+        AE426082}
+      OptionsImage.Margin = 15
+      TabOrder = 5
+    end
+    object btnModificar: TcxButton [6]
+      Left = 764
+      Top = 221
+      Width = 165
+      Height = 30
+      Caption = 'Modificar'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA79300000151494441543811BD523D
+        4B0341107DBB67D49C0AB1B0338A8D956067A1444DBC80907F9122447F84A5F8
+        0BE207A4F1178846486111154CA5D8046CB4B50C510C42309B37F1EEC4F38E60
+        9365DEEC7CBCD9D9D93B6058CB1C61DD94900AF6D3C140986F4EE0305E8546D5
+        1C2243DB17E55B11063B6F317541C40991360C726A073570692252DC6EE72478
+        C5346143A1C25B6D8813790009AB249E9164137FE58B5946434730C748F39A15
+        E6C38ADF18DF5645D4B97F9F228687FF144B8D25CA0367DE0470490CEC4C4E5F
+        FC11CC2996D0C62DA30922281FFC843955C07530F1F388736379CCC61A41027D
+        99391B56CC1CCF152D50FC59A6F41A92B13B715D34D145C67B3037F66BB3C42B
+        1FAC2CBF77C6F7E6A75B0AA32A095BD7D1EA4EB238AB76712F9C28F447687EC6
+        0BFB5729557B5E30243E62C2BA4102CEA062723122CAB24CC7597C29375E674A
+        E9FCD383C486861E772E5431F159E8B80000000049454E44AE426082}
+      OptionsImage.Margin = 15
+      TabOrder = 7
+      OnClick = btnModificarClick
+    end
+    object btnHistorialCambios: TcxButton [7]
+      Left = 764
+      Top = 369
+      Width = 165
+      Height = 30
+      Caption = 'Historial de cambios'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA793000001EF494441543811AD52CF
+        6B1351109E792FA9697E41A3A0F4B4498A07F5265AB422A8BDF4D2FFA1088698
+        5E6A100F9E3C0BAD48BA4B2EFA3778E9A997961A5AF06E409AA497A2A56AF3A3
+        3571BB6F9CD992B085988B3EDE37F3E69B6F66877D0FE01F17FEAD7EB24CD144
+        E850777BD17B5AF72AB55CAA394C3BB441DA6E9709E012687A891E7E3604D734
+        E21C21DD25834DF8ED161B4B1347D25089E923E3B4F359A73543C6BC53804E23
+        97AC7AE0A5F69EC6AB44740709E61598837EB1D40D26C83AED87FCA575242CD6
+        0AF115490661D96D1B0D18509067FBA0BE98D80CE6216D777678F40FE7C84070
+        F9F5D7988419BBB5C6DA6D390B9498A9F25116806EF3046F241E866FCFAF1C9F
+        F16A99B5D396F3D3025E7E03D70B5FE5334422DD4FE247C1F45C5F83E6ACC66F
+        8048468ABC6335F827128F8406BE28E05FC22AF474951DB87AECA6F851C0F1F0
+        2DC913B95FC4FB13D417C7F7B85D45213E13F2FAEA415CFC50182A32BFDDC84F
+        34805788E16F45F4821036D276ABFC0BD518930B8C733BB3DA5922A059D6DEEF
+        27FC0924A815925B405822C0C764280E4468BDA788E432A5CE23ABD49C46303B
+        CCE7760BC98AF0021423907B8EC662CB8070911F53C568B326CF581BB8E12978
+        C5FC8F7A3EF144B4410C1A0449394FBDFD9E74439199F069F7E3C985D4E97E0E
+        4F84FFEFF8036E6DB72C00108D310000000049454E44AE426082}
+      OptionsImage.Margin = 15
+      TabOrder = 11
+      OnClick = btnHistorialCambiosClick
+    end
+    object btnFacturar: TcxButton [8]
+      Left = 764
+      Top = 258
+      Width = 165
+      Height = 30
+      Caption = 'Facturar'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA7930000018D494441543811C5523D
+        48425114FEEEF369EF39048163483A05D126D8D4D0120485436A34E4D20FF423
+        4E81B64843585B1182AD41145644531005512DD1D8D2621435D8D2108F34F2DD
+        CEBDEF093E9356E59CEF3BDF770EE71D2E02EDFE3179C062E219819E6E68FA05
+        6ADE51249355E913F07890033CC60E9E8A24FF84221DAF360D7747140C43508D
+        31E9FD07F9F502F2B98C18B1166C14CE91CC1C83E3126013A2C127FD5D3C1E88
+        8A9ABC011E0DF6CB7A7B2D4C17CD02CAADD0D60251895470443482AD6C27DB7B
+        F900637DA44584A0192551405152C477985FBE228673815A3B21D303973E450C
+        B65FCAD2D796E0FA89B0DDB28142CE0F609C7293528673C1CC4A995CF2788258
+        063DDEB6BC4628130B44EFF0550E8965A8129B8121448FC49B6D7A237A0EA411
+        CB7ED77BAD17C05CA5C9EBFA9083B5EA4DA3561B855DBF812BBD60FCC1D64EFA
+        D47D64BC52CA50253A618EFE0F3B7441CC69DB4A35855FB4158DD6AB060E0F47
+        521E5D4F7F558CC1FBB3D347D16AE5095F11D09C9C73C6008FDBE44456B79567
+        75DA8DBF9B9D6DEBC68ABDC20000000049454E44AE426082}
+      OptionsImage.Margin = 15
+      TabOrder = 8
+    end
+    object btnRecibirPagos: TcxButton [9]
+      Left = 764
+      Top = 295
+      Width = 165
+      Height = 30
+      Caption = 'Recibir pago'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA7930000023A494441543811AD524D
+        681351109E799B50C4932278107F5ABD46A5D58B4D0CE2A16E6ABD48F550BC14
+        3C14C116E96E50AC90F420EC867A10C55EF42282F42008DDA43D1892A6410AE6
+        D00A7A2852510B5EBC15856EDE38F3D28D45F4A4CB7CF3F3CDCFBE373C807FFC
+        F06FFDDEA27D18B5EA94BC65856B374ECDAD8AFF3B703BE157ED7B4C540831C7
+        FC51465B1060093438E3E9A0DA26D9510C2385F2C01E40BCCECD2F08E02B29EA
+        D318DB1702EE460D69E63E9382575ED51E310D5BAA3D40C7C3B3CCB562848F6E
+        6F71FE69F1D39167A5F584FCD549051789E81622DEF76AFD29AE35D26A30AE51
+        C33AA4FD6E32B89A98E8EE410B7C54389DB87D222359F774D103C23945549058
+        1013257093C5E76223F09D2791D4BC46FA80A01F317F80017C4D9F80CA77CBE7
+        0EDD3C535A3327F02B039D859A3D4404DC67CAB81096B8F03280FEB63CD938B8
+        C54247BCD9103F6EE171B16600C4F44E02E81222C272BE9143842C9F227B6CA2
+        FB71C47F0FE35CCA63117F08A74439BDB36FB930F0EB7697C402DEC1175E5A07
+        E30E779C174EA048F7886D86FABD58254A40486356A8F68A6F8038CAF7F01071
+        9A105CC3892272D8D4E5FE6CA13DC0490657B4A2A6B7600F4B6225FF66861FCE
+        25C6D04ABEF14438AF66E700A94F699421426D5B1A87DE42E61A8F5CE465C6A0
+        891BD9F4ECBBA9FAE00EBDB971921FD6189FE802018CBAA9E001971BF9B57513
+        B6945FEB7FA801662CA2116E181496ED6B85DA194F966A1247F8E380283955C9
+        2478D0AEA6155BCD265FAE47FC7FB53F0113CACD6DEEDE8DAB0000000049454E
+        44AE426082}
+      OptionsImage.Margin = 15
+      TabOrder = 9
+    end
+    object btnNotificaciones: TcxButton [10]
+      Left = 764
+      Top = 332
+      Width = 165
+      Height = 30
+      Caption = 'Notificaciones'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA79300000159494441543811CD51BB
+        4A0351103D771FD1353159820641A2160615C1CA22245859F81F36829F606561
+        E10704B531103B7B1BB1106214FF40D0156C52F80A5182A8EBEE38BBACEBBA0F
+        3BC16566EECC9C338F7B17F8CBEF7A531B3336B4E26F33A424905A184C0F5123
+        33420DC74FE28938805A7D53B07108C2B887DF40C2925878BBF462FF88DFC046
+        2D50EC9027B861CD71C21ADF8050091339AEB24624BE01301061C6E7F8662126
+        355373A1941FD2B13AEF079EF363033A420E24F63D2C7A48D21E9D231B04FC06
+        4410E8CFD7199C664D921998F9DD20E8FF466A8DEE402FAF404E03D633F07E07
+        D82F1E5706D402901AE6DC2BD03DDD16D5F6AA032A8E71D5EA34F170B0C87B4C
+        42C9018A0E481A207886D503CC5BE0E9911BD80603276E0D1B46D906C4BDA3A9
+        96DA17CA72B703774A56C75671F6A30ED5BC1265F07ADF0591065F90B19E2990
+        6A9D71CCAF23574A6BBD7BF6FFA17C02711C58FABBF7241B0000000049454E44
+        AE426082}
+      OptionsImage.Margin = 15
+      TabOrder = 10
+    end
+    object btnCambiarEstado: TcxButton [11]
+      Left = 764
+      Top = 184
+      Width = 165
+      Height = 30
+      OptionsImage.Images = dmBaseDeDatos.ImgenesEstados
+      OptionsImage.Margin = 15
+      TabOrder = 6
+      OnClick = btnCambiarEstadoClick
+    end
+    inherited dxLayoutItem5: TdxLayoutItem
+      AlignHorz = ahCenter
+      CaptionOptions.Visible = False
+      Control = btnVer
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 165
+      ControlOptions.ShowBorder = False
+    end
+    inherited dxLayoutItem7: TdxLayoutItem
+      ControlOptions.OriginalWidth = 225
+    end
+    inherited Acciones: TdxLayoutGroup
+      ItemIndex = 8
+    end
+    object dxLayoutSeparatorItem2: TdxLayoutSeparatorItem
+      Parent = BarraHerramientas
+      CaptionOptions.Text = 'Separator'
+      Index = 2
+    end
+    object dxLayoutItem3: TdxLayoutItem
+      Parent = BarraHerramientas
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnImportar
+      ControlOptions.OriginalHeight = 35
+      ControlOptions.OriginalWidth = 150
+      ControlOptions.ShowBorder = False
+      Index = 3
+    end
+    object dxLayoutItem4: TdxLayoutItem
+      Parent = BarraHerramientas
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnPlantillaImportarClientes
+      ControlOptions.OriginalHeight = 35
+      ControlOptions.OriginalWidth = 225
+      ControlOptions.ShowBorder = False
+      Index = 4
+    end
+    object dxLayoutItem6: TdxLayoutItem
+      Parent = Acciones
+      AlignHorz = ahCenter
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnModificar
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 165
+      ControlOptions.ShowBorder = False
+      Index = 4
+    end
+    object dxLayoutItem8: TdxLayoutItem
+      Parent = Acciones
+      AlignHorz = ahCenter
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnHistorialCambios
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 165
+      ControlOptions.ShowBorder = False
+      Index = 8
+    end
+    object dxLayoutItem9: TdxLayoutItem
+      Parent = Acciones
+      AlignHorz = ahCenter
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnFacturar
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 165
+      ControlOptions.ShowBorder = False
+      Index = 5
+    end
+    object dxLayoutItem10: TdxLayoutItem
+      Parent = Acciones
+      AlignHorz = ahCenter
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnRecibirPagos
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 165
+      ControlOptions.ShowBorder = False
+      Index = 6
+    end
+    object dxLayoutItem11: TdxLayoutItem
+      Parent = Acciones
+      AlignHorz = ahCenter
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnNotificaciones
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 165
+      ControlOptions.ShowBorder = False
+      Index = 7
+    end
+    object dxLayoutItem12: TdxLayoutItem
+      Parent = Acciones
+      AlignHorz = ahCenter
+      CaptionOptions.Visible = False
+      Control = btnCambiarEstado
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 165
+      ControlOptions.ShowBorder = False
+      Index = 3
+    end
+  end
+  object qClientes: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    AfterScroll = qClientesAfterScroll
+    Parameters = <>
+    SQL.Strings = (
+      'Select codigo'
+      ',concat(Nombres, '#39' '#39', Apellidos) NombreCliente'
+      ',b.Categoria Categoria'
+      ',c.TipoCliente '
+      ',concat(documento, '#39' ('#39', d.TipoDocumento, '#39')'#39') Documento'
+      ',concat(a.TelefonoCelular, '
+      
+        'case when a.TelefonoCelular is not null then  '#39', '#39' else '#39#39' end, ' +
+        'a.TelefonoTrabajo,'
+      
+        'case when a.telefonoTrabajo is not null then  '#39', '#39' else '#39#39' end, ' +
+        'a.TelefonoHogar) Telefonos'
+      ',a.CorreoElectronico'
+      ',e.Nombre Estado'
+      ', a.ClienteId, a.EstadoId'
+      
+        ',(select count(*) from HistorialDeCambios where tabla = '#39'Cliente' +
+        's'#39' and ClavePrimaria = a.ClienteId) Cambios'
+      'From Clientes a'
+      'Inner join ClientesCategorias b on a.CategoriaId = b.CategoriaId'
+      'Inner join ClientesTipos c on a.TipoClienteId = c.TipoClienteId'
+      
+        'Inner join TiposDocumentos d on a.TipoDocumentoId = d.TipoDocume' +
+        'ntoId'
+      'Inner join Estados e on a.EstadoId = e.EstadoId')
+    Left = 160
+    Top = 296
+    object qClientescodigo: TIntegerField
+      Alignment = taCenter
+      FieldName = 'codigo'
+    end
+    object qClientesNombreCliente: TStringField
+      FieldName = 'NombreCliente'
+      ReadOnly = True
+      Size = 401
+    end
+    object qClientesCategoria: TStringField
+      FieldName = 'Categoria'
+      Size = 200
+    end
+    object qClientesTipoCliente: TStringField
+      FieldName = 'TipoCliente'
+      Size = 50
+    end
+    object qClientesDocumento: TStringField
+      FieldName = 'Documento'
+      ReadOnly = True
+      Size = 103
+    end
+    object qClientesTelefonos: TStringField
+      FieldName = 'Telefonos'
+      ReadOnly = True
+      Size = 64
+    end
+    object qClientesCorreoElectronico: TStringField
+      FieldName = 'CorreoElectronico'
+      Size = 50
+    end
+    object qClientesEstado: TStringField
+      FieldName = 'Estado'
+      Size = 50
+    end
+    object qClientesClienteId: TIntegerField
+      FieldName = 'ClienteId'
+    end
+    object qClientesEstadoId: TIntegerField
+      FieldName = 'EstadoId'
+    end
+    object qClientesCambios: TIntegerField
+      FieldName = 'Cambios'
+      ReadOnly = True
+    end
+  end
+  object dsClientes: TDataSource
+    DataSet = qClientes
+    Left = 264
+    Top = 304
+  end
+  object MainMenu1: TMainMenu
+    Left = 792
+    Top = 48
+    object Configuraciones1: TMenuItem
+      Caption = 'Configuraciones'
+      object Categorias1: TMenuItem
+        Caption = 'Categorias'
+        OnClick = Categorias1Click
+      end
+      object Plazosdepagos1: TMenuItem
+        Caption = 'Plazos de pagos'
+        OnClick = Plazosdepagos1Click
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object Valorespordefecto1: TMenuItem
+        Caption = 'Valores por defecto'
+        OnClick = Valorespordefecto1Click
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Salir1: TMenuItem
+        Caption = 'Salir'
+        OnClick = Salir1Click
+      end
+    end
+  end
+  object ClientesActualizarEstado: TADOStoredProc
+    Connection = dmBaseDeDatos.db
+    ProcedureName = 'ClientesActualizarEstado;1'
+    Parameters = <
+      item
+        Name = '@RETURN_VALUE'
+        DataType = ftInteger
+        Direction = pdReturnValue
+        Precision = 10
+        Value = Null
+      end
+      item
+        Name = '@ClienteId'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 10
+        Value = Null
+      end
+      item
+        Name = '@EstadoId'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 10
+        Value = Null
+      end
+      item
+        Name = '@usuario'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 50
+        Value = Null
+      end>
+    Left = 384
+    Top = 248
+  end
+end

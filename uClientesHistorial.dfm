@@ -1,0 +1,81 @@
+inherited frmClientesHistorial: TfrmClientesHistorial
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Clientes historial de cambios'
+  ClientHeight = 536
+  ClientWidth = 841
+  ExplicitTop = 8
+  ExplicitWidth = 857
+  ExplicitHeight = 575
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited StatusBar1: TStatusBar
+    Top = 517
+    Width = 841
+    ExplicitTop = 517
+    ExplicitWidth = 841
+  end
+  inherited Panel3: TPanel
+    Width = 826
+    Height = 507
+    ExplicitWidth = 826
+    ExplicitHeight = 507
+  end
+  inherited dxLayoutControl1: TdxLayoutControl
+    Width = 841
+    Height = 517
+    ExplicitWidth = 841
+    ExplicitHeight = 517
+    inherited GridListado: TcxGrid
+      Width = 582
+      Height = 381
+      ExplicitWidth = 582
+      ExplicitHeight = 381
+      inherited GridListadoDBTableView1: TcxGridDBTableView
+        DataController.DataSource = dsHistorial
+        object GridListadoDBTableView1FechaCambio: TcxGridDBColumn
+          Caption = 'Fecha del cambio'
+          DataBinding.FieldName = 'FechaCambio'
+          Width = 165
+        end
+        object GridListadoDBTableView1Usuario: TcxGridDBColumn
+          DataBinding.FieldName = 'Usuario'
+          Width = 150
+        end
+        object GridListadoDBTableView1Campo: TcxGridDBColumn
+          DataBinding.FieldName = 'Campo'
+          Width = 150
+        end
+        object GridListadoDBTableView1valorAnterior: TcxGridDBColumn
+          Caption = 'Valor anterior'
+          DataBinding.FieldName = 'valorAnterior'
+          Width = 150
+        end
+        object GridListadoDBTableView1ValorNuevo: TcxGridDBColumn
+          Caption = 'Valor nuevo'
+          DataBinding.FieldName = 'ValorNuevo'
+          Width = 150
+        end
+      end
+    end
+  end
+  object qHistorial: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    Parameters = <
+      item
+        Name = 'ClienteId'
+        DataType = ftInteger
+        Size = -1
+        Value = Null
+      end>
+    SQL.Strings = (
+      'select * from ClientesHistorialCambios( :ClienteId)')
+    Left = 144
+    Top = 280
+  end
+  object dsHistorial: TDataSource
+    DataSet = qHistorial
+    Left = 192
+    Top = 224
+  end
+end

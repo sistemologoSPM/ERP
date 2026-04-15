@@ -1,0 +1,252 @@
+inherited frmClientesCategorias: TfrmClientesCategorias
+  BorderStyle = bsDialog
+  Caption = 'Categorias'
+  ClientHeight = 521
+  ClientWidth = 744
+  ExplicitWidth = 750
+  ExplicitHeight = 550
+  PixelsPerInch = 96
+  TextHeight = 16
+  inherited StatusBar1: TStatusBar
+    Top = 502
+    Width = 744
+    ExplicitTop = 505
+    ExplicitWidth = 741
+  end
+  inherited Panel3: TPanel
+    Width = 729
+    Height = 492
+    ExplicitWidth = 726
+    ExplicitHeight = 495
+  end
+  inherited dxLayoutControl1: TdxLayoutControl
+    Width = 744
+    Height = 502
+    ExplicitWidth = 741
+    ExplicitHeight = 505
+    inherited btnNuevo: TcxButton
+      Caption = 'Nueva'
+      OnClick = btnNuevoClick
+    end
+    inherited GridListado: TcxGrid
+      Width = 485
+      Height = 366
+      ExplicitWidth = 485
+      ExplicitHeight = 366
+      inherited GridListadoDBTableView1: TcxGridDBTableView
+        DataController.DataSource = dsCategorias
+        object GridListadoDBTableView1Categoria: TcxGridDBColumn
+          Caption = 'Categorias'
+          DataBinding.FieldName = 'Categoria'
+          Width = 300
+        end
+        object GridListadoDBTableView1Estado: TcxGridDBColumn
+          DataBinding.FieldName = 'Estado'
+          PropertiesClassName = 'TcxImageComboBoxProperties'
+          Properties.Images = dmBaseDeDatos.ImgenesEstados
+          Properties.Items = <
+            item
+              Description = 'Activo'
+              ImageIndex = 0
+              Value = 'Activo'
+            end
+            item
+              Description = 'Inactivo'
+              ImageIndex = 1
+              Value = 'Inactivo'
+            end>
+          Width = 100
+        end
+      end
+    end
+    object btnHistorialCambios: TcxButton [3]
+      Left = 535
+      Top = 221
+      Width = 165
+      Height = 30
+      Caption = 'Historial de cambios'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA793000001EF494441543811AD52CF
+        6B1351109E792FA9697E41A3A0F4B4498A07F5265AB422A8BDF4D2FFA1088698
+        5E6A100F9E3C0BAD48BA4B2EFA3778E9A997961A5AF06E409AA497A2A56AF3A3
+        3571BB6F9CD992B085988B3EDE37F3E69B6F66877D0FE01F17FEAD7EB24CD144
+        E850777BD17B5AF72AB55CAA394C3BB441DA6E9709E012687A891E7E3604D734
+        E21C21DD25834DF8ED161B4B1347D25089E923E3B4F359A73543C6BC53804E23
+        97AC7AE0A5F69EC6AB44740709E61598837EB1D40D26C83AED87FCA575242CD6
+        0AF115490661D96D1B0D18509067FBA0BE98D80CE6216D777678F40FE7C84070
+        F9F5D7988419BBB5C6DA6D390B9498A9F25116806EF3046F241E866FCFAF1C9F
+        F16A99B5D396F3D3025E7E03D70B5FE5334422DD4FE247C1F45C5F83E6ACC66F
+        8048468ABC6335F827128F8406BE28E05FC22AF474951DB87AECA6F851C0F1F0
+        2DC913B95FC4FB13D417C7F7B85D45213E13F2FAEA415CFC50182A32BFDDC84F
+        34805788E16F45F4821036D276ABFC0BD518930B8C733BB3DA5922A059D6DEEF
+        27FC0924A815925B405822C0C764280E4468BDA788E432A5CE23ABD49C46303B
+        CCE7760BC98AF0021423907B8EC662CB8070911F53C568B326CF581BB8E12978
+        C5FC8F7A3EF144B4410C1A0449394FBDFD9E74439199F069F7E3C985D4E97E0E
+        4F84FFEFF8036E6DB72C00108D310000000049454E44AE426082}
+      OptionsImage.Margin = 15
+      TabOrder = 5
+      OnClick = btnHistorialCambiosClick
+    end
+    object btnModificar: TcxButton [4]
+      Left = 535
+      Top = 184
+      Width = 165
+      Height = 30
+      Caption = 'Modificar'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        6100000006624B474400FF00FF00FFA0BDA79300000151494441543811BD523D
+        4B0341107DBB67D49C0AB1B0338A8D956067A1444DBC80907F9122447F84A5F8
+        0BE207A4F1178846486111154CA5D8046CB4B50C510C42309B37F1EEC4F38E60
+        9365DEEC7CBCD9D9D93B6058CB1C61DD94900AF6D3C140986F4EE0305E8546D5
+        1C2243DB17E55B11063B6F317541C40991360C726A073570692252DC6EE72478
+        C5346143A1C25B6D8813790009AB249E9164137FE58B5946434730C748F39A15
+        E6C38ADF18DF5645D4B97F9F228687FF144B8D25CA0367DE0470490CEC4C4E5F
+        FC11CC2996D0C62DA30922281FFC843955C07530F1F388736379CCC61A41027D
+        99391B56CC1CCF152D50FC59A6F41A92B13B715D34D145C67B3037F66BB3C42B
+        1FAC2CBF77C6F7E6A75B0AA32A095BD7D1EA4EB238AB76712F9C28F447687EC6
+        0BFB5729557B5E30243E62C2BA4102CEA062723122CAB24CC7597C29375E674A
+        E9FCD383C486861E772E5431F159E8B80000000049454E44AE426082}
+      OptionsImage.Margin = 15
+      TabOrder = 4
+      OnClick = btnModificarClick
+    end
+    object btnCambiarEstado: TcxButton [5]
+      Left = 535
+      Top = 147
+      Width = 165
+      Height = 30
+      OptionsImage.Images = dmBaseDeDatos.ImgenesEstados
+      OptionsImage.Margin = 15
+      TabOrder = 3
+      OnClick = btnCambiarEstadoClick
+    end
+    inherited dxLayoutItem5: TdxLayoutItem
+      AlignHorz = ahCenter
+      CaptionOptions.Visible = False
+      Control = btnCambiarEstado
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 165
+      ControlOptions.ShowBorder = False
+    end
+    inherited dxLayoutItem7: TdxLayoutItem
+      Visible = False
+    end
+    inherited Acciones: TdxLayoutGroup
+      ItemIndex = 4
+    end
+    object dxLayoutItem3: TdxLayoutItem
+      Parent = Acciones
+      AlignHorz = ahCenter
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnModificar
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 165
+      ControlOptions.ShowBorder = False
+      Index = 3
+    end
+    object dxLayoutItem4: TdxLayoutItem
+      Parent = Acciones
+      AlignHorz = ahCenter
+      CaptionOptions.Text = 'New Item'
+      CaptionOptions.Visible = False
+      Control = btnHistorialCambios
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 165
+      ControlOptions.ShowBorder = False
+      Index = 4
+    end
+  end
+  object qCategorias: TADOQuery
+    Connection = dmBaseDeDatos.db
+    CursorType = ctStatic
+    AfterScroll = qCategoriasAfterScroll
+    Parameters = <>
+    SQL.Strings = (
+      'Select a.*, b.Nombre Estado'
+      
+        ', (select count(*) from HistorialDeCambios Where tabla = '#39'Client' +
+        'esCategorias'#39' and ClavePrimaria = a.CategoriaId) cambios'
+      'From ClientesCategorias a'
+      'Inner join Estados b on a.EstadoId = b.EstadoId'
+      '')
+    Left = 96
+    Top = 248
+    object qCategoriasCategoriaId: TIntegerField
+      FieldName = 'CategoriaId'
+    end
+    object qCategoriasCategoria: TStringField
+      FieldName = 'Categoria'
+      Size = 200
+    end
+    object qCategoriasEstadoId: TIntegerField
+      FieldName = 'EstadoId'
+    end
+    object qCategoriasCreadoPor: TStringField
+      FieldName = 'CreadoPor'
+      Size = 50
+    end
+    object qCategoriasFechaCreacion: TDateTimeField
+      FieldName = 'FechaCreacion'
+    end
+    object qCategoriasModificadopor: TStringField
+      FieldName = 'Modificadopor'
+      Size = 50
+    end
+    object qCategoriasFechaModificacion: TDateTimeField
+      FieldName = 'FechaModificacion'
+    end
+    object qCategoriasEstado: TStringField
+      FieldName = 'Estado'
+      Size = 50
+    end
+    object qCategoriascambios: TIntegerField
+      FieldName = 'cambios'
+      ReadOnly = True
+    end
+  end
+  object dsCategorias: TDataSource
+    DataSet = qCategorias
+    Left = 192
+    Top = 240
+  end
+  object ClientesCategoriasActualizarEstado: TADOStoredProc
+    Connection = dmBaseDeDatos.db
+    ProcedureName = 'ClientesCategoriasActualizarEstado;1'
+    Parameters = <
+      item
+        Name = '@RETURN_VALUE'
+        DataType = ftInteger
+        Direction = pdReturnValue
+        Precision = 10
+        Value = Null
+      end
+      item
+        Name = '@CategoriaId'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 10
+        Value = Null
+      end
+      item
+        Name = '@EstadoId'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 10
+        Value = Null
+      end
+      item
+        Name = '@usuario'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 50
+        Value = Null
+      end>
+    Left = 384
+    Top = 248
+  end
+end

@@ -1,0 +1,198 @@
+unit uClientesCategorias;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uBaseFormList, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, Vcl.Menus, cxStyles, cxCustomData, cxFilter, cxData,
+  cxDataStorage, cxEdit, cxNavigator,
+  cxDataControllerConditionalFormattingRulesManagerDialog, Data.DB, cxDBData,
+  dxLayoutControlAdapters, dxLayoutContainer, cxGridLevel, cxClasses,
+  cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView,
+  cxGrid, Vcl.StdCtrls, cxButtons, dxLayoutControl, Vcl.ExtCtrls, Vcl.ComCtrls,
+  uBaseDeDatos, Data.Win.ADODB, cxImageComboBox, uFormShadow,
+  uClientesCategoriasHistorial, uClientesCategoriasCreate, uMensaje;
+
+type
+  TfrmClientesCategorias = class(TfrmBaseFormList)
+    btnHistorialCambios: TcxButton;
+    btnModificar: TcxButton;
+    btnCambiarEstado: TcxButton;
+    dxLayoutItem3: TdxLayoutItem;
+    dxLayoutItem4: TdxLayoutItem;
+    qCategorias: TADOQuery;
+    dsCategorias: TDataSource;
+    GridListadoDBTableView1Categoria: TcxGridDBColumn;
+    GridListadoDBTableView1Estado: TcxGridDBColumn;
+    qCategoriasCategoriaId: TIntegerField;
+    qCategoriasCategoria: TStringField;
+    qCategoriasEstadoId: TIntegerField;
+    qCategoriasCreadoPor: TStringField;
+    qCategoriasFechaCreacion: TDateTimeField;
+    qCategoriasModificadopor: TStringField;
+    qCategoriasFechaModificacion: TDateTimeField;
+    qCategoriasEstado: TStringField;
+    qCategoriascambios: TIntegerField;
+    ClientesCategoriasActualizarEstado: TADOStoredProc;
+    procedure btnHistorialCambiosClick(Sender: TObject);
+    procedure btnNuevoClick(Sender: TObject);
+    procedure btnModificarClick(Sender: TObject);
+    procedure qCategoriasAfterScroll(DataSet: TDataSet);
+    procedure FormShow(Sender: TObject);
+    procedure btnCambiarEstadoClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    CategoriaId:Integer;
+    { Public declarations }
+  end;
+
+var
+  frmClientesCategorias: TfrmClientesCategorias;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmClientesCategorias.btnModificarClick(Sender: TObject);
+begin
+  inherited;
+
+
+  frmClientesCategoriasCreate:= TfrmClientesCategoriasCreate.Create(Self);
+  frmClientesCategoriasCreate.CategoriaId:= qCategorias.FieldByName('CategoriaId').AsInteger;
+  CategoriaId:= frmClientesCategoriasCreate.ShowModal;
+  frmClientesCategoriasCreate.Release;
+
+
+  qCategorias.Close;
+  qCategorias.Open;
+
+  qCategorias.Locate('CategoriaId', CategoriaId, []);
+  GridListadoDBTableView1.Control.SetFocus;
+
+end;
+
+procedure TfrmClientesCategorias.btnCambiarEstadoClick(Sender: TObject);
+var
+  Mensaje:String;
+  EstadoId:Integer;
+
+begin
+  inherited;
+
+  CategoriaID:= qCategorias.FieldByName('CategoriaId').AsInteger;
+  Mensaje:= '¿Esta seguro que desea deactivar la categoria seleccionada?';
+  EstadoId:= 2;
+
+  if qCategorias.FieldByName('EstadoId').AsInteger = 2 then
+    Begin
+       Mensaje:= '¿Esta seguro que desea activar la categoria seleccionada?';
+       EstadoId:= 1;
+    End;
+
+  frmMensaje:= TfrmMensaje.Create(self);
+  frmMensaje.Mensaje:= Mensaje;
+
+  if frmMensaje.ShowModal = mrOk then
+    Begin
+      ClientesCategoriasActualizarEstado.Parameters.ParamValues['@CategoriaId']:= CategoriaId;
+      ClientesCategoriasActualizarEstado.Parameters.ParamValues['@EstadoId']:= EstadoId;
+      ClientesCategoriasActualizarEstado.Parameters.ParamValues['@Usuario']:= dmBaseDeDatos.GetUsuarioActual;
+
+      ClientesCategoriasActualizarEstado.ExecProc;
+
+      qCategorias.Close;
+      qCategorias.Open;
+
+      qCategorias.Locate('CategoriaId', CategoriaId,[] );
+      GridListadoDBTableView1.Control.SetFocus;
+
+    End;
+
+  frmMensaje.Free;
+
+
+
+
+end;
+
+procedure TfrmClientesCategorias.btnHistorialCambiosClick(Sender: TObject);
+begin
+  inherited;
+
+
+
+
+ frmClientesCategoriasHistorial:= TfrmClientesCategoriasHistorial.Create(self);
+ frmClientesCategoriasHistorial.CategoriaId:= qCategorias.FieldByName('CategoriaId').AsInteger;
+ frmClientesCategoriasHistorial.CategoriaNombre:= qCategorias.FieldByName('Categoria').AsString;
+ frmClientesCategoriasHistorial.ShowModal;
+ frmClientesCategoriasHistorial.Release;
+
+end;
+
+procedure TfrmClientesCategorias.btnNuevoClick(Sender: TObject);
+begin
+  inherited;
+
+
+
+  frmClientesCategoriasCreate:= TfrmClientesCategoriasCreate.Create(Self);
+  frmClientesCategoriasCreate.CategoriaId:= 0;
+  CategoriaId:= frmClientesCategoriasCreate.ShowModal;
+  frmClientesCategoriasCreate.Release;
+
+
+  qCategorias.Close;
+  qCategorias.Open;
+
+  qCategorias.Locate('CategoriaId', CategoriaId, []);
+  GridListadoDBTableView1.Control.SetFocus;
+
+
+end;
+
+procedure TfrmClientesCategorias.FormShow(Sender: TObject);
+begin
+  inherited;
+
+  qCategorias.Close;
+  qCategorias.Open;
+end;
+
+procedure TfrmClientesCategorias.qCategoriasAfterScroll(DataSet: TDataSet);
+begin
+  inherited;
+
+
+          btnCambiarEstado.Caption:= 'Desactivar';
+      btnCambiarEstado.OptionsImage.ImageIndex:=1;
+
+  if DataSet.FieldByName('EstadoId').AsInteger = 2 then
+    Begin
+      btnCambiarEstado.Caption:= 'Activar';
+      btnCambiarEstado.OptionsImage.ImageIndex:=0;
+    End;
+
+     btnHistorialCambios.Enabled:= DataSet.FieldByName('Cambios').AsInteger > 0;
+
+end;
+
+end.
