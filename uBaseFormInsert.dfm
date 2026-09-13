@@ -3,6 +3,7 @@ inherited frmBaseFormInsert: TfrmBaseFormInsert
   Caption = 'frmBaseFormInsert'
   ClientHeight = 305
   ClientWidth = 596
+  Position = poMainFormCenter
   ExplicitWidth = 612
   ExplicitHeight = 344
   PixelsPerInch = 96

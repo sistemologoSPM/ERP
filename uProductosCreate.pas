@@ -164,6 +164,7 @@ type
     cdsProductosGanancias: TCurrencyField;
     cdsProductosListadoAlmacen: TStringField;
     procedure FormShow(Sender: TObject);
+    procedure cdsProductosNewRecord(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -177,6 +178,40 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmProductosCreate.cdsProductosNewRecord(DataSet: TDataSet);
+begin
+  inherited;
+
+  dmBaseDeDatos.qValoresPorDefecto.Close;
+  dmBaseDeDatos.qValoresPorDefecto.Open;
+
+  DataSet.FieldByName('ProductoId').AsInteger:= dmBaseDeDatos.GetProximoId('ProductoId');
+  DataSet.FieldByName('TipoProductoId').AsInteger:= dmBaseDeDatos.qValoresPorDefectoProductosTipoProductoId.Value;
+  DataSet.FieldByName('CategoriaId').AsInteger:= dmBaseDeDatos.qValoresPorDefectoProductosCategoriaId.Value;
+  DataSet.FieldByName('MarcaId').AsInteger:= dmBaseDeDatos.qValoresPorDefectoProductosMarcaId.Value;
+  DataSet.FieldByName('ModeloId').AsInteger:= dmBaseDeDatos.qValoresPorDefectoProductosModeloId.Value;
+  DataSet.FieldByName('UnidadDeMedidaId').AsInteger:= dmBaseDeDatos.qValoresPorDefectoProductosUnidadDeMedidaId.Value;
+  DataSet.FieldByName('AlmacenId').AsInteger:= dmBaseDeDatos.qValoresPorDefectoAlmacenId.Value;
+  DataSet.FieldByName('MonedaId').AsInteger:= dmBaseDeDatos.qValoresPorDefectoMonedaId.Value;
+
+  DataSet.FieldByName('Codigo').AsString:= '0';
+  DataSet.FieldByName('EsActivoFijo').AsBoolean:= false;
+  DataSet.FieldByName('TieneFechaVencimiento').AsBoolean:= false;
+  DataSet.FieldByName('TieneSerie').AsBoolean:= false;
+
+  DataSet.FieldByName('EstadoId').AsInteger:= 1;
+  DataSet.FieldByName('CreadoPor').AsString:= dmBaseDeDatos.GetUsuarioActual;
+  DataSet.FieldByName('FechaCreacion').AsDateTime:= dmBaseDeDatos.GetFechaActual;
+
+
+
+
+
+
+
+
+end;
 
 procedure TfrmProductosCreate.FormShow(Sender: TObject);
 begin
@@ -205,7 +240,18 @@ begin
   qAlmacen.Open;
 
 
-  //comentario. dafdasdfadfadsf
+  qProdutos.Parameters.ParamValues['ProductoId']:= ProductoId;
+  qProdutos.Close;
+  qProdutos.Open;
+
+  cdsProductos.Close;
+  cdsProductos.Open;
+
+  if cdsProductos.RecordCount>1 then
+    cdsProductos.Edit
+  else
+    cdsProductos.Insert;
+
 
 
 

@@ -1074,6 +1074,7 @@ inherited frmProductosCreate: TfrmProductosCreate
     Aggregates = <>
     Params = <>
     ProviderName = 'DataSetProvider1'
+    OnNewRecord = cdsProductosNewRecord
     Left = 464
     Top = 256
     object cdsProductosProductoId: TIntegerField

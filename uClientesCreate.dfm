@@ -1,36 +1,37 @@
 inherited frmClientesCreate: TfrmClientesCreate
   Left = 658
   Caption = 'frmClientesCreate'
-  ClientHeight = 692
-  ClientWidth = 907
+  ClientHeight = 705
+  ClientWidth = 920
   Menu = MainMenu1
   OnClose = FormClose
   OnShow = FormShow
-  ExplicitWidth = 923
-  ExplicitHeight = 751
+  ExplicitTop = 0
+  ExplicitWidth = 936
+  ExplicitHeight = 764
   PixelsPerInch = 96
   TextHeight = 16
   inherited StatusBar1: TStatusBar
-    Top = 673
-    Width = 907
+    Top = 686
+    Width = 920
     ExplicitTop = 673
     ExplicitWidth = 907
   end
   inherited dxLayoutControl1: TdxLayoutControl
-    Width = 907
-    Height = 673
+    Width = 920
+    Height = 686
     ExplicitWidth = 907
     ExplicitHeight = 673
     inherited cxButton1: TcxButton
-      Left = 786
-      Top = 621
+      Left = 794
+      Top = 625
       TabOrder = 28
       OnClick = cxButton1Click
-      ExplicitLeft = 786
-      ExplicitTop = 621
+      ExplicitLeft = 794
+      ExplicitTop = 625
     end
     object btnCargarFoto: TcxButton [1]
-      Left = 735
+      Left = 743
       Top = 249
       Width = 150
       Height = 30
@@ -50,7 +51,7 @@ inherited frmClientesCreate: TfrmClientesCreate
       OnClick = btnCargarFotoClick
     end
     object btnTomarFoto: TcxButton [2]
-      Left = 735
+      Left = 743
       Top = 286
       Width = 150
       Height = 30
@@ -172,7 +173,7 @@ inherited frmClientesCreate: TfrmClientesCreate
       Style.HotTrack = False
       TabOrder = 20
       Height = 50
-      Width = 518
+      Width = 526
     end
     object cxDBTextEdit7: TcxDBTextEdit [11]
       Left = 171
@@ -205,7 +206,7 @@ inherited frmClientesCreate: TfrmClientesCreate
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
       TabOrder = 22
-      Width = 220
+      Width = 228
     end
     object cxDBTextEdit6: TcxDBTextEdit [14]
       Left = 469
@@ -216,12 +217,12 @@ inherited frmClientesCreate: TfrmClientesCreate
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
       TabOrder = 24
-      Width = 220
+      Width = 228
     end
     object Panel1: TPanel [15]
       Left = 26
       Top = 123
-      Width = 673
+      Width = 681
       Height = 25
       BevelOuter = bvNone
       Caption = 'Datos personales'
@@ -238,7 +239,7 @@ inherited frmClientesCreate: TfrmClientesCreate
     object Panel2: TPanel [16]
       Left = 26
       Top = 310
-      Width = 673
+      Width = 681
       Height = 25
       BevelOuter = bvNone
       Caption = 'Datos de facturaci'#243'n'
@@ -255,7 +256,7 @@ inherited frmClientesCreate: TfrmClientesCreate
     object Panel3: TPanel [17]
       Left = 26
       Top = 404
-      Width = 673
+      Width = 681
       Height = 25
       BevelOuter = bvNone
       Caption = 'Datos de localizaci'#243'n'
@@ -270,7 +271,7 @@ inherited frmClientesCreate: TfrmClientesCreate
       TabOrder = 18
     end
     object imgFotoCliente: TcxDBImage [18]
-      Left = 734
+      Left = 742
       Top = 92
       DataBinding.DataField = 'Foto'
       DataBinding.DataSource = dsFotos
@@ -291,7 +292,11 @@ inherited frmClientesCreate: TfrmClientesCreate
       DataBinding.DataField = 'ListadoTiposClientes'
       DataBinding.DataSource = dsClientes
       Properties.DropDownListStyle = lsFixedList
-      Properties.ListColumns = <>
+      Properties.KeyFieldNames = 'TipoClienteId'
+      Properties.ListColumns = <
+        item
+          FieldName = 'TipoCliente'
+        end>
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
       Style.Color = clWhite
@@ -309,7 +314,11 @@ inherited frmClientesCreate: TfrmClientesCreate
       DataBinding.DataField = 'ListadoCategorias'
       DataBinding.DataSource = dsClientes
       Properties.DropDownListStyle = lsFixedList
-      Properties.ListColumns = <>
+      Properties.KeyFieldNames = 'CategoriaId'
+      Properties.ListColumns = <
+        item
+          FieldName = 'Categoria'
+        end>
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
@@ -317,7 +326,7 @@ inherited frmClientesCreate: TfrmClientesCreate
       Style.PopupBorderStyle = epbsFrame3D
       TabOrder = 1
       Height = 24
-      Width = 200
+      Width = 208
     end
     object cxDBLookupComboBox3: TcxDBLookupComboBox [21]
       Left = 171
@@ -326,7 +335,11 @@ inherited frmClientesCreate: TfrmClientesCreate
       DataBinding.DataField = 'ListadoTiposDocumentos'
       DataBinding.DataSource = dsClientes
       Properties.DropDownListStyle = lsFixedList
-      Properties.ListColumns = <>
+      Properties.KeyFieldNames = 'TipoDocumentoId'
+      Properties.ListColumns = <
+        item
+          FieldName = 'TipoDocumento'
+        end>
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
@@ -343,7 +356,11 @@ inherited frmClientesCreate: TfrmClientesCreate
       DataBinding.DataField = 'ListadoSexos'
       DataBinding.DataSource = dsClientes
       Properties.DropDownListStyle = lsFixedList
-      Properties.ListColumns = <>
+      Properties.KeyFieldNames = 'SexoId'
+      Properties.ListColumns = <
+        item
+          FieldName = 'Nombre'
+        end>
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
@@ -360,7 +377,11 @@ inherited frmClientesCreate: TfrmClientesCreate
       DataBinding.DataField = 'ListadoEstadosCiviles'
       DataBinding.DataSource = dsClientes
       Properties.DropDownListStyle = lsFixedList
-      Properties.ListColumns = <>
+      Properties.KeyFieldNames = 'EstadoCivilId'
+      Properties.ListColumns = <
+        item
+          FieldName = 'Nombre'
+        end>
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
@@ -377,7 +398,11 @@ inherited frmClientesCreate: TfrmClientesCreate
       DataBinding.DataField = 'ListadoNacionalidades'
       DataBinding.DataSource = dsClientes
       Properties.DropDownListStyle = lsFixedList
-      Properties.ListColumns = <>
+      Properties.KeyFieldNames = 'NacionalidadId'
+      Properties.ListColumns = <
+        item
+          FieldName = 'Nacionalidad'
+        end>
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
@@ -394,7 +419,11 @@ inherited frmClientesCreate: TfrmClientesCreate
       DataBinding.DataField = 'ListadoNCF'
       DataBinding.DataSource = dsClientes
       Properties.DropDownListStyle = lsFixedList
-      Properties.ListColumns = <>
+      Properties.KeyFieldNames = 'TipoNCFId'
+      Properties.ListColumns = <
+        item
+          FieldName = 'TipoNCF'
+        end>
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
@@ -411,7 +440,11 @@ inherited frmClientesCreate: TfrmClientesCreate
       DataBinding.DataField = 'ListadoTerminosDePagos'
       DataBinding.DataSource = dsClientes
       Properties.DropDownListStyle = lsFixedList
-      Properties.ListColumns = <>
+      Properties.KeyFieldNames = 'TerminoPagoId'
+      Properties.ListColumns = <
+        item
+          FieldName = 'TerminoPago'
+        end>
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
@@ -428,7 +461,11 @@ inherited frmClientesCreate: TfrmClientesCreate
       DataBinding.DataField = 'ListadoListasDePrecios'
       DataBinding.DataSource = dsClientes
       Properties.DropDownListStyle = lsFixedList
-      Properties.ListColumns = <>
+      Properties.KeyFieldNames = 'ListaPrecioId'
+      Properties.ListColumns = <
+        item
+          FieldName = 'Nombre'
+        end>
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
@@ -445,7 +482,11 @@ inherited frmClientesCreate: TfrmClientesCreate
       DataBinding.DataField = 'ListadosProvincias'
       DataBinding.DataSource = dsClientes
       Properties.DropDownListStyle = lsFixedList
-      Properties.ListColumns = <>
+      Properties.KeyFieldNames = 'ProvinciaId'
+      Properties.ListColumns = <
+        item
+          FieldName = 'Nombre'
+        end>
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
@@ -1037,9 +1078,6 @@ inherited frmClientesCreate: TfrmClientesCreate
       FieldName = 'ModificadoPor'
       Size = 50
     end
-    object qClientesFechaModficacion: TDateTimeField
-      FieldName = 'FechaModficacion'
-    end
     object qClientesListadoTiposClientes: TStringField
       FieldKind = fkLookup
       FieldName = 'ListadoTiposClientes'
@@ -1133,6 +1171,9 @@ inherited frmClientesCreate: TfrmClientesCreate
       KeyFields = 'ProvinciaId'
       Lookup = True
     end
+    object qClientesFechaModificacion: TDateTimeField
+      FieldName = 'FechaModificacion'
+    end
   end
   object dsClientes: TDataSource
     DataSet = qClientes
@@ -1140,6 +1181,7 @@ inherited frmClientesCreate: TfrmClientesCreate
     Top = 408
   end
   object qTiposClientes: TADOQuery
+    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -1156,6 +1198,7 @@ inherited frmClientesCreate: TfrmClientesCreate
     end
   end
   object qCategorias: TADOQuery
+    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -1173,6 +1216,7 @@ inherited frmClientesCreate: TfrmClientesCreate
     end
   end
   object TiposDocumentos: TADOQuery
+    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -1189,6 +1233,7 @@ inherited frmClientesCreate: TfrmClientesCreate
     end
   end
   object qSexos: TADOQuery
+    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -1205,6 +1250,7 @@ inherited frmClientesCreate: TfrmClientesCreate
     end
   end
   object qEstadosCiviles: TADOQuery
+    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -1221,6 +1267,7 @@ inherited frmClientesCreate: TfrmClientesCreate
     end
   end
   object qNacionalidades: TADOQuery
+    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -1237,6 +1284,7 @@ inherited frmClientesCreate: TfrmClientesCreate
     end
   end
   object qTipoNCF: TADOQuery
+    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -1303,6 +1351,7 @@ inherited frmClientesCreate: TfrmClientesCreate
     end
   end
   object qListadoDePrecios: TADOQuery
+    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>
@@ -1327,6 +1376,7 @@ inherited frmClientesCreate: TfrmClientesCreate
     end
   end
   object qProvincias: TADOQuery
+    Active = True
     Connection = dmBaseDeDatos.db
     CursorType = ctStatic
     Parameters = <>

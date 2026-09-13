@@ -24,7 +24,11 @@ uses
   uClientesTerminosPagosCreate in 'uClientesTerminosPagosCreate.pas' {frmClientesTerminosPagosCreate},
   uClientesTerminosPagosHistorial in 'uClientesTerminosPagosHistorial.pas' {frmClientesTerminosPagosHistorial},
   uProductos in 'uProductos.pas' {frmProductos},
-  uProductosCreate in 'uProductosCreate.pas' {frmProductosCreate};
+  uProductosCreate in 'uProductosCreate.pas' {frmProductosCreate},
+  uProductosCategorias in 'uProductosCategorias.pas' {frmProductosCategorias},
+  uProductosCategoriasCreate in 'uProductosCategoriasCreate.pas' {frmProductosCategoriasCreate},
+  uProductosMarcas in 'uProductosMarcas.pas' {frmProductosMarcas},
+  uProductosMarcasCreate in 'uProductosMarcasCreate.pas' {frmProductosMarcasCreate};
 
 {$R *.res}
 
@@ -33,5 +37,8 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmMenu, frmMenu);
   Application.CreateForm(TdmBaseDeDatos, dmBaseDeDatos);
+  Application.CreateForm(TfrmProductosCategoriasCreate, frmProductosCategoriasCreate);
+  Application.CreateForm(TfrmProductosMarcas, frmProductosMarcas);
+  Application.CreateForm(TfrmProductosMarcasCreate, frmProductosMarcasCreate);
   Application.Run;
 end.

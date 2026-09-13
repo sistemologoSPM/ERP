@@ -26,7 +26,7 @@ uses
   dxLayoutControlAdapters, dxLayoutContainer, cxGridLevel, cxClasses,
   cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView,
   cxGrid, Vcl.StdCtrls, cxButtons, dxLayoutControl, Vcl.ExtCtrls, Vcl.ComCtrls,
-  uProductosCreate;
+  uProductosCreate, uProductosCategorias, uFormShadow;
 
 type
   TfrmProductos = class(TfrmBaseFormList)
@@ -53,9 +53,11 @@ type
     Salir1: TMenuItem;
     N2: TMenuItem;
     Salir2: TMenuItem;
+    Modelos1: TMenuItem;
     procedure Salir1Click(Sender: TObject);
     procedure btnNuevoClick(Sender: TObject);
     procedure Salir2Click(Sender: TObject);
+    procedure Cat1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -76,6 +78,23 @@ begin
   frmProductosCreate:=  tfrmProductosCreate.create(self);
   frmProductosCreate.ShowModal;
   frmProductosCreate.Release;
+end;
+
+procedure TfrmProductos.Cat1Click(Sender: TObject);
+begin
+  inherited;
+
+
+frmShadow:= TfrmShadow.Create(self);
+frmShadow.Show;
+
+  frmProductosCategorias:= TfrmProductosCategorias.Create(Self);
+  frmProductosCategorias.modo:= 1;
+  frmProductosCategorias.ShowModal;
+  frmProductosCategorias.Release;
+
+frmShadow.Release;
+
 end;
 
 procedure TfrmProductos.Salir1Click(Sender: TObject);

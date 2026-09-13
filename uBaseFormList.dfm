@@ -2,6 +2,8 @@ inherited frmBaseFormList: TfrmBaseFormList
   Caption = 'frmBaseFormList'
   ClientHeight = 528
   ClientWidth = 973
+  Position = poMainFormCenter
+  WindowState = wsMaximized
   OnShow = FormShow
   ExplicitWidth = 989
   ExplicitHeight = 567

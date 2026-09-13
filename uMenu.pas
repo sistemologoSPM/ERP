@@ -109,7 +109,7 @@ type
     cxButton37: TcxButton;
     cxButton38: TcxButton;
     cxButton15: TcxButton;
-    cxTabSheet1: TcxTabSheet;
+    tabPuntoVenta: TcxTabSheet;
     Panel10: TPanel;
     cxButton39: TcxButton;
     cxButton40: TcxButton;
@@ -189,6 +189,7 @@ type
     dxLayoutItem38: TdxLayoutItem;
     dxLayoutAutoCreatedGroup7: TdxLayoutAutoCreatedGroup;
     dxLayoutGroup17: TdxLayoutGroup;
+    tabReportes: TcxTabSheet;
     procedure cxLabel4MouseEnter(Sender: TObject);
     procedure cxLabel4MouseLeave(Sender: TObject);
     procedure btnClientesClick(Sender: TObject);

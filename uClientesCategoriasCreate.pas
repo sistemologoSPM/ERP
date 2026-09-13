@@ -97,8 +97,6 @@ procedure TfrmClientesCategoriasCreate.FormShow(Sender: TObject);
 begin
   inherited;
 
-
-
   Titulo.Caption:= 'Nueva Categoria';
   Nuevo:=true;
   if Categoriaid>0 then
@@ -109,7 +107,7 @@ begin
 
   frmClientesCategoriasCreate.Caption:= Titulo.Caption;
 
-   qCategorias.Close;
+  qCategorias.Close;
   qCategorias.Parameters.ParamValues['CategoriaId']:= CategoriaId;
   qCategorias.Open;
 

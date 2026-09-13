@@ -66,7 +66,6 @@ type
     qClientesCreadoPor: TStringField;
     qClientesFechaCreacion: TDateTimeField;
     qClientesModificadoPor: TStringField;
-    qClientesFechaModficacion: TDateTimeField;
     qTiposClientes: TADOQuery;
     qClientesListadoTiposClientes: TStringField;
     qCategorias: TADOQuery;
@@ -200,6 +199,7 @@ type
     qTerminosDePagosFechaCreacion: TDateTimeField;
     qTerminosDePagosModificadoPor: TStringField;
     qTerminosDePagosFechaModificacion: TDateTimeField;
+    qClientesFechaModificacion: TDateTimeField;
     procedure FormShow(Sender: TObject);
     procedure btnCargarFotoClick(Sender: TObject);
     procedure btnTomarFotoClick(Sender: TObject);

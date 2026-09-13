@@ -1,26 +1,32 @@
 inherited frmClientesCategoriasCreate: TfrmClientesCategoriasCreate
   Caption = ''
-  ClientWidth = 437
+  ClientHeight = 311
+  ClientWidth = 434
   OnShow = FormShow
-  ExplicitWidth = 453
+  ExplicitWidth = 450
+  ExplicitHeight = 350
   PixelsPerInch = 96
   TextHeight = 16
   inherited StatusBar1: TStatusBar
-    Width = 437
+    Top = 292
+    Width = 434
     ExplicitWidth = 437
   end
   inherited dxLayoutControl1: TdxLayoutControl
-    Width = 437
+    Width = 434
+    Height = 292
     ExplicitWidth = 437
     inherited cxButton1: TcxButton
-      Left = 311
+      Left = 308
+      Top = 231
       TabOrder = 1
       OnClick = cxButton1Click
-      ExplicitLeft = 311
+      ExplicitLeft = 308
+      ExplicitTop = 231
     end
     object txtCategoria: TcxDBTextEdit [1]
       Left = 87
-      Top = 125
+      Top = 128
       DataBinding.DataField = 'Categoria'
       DataBinding.DataSource = dsCategorias
       Properties.ValidationErrorIconAlignment = taRightJustify
@@ -30,7 +36,7 @@ inherited frmClientesCategoriasCreate: TfrmClientesCategoriasCreate
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
       TabOrder = 0
-      Width = 324
+      Width = 321
     end
     object dxLayoutItem1: TdxLayoutItem
       Parent = Cuerpo

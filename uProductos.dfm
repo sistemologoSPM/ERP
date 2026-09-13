@@ -265,9 +265,13 @@ inherited frmProductos: TfrmProductos
       Caption = 'Configuraciones'
       object Cat1: TMenuItem
         Caption = 'Categorias'
+        OnClick = Cat1Click
       end
       object Marcas1: TMenuItem
         Caption = 'Marcas'
+      end
+      object Modelos1: TMenuItem
+        Caption = 'Modelos'
       end
       object Unidadesdemedidas1: TMenuItem
         Caption = 'Unidades de medidas'
